@@ -26,9 +26,9 @@ def RSI(d,df):
     #RIS 交易訊號欄
         df['rsi_sign'] =0
     #設定RSI指標超賣訊號= 0 (部位買進)
-        df['rsi_sign'][(df['rsi']<20)]= 1
+        df['rsi_sign'][(df['rsi']<10)]= 1
     #設定RSI指標超買訊號= -1 (部位買進)
-        df['rsi_sign'][(df['rsi']>80)]= -1
+        df['rsi_sign'][(df['rsi']>90)]= -1
 
 
 #定義進場函數，呼號範例為(r,b) = inp(df,r,b,i)
@@ -36,6 +36,8 @@ def inp(df,r,b,i):
     #r=成本 b=多空方設定 多方=1 空方=1
     df['sign'].iloc[i] = b #進場時記錄多空
     r = df.iloc[i,1] #設定多方買進與空方賣出成本
+    df['note'].iloc[i] =str(r) + df['note'].iloc[i]+ " 下單 ： " + str(b) +"  :  "
+
     return (r,b)
 
 
@@ -43,10 +45,9 @@ def inp(df,r,b,i):
 def outp(df,r,b,price,i):
     #r是資金存量，b=多空方設定 多方=1 空方=-1
     #price=1代表開盤價，price=4代表收盤價
-    rr = df.iloc[i,1] - r
-    print(str(df.iloc[i,1]) +' - '+  str(r) +' = '+ str(rr))
+    rr = (df.iloc[i,1] - r) * b
     df['ret'].iloc[i] = rr #進場時記錄多空
-
+    df['note'].iloc[i] = df['note'].iloc[i] +'出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(df.iloc[i,1]) +' ,結算 ： '+str(rr)
     r=0#歸零
     b=0#多空方歸零
     return (r,b)
@@ -54,11 +55,14 @@ def outp(df,r,b,price,i):
 #定義當日結算和停利停損函數
 def stop(df,wsp,lsp,r,b,i):
     #r是資金存量，b=多空方設定 多方=1 空方=1
-    mm = r + b * df.ilco[i,4] #當日結算(收盤價)
-    mp = mm / ( -b * r ) # 以當日結價價 / 進場成本
-    #若當日結算比率大於10%或小於5% 
+    #mm = df.iloc[i,4] #當日結算(收盤價)
+    #mp = mm / r  # 以當日結價價 / 進場成本
+    mp =  (df.iloc[i,4] - r ) * b 
+        #若當日結算比率大於10%或小於5% 
     if mp > wsp or mp < lsp :
         #若苻合停利、停損條件，以下一筆開盤價出場
+
+        df['note'].iloc[i] =df['note'].iloc[i] +' 停利、停損 MP = ' + str(mp) + '=' +  '('+str(df.iloc[i,4] ) +'-' + str(r)+ ') *'+str( b) 
         r,b = outp(df,r,b,1,i+1)
     return (r,b)
 
@@ -69,6 +73,9 @@ def result_F(df):
     last = df['cus'].iloc[-1]
     #計算交易次數
     count = df['sign'][df['sign']!=0].count()
+    wamt = df['ret'][df['ret']>0].sum()
+    lamt = df['ret'][df['ret']<0].sum()
+    
     #計算最大回檔
     def maxdrawdown(s):
         s = s.cummax() - s #歷史最高價 - 現在序列,cummax 生成當日之前的歷史最高價序列
@@ -84,6 +91,8 @@ def result_F(df):
     #將最後報酬、交易次數、最大回檔、勝率，統整成表格
     result = pd.DataFrame({
         '最後報酬':[last],
+        '總賺錢點數':[wamt],
+        '總賠錢點數':[lamt],
         '交易次數':[count],
         '最大回檔':[mdd],
         '勝率':[w]
@@ -112,35 +121,40 @@ MA(5,10,df)
 RSI(6,df)
 
 #進行買賣
-K = 50 #設定保留K線參數
+K = 10 #設定保留K線參數
 L = len(df) #取得筆數
 r=0 #記錄交易資金流量
 b=0 #設定多空方，多方=1，空方=-1，空手=0
 df['sign']=0 #新增欄位，用來記錄進場多空
 df['ret']=0 #新增欄位，用來記錄出勤結算
+df['note']='' #記錄交易指數
 
 #由於序號從0開始，迴圈從第k-1筆記錄開始執行
 for i in range(K-1,L):
  
     #若 i < 最後一筆，則執行
     if i < L-1 :
-        #若 b = 1 ,表示多少
+        #若 b = 1 ,表示多
         if b == 1 :
             #若死亡交叉，則以下一筆開盤價執行多方出場
-            if df['ma_sign'].iloc[i] == -1  or df['rsi_sign'].iloc[i] == -1 :
+            if df['ma_sign'].iloc[i] == -1  :#or df['rsi_sign'].iloc[i] == -1 :
                 (r,b) = outp(df,r,b,1,i+1)
+            else :#停利、停損
+                (r,b)=stop(df,1000,-100,r,b,i)
         
-        if b == -1 :
+        elif b == -1 :
             #黃金交叉，則以下一筆開盤價執行多方出場
-            if df['ma_sign'].iloc[i] == 1  or df['rsi_sign'].iloc[i] == 1 :
+            if df['ma_sign'].iloc[i] == 1  :#or df['rsi_sign'].iloc[i] == 1 :
                 (r,b) = outp(df,r,b,1,i+1)
-            
+            else :#停利、停損
+                (r,b)=stop(df,1000,-100,r,b,i)
+         
             #若b=0,表示空手
-        if b == 0 :
+        elif b == 0 :
                 #若黃金交叉，則以下一筆開盤價執行多方進場
-            if df['ma_sign'].iloc[i] == 1 or df['rsi_sign'].iloc[i] == 1 :
+            if df['ma_sign'].iloc[i] == 1 :#or df['rsi_sign'].iloc[i] == 1 :
                 r,b = inp(df,r,1,i+1)
-            elif df['ma_sign'].iloc[i] == -1 or df['rsi_sign'].iloc[i] == -1 :
+            elif df['ma_sign'].iloc[i] == -1 :#or df['rsi_sign'].iloc[i] == -1 :
                 r,b = inp(df,r,-1,i+1)   
                
     elif i == L-1 :
