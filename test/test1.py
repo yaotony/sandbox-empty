@@ -66,6 +66,26 @@ def stop(df,wsp,lsp,r,b,i):
         r,b = outp(df,r,b,1,i+1)
     return (r,b)
 
+
+def BoxTheory(df,N):
+    #當近期N天內的高點比 N+1 天前的 N天內高點還低時 ,則 N+1天前的 N天內高點 為近期箱型的頂部。
+    #當近期M天內的低點比 M+1 天前的 M天內低點還高時 ,則 M+1天前的 M天內低點 為近期箱型的底部。
+    df['BoxTop']  = 0
+    df['BoxDown'] = 0
+    #High 
+    df['BoxTop'] = df.iloc[:,4].shift(1).rolling(N).max()
+    df['BoxDown'] = df.iloc[:,4].shift(1).rolling(N).min()
+
+    #Box 交易訊號欄
+    df['box_sign'] =0
+    #設定Box 指標箱型突破高點訊號= 1 (部位買進)
+    df['box_sign'][(df['BoxTop'] < df['Close'])]= 1
+    #設定Box指標箱型突破低點訊號= -1 (部位買進)
+    df['box_sign'][(df['BoxDown'] > df['Close'])]= -1
+
+
+
+
 #計算各項策略績效指標
 #df為欲分析策略績效的資料
 def result_F(df):
@@ -115,10 +135,12 @@ def out_excle(name,df,result,K,L) :
 
 
 # 讀取資料
-df = pd.read_csv('/Users/Tony/Downloads/TWII.csv',encoding="BIG5")
+df = pd.read_csv('/Users/Tony/Downloads/abc.csv',encoding="UTF8")
 
 MA(5,10,df)
 RSI(6,df)
+BoxTheory(df,10)
+
 
 #進行買賣
 K = 10 #設定保留K線參數
@@ -137,14 +159,14 @@ for i in range(K-1,L):
         #若 b = 1 ,表示多
         if b == 1 :
             #若死亡交叉，則以下一筆開盤價執行多方出場
-            if df['ma_sign'].iloc[i] == -1  :#or df['rsi_sign'].iloc[i] == -1 :
+            if df['box_sign'].iloc[i] == -1  : # df['ma_sign'].iloc[i] == -1  : # or df['rsi_sign'].iloc[i] == -1 :
                 (r,b) = outp(df,r,b,1,i+1)
             else :#停利、停損
                 (r,b)=stop(df,1000,-100,r,b,i)
         
         elif b == -1 :
             #黃金交叉，則以下一筆開盤價執行多方出場
-            if df['ma_sign'].iloc[i] == 1  :#or df['rsi_sign'].iloc[i] == 1 :
+            if  df['box_sign'].iloc[i] == 1  : # or df['rsi_sign'].iloc[i] == 1 :
                 (r,b) = outp(df,r,b,1,i+1)
             else :#停利、停損
                 (r,b)=stop(df,1000,-100,r,b,i)
@@ -152,9 +174,9 @@ for i in range(K-1,L):
             #若b=0,表示空手
         elif b == 0 :
                 #若黃金交叉，則以下一筆開盤價執行多方進場
-            if df['ma_sign'].iloc[i] == 1 :#or df['rsi_sign'].iloc[i] == 1 :
+            if  df['box_sign'].iloc[i] == 1 : # df['ma_sign'].iloc[i] == 1 :# or df['rsi_sign'].iloc[i] == 1 :
                 r,b = inp(df,r,1,i+1)
-            elif df['ma_sign'].iloc[i] == -1 :#or df['rsi_sign'].iloc[i] == -1 :
+            elif  df['box_sign'].iloc[i] == -1 : #  df['ma_sign'].iloc[i] == -1 : # or df['rsi_sign'].iloc[i] == -1 :
                 r,b = inp(df,r,-1,i+1)   
                
     elif i == L-1 :
