@@ -1,4 +1,15 @@
+from indicator import GetHistoryData,KBar
 import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import datetime,sys
+strptime=datetime.datetime.strptime
+
+from matplotlib import ticker as mticker
+from mpl_finance import candlestick_ohlc
+from matplotlib.dates import DateFormatter
+import datetime as dt
+
 
 # MA策略 黃金交叉 = 1   死亡交叉 = -1  預設=0
 def MA(s,l,df):
@@ -62,27 +73,68 @@ def stop(df,wsp,lsp,r,b,i):
     if mp > wsp or mp < lsp :
         #若苻合停利、停損條件，以下一筆開盤價出場
 
-        df['note'].iloc[i] =df['note'].iloc[i] +' 停利、停損 MP = ' + str(mp) + '=' +  '('+str(df.iloc[i,4] ) +'-' + str(r)+ ') *'+str( b) 
+        #df['note'].iloc[i] =df['note'].iloc[i] +' 停利、停損 MP = ' + str(mp) + '=' +  '('+str(df.iloc[i,4] ) +'-' + str(r)+ ') *'+str( b) 
         r,b = outp(df,r,b,1,i+1)
     return (r,b)
 
 
-def BoxTheory(df,N):
+def BoxTheory(df,N,S):
     #當近期N天內的高點比 N+1 天前的 N天內高點還低時 ,則 N+1天前的 N天內高點 為近期箱型的頂部。
     #當近期M天內的低點比 M+1 天前的 M天內低點還高時 ,則 M+1天前的 M天內低點 為近期箱型的底部。
     df['BoxTop']  = 0
     df['BoxDown'] = 0
+    df['BoxTopDef']  = 0
+    df['BoxDownDef'] = 0
+    
     #Box 交易訊號欄
     df['box_sign'] =0
 
     df['BoxTop'] = df.iloc[:,2].shift(1).rolling(N).max()
-    df['BoxDown'] = df.iloc[:,2].shift(1).rolling(N).min()
+    df['BoxDown'] = df.iloc[:,3].shift(1).rolling(N).min()
 
+    for i in  range( len(df)):
+        df['BoxTopDef'].iloc[i] = (df['BoxTop'].iloc[i] - df['High'].iloc[i]) * -1
+        df['BoxDownDef'].iloc[i] = df['BoxDown'].iloc[i] - df['Low'].iloc[i]
+        
+        #設定Box 指標箱型突破高點訊號= 1 (部位買進)
+        if (df['BoxTop'].iloc[i] < df['Close'].iloc[i] ) &  (df['BoxTopDef'].iloc[i] > S ) :
+            df['box_sign'].iloc[i] = 1
+    
+        
+        #設定Box指標箱型突破低點訊號= -1 (部位買進)
+        if (df['BoxDown'].iloc[i] > df['Close'].iloc[i]) &  (df['BoxDownDef'].iloc[i] > S ) :
+            df['box_sign'].iloc[i] = -1
+    
+
+
+def BoxTheory1(df,N,S):
+    #當近期N天內的高點 比 N+1 天前的 N天內高點還低時 ,則 N+1天前的 N天內高點 為近期箱型的頂部。
+    #當近期M天內的低點 比 M+1 天前的 M天內低點還高時 ,則 M+1天前的 M天內低點 為近期箱型的底部。
+    df['BoxTop']  = 0
+    df['BoxDown'] = 0
+    df['BoxTopDef']  = 0
+    df['BoxDownDef'] = 0
+    
+    #Box 交易訊號欄
+    df['box_sign'] =0
+    n = 0
+    #if df.iloc[:,2].shift(1).rolling(N).max() < df.iloc[:,2].shift(1).rolling(N+1).max():
+      #  if n < df.iloc[:,2].shift(1).rolling(N).max() : 
+     #       n = df.iloc[:,2].shift(1).rolling(N).max()
+
+    #    df['BoxTop']
+   #else
+
+    df['BoxTop'] = df.iloc[:,2].shift(1).rolling(N).max()
+    df['BoxDown'] = df.iloc[:,2].shift(1).rolling(N).min()
+    df['BoxTopDef'] = (df['BoxTop'] - df['Close']) * -1
+    df['BoxDownDef'] = df['BoxDown'] - df['Close']
+    
 
     #設定Box 指標箱型突破高點訊號= 1 (部位買進)
-    df['box_sign'][(df['BoxTop'] < df['Close'])]= 1
+    df['box_sign'][(df['BoxTop'] < df['Close'] ) &  (df['BoxTopDef'] > S )] = 1
     #設定Box指標箱型突破低點訊號= -1 (部位買進)
-    df['box_sign'][(df['BoxDown'] > df['Close'])]= -1
+    df['box_sign'][(df['BoxDown'] > df['Close']) &  (df['BoxDownDef'] > S )] = -1
 
 
 
@@ -136,11 +188,11 @@ def out_excle(name,df,result,K,L) :
 
 
 # 讀取資料
-df = pd.read_csv('/Users/Tony/Downloads/abc_22.csv',encoding="UTF8")
+df = pd.read_csv('/Users/Tony/Downloads/abc_271.csv',encoding="UTF8")
 
 MA(5,10,df)
 RSI(6,df)
-BoxTheory(df,5)
+BoxTheory(df,5,5)
 
 
 #進行買賣
@@ -193,7 +245,72 @@ result = result_F(df)
 out_excle('st1',df,result,K,L)
 
 
+mmData = df
 
+
+#取得轉換時間字串至時間格式
+Time = mmData.iloc[:,0]
+#價格由字串轉數值
+Price = mmData.iloc[:,4]
+
+Price = mmData.iloc[:,4]
+NoteText = mmData.iloc[:,19]
+NoteTime = mmData.iloc[:,0]
+NotePrice = mmData.iloc[:,4]
+
+#BoxTop	BoxDown
+BoxTop   = mmData.iloc[:,12]
+BoxDown  = mmData.iloc[:,13]
+
+#定義圖表物件
+ax = plt.subplot(111)
+plt.rcParams['font.sans-serif'] = ['PingFang HK']
+
+ax.xaxis.set_visible(False)  # 隱藏X軸刻度線
+#繪製圖案 ( X軸物件, Y軸物件, 線風格 )
+ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
+ax.plot_date( Time,Price, 'k-' , linewidth=1 ,color='#FF0000')
+ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
+for i in  range( len(mmData)):
+    if mmData['sign'].iloc[i] == -1 :
+        ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]-5),
+            xycoords='data',
+            arrowprops=dict(facecolor='green', shrink=0.05)
+            )
+    elif mmData['sign'].iloc[i]== 1 :
+        ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]+5),
+            xycoords='data',
+            arrowprops=dict(facecolor='red', shrink=0.05)
+            )
+
+    elif  len(mmData['note'].iloc[i]) > 0:
+         ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]+5),
+            xycoords='data',
+            arrowprops=dict(facecolor='fuchsia', shrink=0.05)
+            )
+       
+    #ax.text(Time[i],Price[i],NoteText[i],fontsize=5 )
+
+
+
+
+
+#plt.annotate("(%s,%s)" % xy, xy=xy, xytext=(-20, 10), textcoords='offset points')
+
+
+
+#定義標頭
+#ax.set_title('Price Line')
+
+#定義x軸
+hfmt = mdates.DateFormatter('%H:%M')
+ax.xaxis.set_major_formatter(hfmt)
+
+table = pd.plotting.table(ax, result, loc='top')
+table.set_fontsize(14)
+table.scale(1.5, 1.5)  # may help
+#顯示繪製圖表
+plt.show()
 
 
 #pd.set_option('display.max_rows', df.shape[0]+1)
