@@ -1,0 +1,93 @@
+from LineMSG import linePush
+
+
+# r=0 #記錄交易資金流量
+# b=0 #設定多空方，多方=1，空方=-1，空手=0
+# topProfit = 0 
+# order_sign = 0 下單訊號 1 下一筆下單
+
+def BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex):
+    index = len(df)-1 #讀取最後一筆   
+    isOk =False
+   
+    #若b=0,表示空手
+    if b == 0 :
+        # 是否有下單訊號
+        if order_sign == 0 :
+            if  df['box_sign'].iloc[index] == 1  :
+                order_sign = 1
+            elif  df['box_sign'].iloc[index] == -1   :
+                order_sign = -1      
+        else :       
+            if order_sign == 1 or order_sign == -1 :   
+                
+                if( order_sign == 1 and  df['Close'].iloc[index] > df['Close'].iloc[index-1] and df['Close'].iloc[index] > df['BoxTop'].iloc[index-1]) :
+                    isOk = True
+                elif( order_sign == -1 and  df['Close'].iloc[index] < df['Close'].iloc[index-1] and df['Close'].iloc[index] < df['BoxDown'].iloc[index-1]) :
+                    isOk = True
+                else :
+                    isOk =False
+                    order_sign = 0
+                    b = 0
+                
+                
+                
+                if isOk == True :
+                    if  df['BoxIndex'].iloc[index] != boxIndex :
+                        b =  order_sign
+                        df['sign'].iloc[index] = b #進場時記錄多空
+                        r = df['Open'].iloc[index] #設定多方買進與空方賣出成本
+                        df['note'].iloc[index] = df['note'].iloc[index]+ " 進場 - 下單 ： " + str(b) +"  :  " + str(r) 
+                        linePush( str(df['BoxIndex'].iloc[index]) +' : '+endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+ df['note'].iloc[index])
+                        topProfit = r 
+                        order_sign = 0
+                        boxIndex = df['BoxIndex'].iloc[index]
+
+
+    return r,b,order_sign,topProfit,boxIndex
+
+def BoxTheoryOrderStop(df,wsp,lsp,r,b,topProfit,endTime):
+    index = len(df)-1 #讀取最後一筆  
+    mp = 0
+    try:
+        mm = df['Close'].iloc[index] 
+        mp = ( (int(mm) - int(r)) / int(r) )  * 100 * b
+        if(b == 1 and topProfit < mm) : 
+            topProfit = mm
+        elif (b == -1 and topProfit > mm) :
+            topProfit = mm  
+        
+        df['AA'].iloc[index] = ((topProfit - r ) * b )
+        df['BB'].iloc[index] = ((topProfit - r ) * b ) * wsp
+        df['CC'].iloc[index] = ((topProfit - mm) * b )
+        df['DD'].iloc[index] = mp
+
+        if ((topProfit - r ) * b ) * wsp < (topProfit - mm ) * b  :
+            linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'符合停利-出場')
+            r,b = BoxTheoryOrderOut(df,r,b,endTime)  
+            
+            b=0#多空方歸零
+            r=0
+            topProfit = 0 
+            return r,b ,topProfit
+
+
+    except :
+        print('except:'+str(r))
+
+    return r,b ,topProfit
+
+
+def BoxTheoryOrderOut(df,r,b,endTime):
+    index = len(df)-1 #讀取最後一筆 
+    #r是資金存量，b=多空方設定 多方=1 空方=-1
+    #price=1代表開盤價，price=4代表收盤價
+    rr = (df['Close'].iloc[index] - r) * b
+    df['ret'].iloc[index] = rr #進場時記錄多空
+    df['note1'].iloc[index] = df['note1'].iloc[index] + ' 出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(df['Close'].iloc[index]) +' ,結算 ： '+str(rr)
+    df['note'].iloc[index] = df['note'].iloc[index] +'出場：'+str(int(rr))
+    r=0#歸零
+    b=0#多空方歸零
+    linePush( endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+ df['note1'].iloc[index])
+   
+    return r,b

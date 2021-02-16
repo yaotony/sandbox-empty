@@ -1,11 +1,12 @@
+from LineMSG import linePush
 
 #定義進場函數，呼號範例為(r,b) = inp(df,r,b,i)
 def inp(df,r,b,i):
     isOk =False
     #r=成本 b=多空方設定 多方=1 空方=-1
-    print(df['Open'].iloc[i])
-    print(df['Close'].iloc[i-1])
-    print(df['BoxTop'].iloc[i])
+    #print(df['Open'].iloc[i])
+    #print(df['Close'].iloc[i-1])
+    #print(df['BoxTop'].iloc[i])
     
     if( b == 1 and  df['Close'].iloc[i] > df['Close'].iloc[i-1] and df['Close'].iloc[i] > df['BoxTop'].iloc[i-1]) :
         isOk = True
@@ -20,7 +21,7 @@ def inp(df,r,b,i):
         df['sign'].iloc[i] = b #進場時記錄多空
         r = df['Open'].iloc[i] #設定多方買進與空方賣出成本
         df['note'].iloc[i] =str(r) + df['note'].iloc[i]+ " 下單 ： " + str(b) +"  :  "
-   
+        linePush( df['note'].iloc[i])
     return (r,b)
 
 
@@ -28,12 +29,13 @@ def inp(df,r,b,i):
 def outp(df,r,b,price,i):
     #r是資金存量，b=多空方設定 多方=1 空方=-1
     #price=1代表開盤價，price=4代表收盤價
-    rr = (df['Open'].iloc[i] - r) * b
+    rr = (df['Close'].iloc[i] - r) * b
     df['ret'].iloc[i] = rr #進場時記錄多空
     df['note1'].iloc[i] = df['note1'].iloc[i] + ' 出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(df['Close'].iloc[i]) +' ,結算 ： '+str(rr)
     df['note'].iloc[i] = df['note'].iloc[i] +'出場：'+str(int(rr))
     r=0#歸零
     b=0#多空方歸零
+    linePush( df['note1'].iloc[i])
     return (r,b)
 
 #定義當日結算和停利停損函數
@@ -52,25 +54,26 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
         elif (b == -1 and topProfit > mm) :
             topProfit = mm
         
-        print('r:'+str(r))
-        print('topProfit:'+str(topProfit))
+        #print('r:'+str(r))
+        #print('topProfit:'+str(topProfit))
     
 
         mp1 =  ( (int(mm) - int(topProfit)) / int(topProfit) )  * 100 * b
 
-        print('mpV='+str( topProfit - r ) * b )
-        print('mpV1='+str ( topProfit -  mm) * b )
-        print('mpV2='+str (  ((topProfit - r ) * b ) * wsp  ))
+        #print('mpV='+str( topProfit - r ) * b )
+        #print('mpV1='+str ( topProfit -  mm) * b )
+        #print('mpV2='+str (  ((topProfit - r ) * b ) * wsp  ))
 
-        print('mp = ( int(mm) - int(r) / int(r) )  * 100 : ' +str(round(mp,2)) +' = ('+ str(int(mm)) +'-'+ str(int(r))+' / '+str(int(r))+')  * 100 * ' + str(b)  )
-        print('mp1 = ( int(mm) - int(topProfit) / int(topProfit) )  * 100 : ' +str(round(mp1,2)) +' = ('+ str(int(mm)) +'-'+ str(int(topProfit))+' / '+str(int(topProfit))+')  * 100 * ' + str(b)  )
+        #print('mp = ( int(mm) - int(r) / int(r) )  * 100 : ' +str(round(mp,2)) +' = ('+ str(int(mm)) +'-'+ str(int(r))+' / '+str(int(r))+')  * 100 * ' + str(b)  )
+        #print('mp1 = ( int(mm) - int(topProfit) / int(topProfit) )  * 100 : ' +str(round(mp1,2)) +' = ('+ str(int(mm)) +'-'+ str(int(topProfit))+' / '+str(int(topProfit))+')  * 100 * ' + str(b)  )
         df['AA'].iloc[i] = ((topProfit - r ) * b )
         df['BB'].iloc[i] = ((topProfit - r ) * b ) * wsp
         df['CC'].iloc[i] = ((topProfit - mm) * b )
         df['DD'].iloc[i] = mp
+        df['EE'].iloc[i] = topProfit
         #if mp > 0.1  :
         if ((topProfit - r ) * b ) * wsp < (topProfit - mm ) * b  :
-            print('苻合停利')
+            #print('苻合停利')
             r,b = outp(df,r,b,1,i+1)       
         
         #elif mp < lsp :
