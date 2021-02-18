@@ -1,6 +1,7 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 import datetime
 import time
+import pandas as pd
 from LineMSG import linePush
 from DataConn import getDBData
 from StrategyData import BoxTheory,setDefault
@@ -11,15 +12,15 @@ OutTime=datetime.datetime.now().replace( hour=19 , minute=33 , second=00 , micro
 
 
 
-starTime = datetime.datetime.strptime('2021-02-04 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-04 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-04 13:30:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-17 13:30:00','%Y-%m-%d %H:%M:%S')
 index = 1
 
-InTime=starTime.replace( hour=10 , minute=00 , second=00 , microsecond=00 )
+InTime=starTime.replace( hour=9 , minute=30 , second=00 , microsecond=00 )
 
 
-K = 60  #設定保留K線參數
+K = 20  #設定保留K線參數
 L = 0 #取得筆數
 r=0 #記錄交易資金流量
 b=0 #設定多空方，多方=1，空方=-1，空手=0
@@ -28,10 +29,18 @@ order_sign =0
 boxIndex = 0
 
 FUllData = getDBData(starTime,endTimeTest)
+result = pd.DataFrame({
+        '最後報酬':[0],
+        '總賺錢點數':[0],
+        '總賠錢點數':[0],
+        '交易次數':[0],
+        '最大回檔':[0],
+        '勝率':[0]
+    })
 
 
 def job():
-    global index,endTime,r,b,L,topProfit,order_sign,boxIndex
+    global index,endTime,r,b,L,topProfit,order_sign,boxIndex,result
     index = index + 1
     endTime = (endTime + datetime.timedelta(minutes=1))
     print(index)
@@ -54,9 +63,9 @@ def job():
 
     if( endTime >= InTime ): 
         if b == 0 :
-            r,b,order_sign,topProfit,boxIndex = BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex)
+            r,b,order_sign,topProfit,boxIndex,result = BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result)
         elif b == 1 or  b == -1 :
-            (r,b,topProfit)=BoxTheoryOrderStop(df,0.5,-0.5,r,b,topProfit,endTime)
+            (r,b,topProfit,result)=BoxTheoryOrderStop(df,0.5,-0.5,r,b,topProfit,endTime,result)
 
     
 
@@ -64,11 +73,14 @@ def job():
     #if datetime.datetime.now() > OutTime :
     if endTime > endTimeTest :
         if b != 0 :
-                (r,b) = BoxTheoryOrderOut(df,r,b,endTime)
+                (r,b,result) = BoxTheoryOrderOut(df,r,b,endTime,result)
                 topProfit=0
     
-        linePush('時間到我要休息了.....')
+        
         sched.shutdown(wait=False)
+        linePush('時間到我要休息了.....')
+        linemsg =result.columns[0] +":"+str(result[result.columns[0]].iloc[0]) +',' +result.columns[1] +":"+str(result[result.columns[1]].iloc[0]) +',' +result.columns[2] +":"+str(result[result.columns[2]].iloc[0])+',' +result.columns[3] +":"+str(result[result.columns[3]].iloc[0])+',' +result.columns[4] +":"+str(result[result.columns[4]].iloc[0])+',' +result.columns[5] +":"+str(result[result.columns[5]].iloc[0])
+        linePush( linemsg)
   
 
 
@@ -77,6 +89,6 @@ setDefault(FUllData)
 linePush('開始執行自動下單程式~')
 sched = BlockingScheduler()
 #每一分鐘執行一次 minute=1 ， 測試每5秒執行一次 seconds=5
-sched.add_job(job, 'interval', seconds=1,max_instances=10) 
+sched.add_job(job, 'interval', seconds=0.5,max_instances=10) 
 sched.start()
 

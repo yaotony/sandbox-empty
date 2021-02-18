@@ -12,7 +12,7 @@ from matplotlib.dates import DateFormatter
 import time 
 import requests,datetime,os
 
-from DataConn import getDBData
+from DataConn import getDBData,getDBDataForWebAPI
 from LineMSG import linePush
 
 
@@ -159,30 +159,30 @@ columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次
 reValues =[]
    
 
-starTime = datetime.datetime.strptime('2021-02-04 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-04 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-04 13:30:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-17 13:30:00','%Y-%m-%d %H:%M:%S')
 
-df = getDBData(starTime,endTimeTest)
-BT(df,5,1)
-df['cus'] = df['ret'].cumsum()
-result = result_F(df,reValues,'DB1')
-out_excle('DB1',df,result)
-drawMap(df,'DB1',result)
-linemsg =result.columns[0] +":"+str(result[result.columns[0]].iloc[0]) +',' +result.columns[1] +":"+str(result[result.columns[1]].iloc[0]) +',' +result.columns[2] +":"+str(result[result.columns[2]].iloc[0])+',' +result.columns[3] +":"+str(result[result.columns[3]].iloc[0])+',' +result.columns[4] +":"+str(result[result.columns[4]].iloc[0])+',' +result.columns[5] +":"+str(result[result.columns[5]].iloc[0])
-linePush( linemsg)
+#df = getDBDataForWebAPI(starTime,endTimeTest)
+#BT(df,5,1)
+#df['cus'] = df['ret'].cumsum()
+#result = result_F(df,reValues,'DB1')
+#out_excle('DB1',df,result)
+#drawMap(df,'DB1',result)
+#linemsg =result.columns[0] +":"+str(result[result.columns[0]].iloc[0]) +',' +result.columns[1] +":"+str(result[result.columns[1]].iloc[0]) +',' +result.columns[2] +":"+str(result[result.columns[2]].iloc[0])+',' +result.columns[3] +":"+str(result[result.columns[3]].iloc[0])+',' +result.columns[4] +":"+str(result[result.columns[4]].iloc[0])+',' +result.columns[5] +":"+str(result[result.columns[5]].iloc[0])
+#linePush( linemsg)
 
-#for i in range (len(filenames)):
-    #df =   pd.read_csv(FilePath+filenames[i],encoding="UTF8")
+for i in range (len(filenames)):
+    df =   pd.read_csv(FilePath+filenames[i],encoding="UTF8")
     #Strategy1  
     #BT(df,5,5)
     #Strategy2  
-    #BT(df,5,1)
+    BT(df,5,1)
     #計算累計損益
-    #df['cus'] = df['ret'].cumsum()
-    #result = result_F(df,reValues,filenames[i])
-    #out_excle(filenames[i],df,result)
-   # drawMap(df,filenames[i],result)
+    df['cus'] = df['ret'].cumsum()
+    result = result_F(df,reValues,filenames[i])
+    out_excle(filenames[i],df,result)
+    #drawMap(df,filenames[i],result)
   
     #計算各項策略績效指標
 

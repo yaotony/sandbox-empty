@@ -1,4 +1,5 @@
 from LineMSG import linePush
+from SendOrderMSG  import sendMSG
 
 #定義進場函數，呼號範例為(r,b) = inp(df,r,b,i)
 def inp(df,r,b,i):
@@ -7,10 +8,13 @@ def inp(df,r,b,i):
     #print(df['Open'].iloc[i])
     #print(df['Close'].iloc[i-1])
     #print(df['BoxTop'].iloc[i])
-    
-    if( b == 1 and  df['Close'].iloc[i] > df['Close'].iloc[i-1] and df['Close'].iloc[i] > df['BoxTop'].iloc[i-1]) :
+    #BoxTopMax	BoxDownMin
+   # if( b == 1 and  df['Close'].iloc[i] > df['BoxTopMax'].iloc[i]  and  df['Close'].iloc[i] > df['Close'].iloc[i-1] and df['Close'].iloc[i] > df['BoxTop'].iloc[i-1]) :
+    if( b == 1 and  df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] ):
         isOk = True
-    elif( b == -1 and  df['Close'].iloc[i] < df['Close'].iloc[i-1] and df['Close'].iloc[i] < df['BoxDown'].iloc[i-1]) :
+
+    #elif( b == -1 and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i]  and df['Close'].iloc[i] < df['Close'].iloc[i-1] and df['Close'].iloc[i] < df['BoxDown'].iloc[i-1]) :
+    elif( b == -1 and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] ):
         isOk = True
     else :
         isOk =False
@@ -21,7 +25,8 @@ def inp(df,r,b,i):
         df['sign'].iloc[i] = b #進場時記錄多空
         r = df['Open'].iloc[i] #設定多方買進與空方賣出成本
         df['note'].iloc[i] =str(r) + df['note'].iloc[i]+ " 下單 ： " + str(b) +"  :  "
-        linePush( df['note'].iloc[i])
+        sendMSG(b,df['Time'].iloc[i])
+        #linePush( df['note'].iloc[i])
     return (r,b)
 
 
@@ -33,9 +38,10 @@ def outp(df,r,b,price,i):
     df['ret'].iloc[i] = rr #進場時記錄多空
     df['note1'].iloc[i] = df['note1'].iloc[i] + ' 出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(df['Close'].iloc[i]) +' ,結算 ： '+str(rr)
     df['note'].iloc[i] = df['note'].iloc[i] +'出場：'+str(int(rr))
+    sendMSG(2,df['Time'].iloc[i])
     r=0#歸零
     b=0#多空方歸零
-    linePush( df['note1'].iloc[i])
+    #linePush( df['note1'].iloc[i])
     return (r,b)
 
 #定義當日結算和停利停損函數
@@ -44,7 +50,10 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
     #mm = df.iloc[i,4] #當日結算(收盤價)
     #mp = mm / r  # 以當日結價價 / 進場成本
     #公式=(現價-上一交易日的收盤價)/上一交易日的收盤價X100%。
-    
+   # if b == 1 :
+   #     topProfit = df['High'].iloc[i].rolling(5).max()
+   # elif b == -1 : 
+   #     topProfit = df['Low'].iloc[i].rolling(5).min()     
     mp = 0
     try:
         mm = df['Close'].iloc[i] 
@@ -58,7 +67,7 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
         #print('topProfit:'+str(topProfit))
     
 
-        mp1 =  ( (int(mm) - int(topProfit)) / int(topProfit) )  * 100 * b
+        #mp1 =  ( (int(mm) - int(topProfit)) / int(topProfit) )  * 100 * b
 
         #print('mpV='+str( topProfit - r ) * b )
         #print('mpV1='+str ( topProfit -  mm) * b )
@@ -71,14 +80,25 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
         df['CC'].iloc[i] = ((topProfit - mm) * b )
         df['DD'].iloc[i] = mp
         df['EE'].iloc[i] = topProfit
-        #if mp > 0.1  :
-        if ((topProfit - r ) * b ) * wsp < (topProfit - mm ) * b  :
-            #print('苻合停利')
-            r,b = outp(df,r,b,1,i+1)       
-        
+      
+        if ((topProfit - r ) * b ) > 0 :
+            if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
+                print('苻合停利+')
+                r,b = outp(df,r,b,1,i)  
+            elif  ((topProfit - r ) * b )  >= 100 :
+                print('強制出場')
+                r,b = outp(df,r,b,1,i)
         #elif mp < lsp :
-        #    print('苻合停損')
-        #    r,b = outp(df,r,b,1,i+1)
+        #    print('苻合停損-')
+        #    r,b = outp(df,r,b,1,i)
+        
+        elif b == 1 and  df['Close'].iloc[i] < df['BoxTop'].iloc[i]:
+            print('苻合停損+')
+            r,b = outp(df,r,b,1,i)
+
+        elif b == -1 and  df['Close'].iloc[i] > df['BoxDown'].iloc[i]:
+            print('苻合停損-')
+            r,b = outp(df,r,b,1,i)
             
 
        

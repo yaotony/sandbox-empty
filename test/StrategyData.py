@@ -39,6 +39,7 @@ def BoxTheory(df,N,S):
     df['CC']='' 
     df['DD']='' 
     df['EE']='' 
+    df['FF']='' 
     df['BoxIndex'] = 0
 
     df['BoxTopD'] = df['High'].iloc[:].rolling(N).max()
@@ -76,8 +77,8 @@ def BoxTheory(df,N,S):
 
       
         
-        #設定Box 指標箱型突破高點訊號= 1 (部位買進)
-        if (df['BoxTop'].iloc[i] < df['Close'].iloc[i] ) &  (df['BoxTopDef'].iloc[i] > S) : 
+        #設定Box 指標箱型突破高點訊號= 1 (部位買進)df['BoxTop'].iloc[i-1] > df['Close'].iloc[i-1] and
+        if ( df['BoxTop'].iloc[i] < df['Close'].iloc[i] ) and  df['BoxTopDef'].iloc[i] > S : 
             if df['Close'].iloc[i] > df['Close'].iloc[i-1]:
                 if topV < df['Close'].iloc[i] :
                     topV = df['Close'].iloc[i]
@@ -93,8 +94,8 @@ def BoxTheory(df,N,S):
            
     
         
-        #設定Box指標箱型突破低點訊號= -1 (部位買進)
-        if (df['BoxDown'].iloc[i] > df['Close'].iloc[i])  &  (df['BoxDownDef'].iloc[i] > S ) : 
+        #設定Box指標箱型突破低點訊號= -1 (部位買進)df['BoxDown'].iloc[i-1] < df['Close'].iloc[i-1] and 
+        if (df['BoxDown'].iloc[i] > df['Close'].iloc[i] ) and  df['BoxDownDef'].iloc[i] > S  : 
             if df['Close'].iloc[i] < df['Close'].iloc[i-1] :
                 if DownV ==  0  or  DownV > df['Close'].iloc[i] :
                     DownV = df['Close'].iloc[i]
@@ -103,16 +104,17 @@ def BoxTheory(df,N,S):
                     if boxIndexDown == 0 :
                         boxIndex = boxIndex + 1 
                         boxIndexTop = 0
-                        boxIndexDown = 1
-                        boxIndexBL =0                 
+                        boxIndexDown = 1  
+                        boxIndexBL =0               
                     df['BoxIndex'].iloc[i] = boxIndex
-        
-
-        if (df['BoxTop'].iloc[i] < df['Close'].iloc[i] ) &  (df['BoxDown'].iloc[i] > df['Close'].iloc[i]): 
+            
+        if (df['BoxTop'].iloc[i] > df['Close'].iloc[i] ) &  (df['BoxDown'].iloc[i] < df['Close'].iloc[i]): 
             if boxIndexBL == 0 :
                 boxIndexTop = 0
                 boxIndexDown = 0  
-                boxIndexBL =1           
+                boxIndexBL =1
+                df['FF'].iloc[i] ='V'            
+                             
 
         if df['BoxTop'].iloc[i] < df['BoxDown'].iloc[i]  :
             df['box_sign'].iloc[i] = 1
