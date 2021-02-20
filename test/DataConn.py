@@ -41,7 +41,7 @@ def getDBDataForWebAPI(strDate,endDate) :
     "Key2": "",
     "Key3": "125",
     "MinutesK": "1",
-    "IsNoDataRefPre": True
+    "IsNoDataRefPre": False
     }
     url = "http://ap.joumingt.net:8858/moneymore/api/handleindexnumber.svc/GetIndexNumberOHLC"
     data_json = json.dumps(data)

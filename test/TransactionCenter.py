@@ -17,10 +17,10 @@ endTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
 endTimeTest = datetime.datetime.strptime('2021-02-17 13:30:00','%Y-%m-%d %H:%M:%S')
 index = 1
 
-InTime=starTime.replace( hour=9 , minute=30 , second=00 , microsecond=00 )
+InTime=starTime.replace( hour=9 , minute=10 , second=00 , microsecond=00 )
 
 
-K = 20  #設定保留K線參數
+K = 10  #設定保留K線參數
 L = 0 #取得筆數
 r=0 #記錄交易資金流量
 b=0 #設定多空方，多方=1，空方=-1，空手=0
@@ -64,6 +64,7 @@ def job():
     if( endTime >= InTime ): 
         if b == 0 :
             r,b,order_sign,topProfit,boxIndex,result = BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result)
+            print("BBBBBBB:"+str(b))
         elif b == 1 or  b == -1 :
             (r,b,topProfit,result)=BoxTheoryOrderStop(df,0.5,-0.5,r,b,topProfit,endTime,result)
 
@@ -89,6 +90,6 @@ setDefault(FUllData)
 linePush('開始執行自動下單程式~')
 sched = BlockingScheduler()
 #每一分鐘執行一次 minute=1 ， 測試每5秒執行一次 seconds=5
-sched.add_job(job, 'interval', seconds=0.5,max_instances=10) 
+sched.add_job(job, 'interval', seconds=1,max_instances=10) 
 sched.start()
 

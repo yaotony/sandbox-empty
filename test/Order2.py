@@ -3,30 +3,11 @@ from SendOrderMSG  import sendMSG
 
 #定義進場函數，呼號範例為(r,b) = inp(df,r,b,i)
 def inp(df,r,b,i):
-    isOk =False
-    #r=成本 b=多空方設定 多方=1 空方=-1
-    #print(df['Open'].iloc[i])
-    #print(df['Close'].iloc[i-1])
-    #print(df['BoxTop'].iloc[i])
-    #BoxTopMax	BoxDownMin
-   # if( b == 1 and  df['Close'].iloc[i] > df['BoxTopMax'].iloc[i]  and  df['Close'].iloc[i] > df['Close'].iloc[i-1] and df['Close'].iloc[i] > df['BoxTop'].iloc[i-1]) :
-    if( b == 1 and  df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] ):
-        isOk = True
 
-    #elif( b == -1 and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i]  and df['Close'].iloc[i] < df['Close'].iloc[i-1] and df['Close'].iloc[i] < df['BoxDown'].iloc[i-1]) :
-    elif( b == -1 and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] ):
-        isOk = True
-    else :
-        isOk =False
-        b = 0
-
-    
-    if isOk == True :
-        df['sign'].iloc[i] = b #進場時記錄多空
-        r = df['Open'].iloc[i] #設定多方買進與空方賣出成本
-        df['note'].iloc[i] =str(r) + df['note'].iloc[i]+ " 下單 ： " + str(b) +"  :  "
-        #sendMSG(b,df['Time'].iloc[i],"BoxTheory")
-        #linePush( df['note'].iloc[i])
+    df['sign'].iloc[i] = b #進場時記錄多空
+    r = df['Open'].iloc[i] #設定多方買進與空方賣出成本
+    df['note'].iloc[i] =str(r) + df['note'].iloc[i]+ " 下單 ： " + str(b) +"  :  "
+   
     return (r,b)
 
 
@@ -81,24 +62,28 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
         df['DD'].iloc[i] = mp
         df['EE'].iloc[i] = topProfit
       
-        if ((topProfit - r ) * b ) > 0 :
-            if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
-                print('苻合停利+')
-                r,b = outp(df,r,b,1,i)  
-            elif  ((topProfit - r ) * b )  >= 100 :
-                print('強制出場')
-                r,b = outp(df,r,b,1,i)
+
+        #TriangleTop	TriangleDown
+        
+        
+        #if mp > wsp :
+            
+        #    r,b = outp(df,r,b,1,i)
+            
         #elif mp < lsp :
         #    print('苻合停損-')
         #    r,b = outp(df,r,b,1,i)
         
-        elif b == 1 and  df['Close'].iloc[i] < df['BoxTop'].iloc[i]:
-            print('苻合停損+')
-            r,b = outp(df,r,b,1,i)
+        TriangleTop = df['TriangleTop'].iloc[i-1]
+        TriangleDown = df['TriangleDown'].iloc[i-1]
+        Triangle = df['Triangle'].iloc[i-1]
 
-        elif b == -1 and  df['Close'].iloc[i] > df['BoxDown'].iloc[i]:
-            print('苻合停損-')
-            r,b = outp(df,r,b,1,i)
+        if( b == 1  and TriangleTop > 0    and Triangle <  100 ) :
+           r,b = outp(df,r,b,1,i)
+        
+        if( b == -1  and TriangleDown > 0   and Triangle < 100 ) :
+           r,b = outp(df,r,b,1,i)
+
             
             
 

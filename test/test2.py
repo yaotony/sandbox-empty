@@ -1,5 +1,5 @@
 from indicator import GetHistoryData,KBar
-from Strategy5 import BoxTheory as BT
+from Strategy6 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -11,8 +11,8 @@ from mpl_finance import candlestick_ohlc
 from matplotlib.dates import DateFormatter
 import time 
 import requests,datetime,os
-
 from DataConn import getDBData,getDBDataForWebAPI
+
 from LineMSG import linePush
 
 
@@ -95,6 +95,9 @@ def drawMap(df ,title ,result) :
     BoxTop   = mmData['BoxTop'].iloc[:]
     BoxDown  = mmData['BoxDown'].iloc[:]
 
+   
+
+
     #定義圖表物件
     ax = plt.subplot(111)
     plt.rcParams['font.sans-serif'] = ['PingFang HK']
@@ -105,23 +108,36 @@ def drawMap(df ,title ,result) :
     ax.plot_date( Time,Price, 'k-' , linewidth=1 ,color='#FF0000')
     ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
     for i in  range( len(mmData)):
-        if mmData['sign'].iloc[i] == -1 :
-            ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
-                xycoords='data',
-                arrowprops=dict(facecolor='green', shrink=0.05)
-                )
-        elif mmData['sign'].iloc[i]== 1 :
-            ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
-                xycoords='data',
-                arrowprops=dict(facecolor='red', shrink=0.05)
-                )
-
-        elif  len(mmData['note'].iloc[i]) > 0:
-            ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
-                xycoords='data',
-                arrowprops=dict(facecolor='fuchsia', shrink=0.05)
-                )
         
+         if mmData['sign'].iloc[i] == -1 :
+             ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+                 xycoords='data',
+                 arrowprops=dict(facecolor='green', shrink=0.05)
+                 )
+         elif mmData['sign'].iloc[i]== 1 :
+             ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+                 xycoords='data',
+                 arrowprops=dict(facecolor='red', shrink=0.05)
+                 )
+
+         elif  len(mmData['note'].iloc[i]) > 0:
+             ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+                 xycoords='data',
+                 arrowprops=dict(facecolor='fuchsia', shrink=0.05)
+                 )
+         #TriangleTop	TriangleDown
+        
+        # if mmData['TriangleTop'].iloc[i] > 0 :
+        #     ax.annotate(str(mmData['Triangle'].iloc[i]), xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+        #         xycoords='data',
+        #         arrowprops=dict(facecolor='Salmon', shrink=0.05)
+        #         )
+        
+        # if mmData['TriangleDown'].iloc[i] > 0 :
+        #     ax.annotate(str(mmData['Triangle'].iloc[i]), xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+        #         xycoords='data',
+        #         arrowprops=dict(facecolor='#00FFFF', shrink=0.05)
+        #         )
 
 
 
@@ -159,15 +175,20 @@ columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次
 reValues =[]
    
 
-starTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-17 13:30:00','%Y-%m-%d %H:%M:%S')
+#starTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
+#endTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
+#endTimeTest = datetime.datetime.strptime('2021-02-19 13:30:00','%Y-%m-%d %H:%M:%S')
+
+starTime = datetime.datetime.strptime('2021-02-19 15:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
+
 
 df = getDBDataForWebAPI(starTime,endTimeTest)
 BT(df,5,1)
 df['cus'] = df['ret'].cumsum()
 result = result_F(df,reValues,'DB1')
-out_excle('DB1',df,result)
+out_excle('DB1API',df,result)
 drawMap(df,'DB1',result)
 #linemsg =result.columns[0] +":"+str(result[result.columns[0]].iloc[0]) +',' +result.columns[1] +":"+str(result[result.columns[1]].iloc[0]) +',' +result.columns[2] +":"+str(result[result.columns[2]].iloc[0])+',' +result.columns[3] +":"+str(result[result.columns[3]].iloc[0])+',' +result.columns[4] +":"+str(result[result.columns[4]].iloc[0])+',' +result.columns[5] +":"+str(result[result.columns[5]].iloc[0])
 #linePush( linemsg)

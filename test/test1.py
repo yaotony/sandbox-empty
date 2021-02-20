@@ -1,5 +1,5 @@
 from indicator import GetHistoryData,KBar
-from Strategy5 import BoxTheory as BT
+from Strategy6 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates

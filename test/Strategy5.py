@@ -139,10 +139,10 @@ def BoxTheory(df,N,S):
         if i < L-1 :
             #若 b = 1 ,表示多
             if b == 1 :
-                (r,b,topProfit)=stop(df,0.5,-0.5,r,b,i,topProfit)
+                (r,b,topProfit)=stop(df,0.5,-0.3,r,b,i,topProfit)
                      
             elif b == -1 :
-                (r,b,topProfit)=stop(df,0.5,-0.5,r,b,i,topProfit)
+                (r,b,topProfit)=stop(df,0.5,-0.3,r,b,i,topProfit)
             
             
             

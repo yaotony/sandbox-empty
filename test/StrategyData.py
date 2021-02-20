@@ -40,13 +40,15 @@ def BoxTheory(df,N,S):
     df['DD']='' 
     df['EE']='' 
     df['FF']='' 
+    df['BoxTopMax']  = 0
+    df['BoxDownMin'] = 0
     df['BoxIndex'] = 0
 
     df['BoxTopD'] = df['High'].iloc[:].rolling(N).max()
-    df['BoxDownD'] = df['Close'].iloc[:].rolling(N).min()
+    df['BoxDownD'] = df['Low'].iloc[:].rolling(N).min()
     df['BoxTopN'] = df['High'].iloc[:].shift(1+N).rolling(N).max()
-    df['BoxDownN'] = df['Close'].iloc[:].shift(1+N).rolling(N).min()
-
+    df['BoxDownN'] = df['Low'].iloc[:].shift(1+N).rolling(N).min()
+   
   
 
     topV = 0
@@ -75,7 +77,8 @@ def BoxTheory(df,N,S):
         df['BoxTopDef'].iloc[i] = (df['BoxTop'].iloc[i] - df['Close'].iloc[i]) * -1
         df['BoxDownDef'].iloc[i] = df['BoxDown'].iloc[i] - df['Close'].iloc[i]
 
-      
+        df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-N:i].max()
+        df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-N:i].min()
         
         #設定Box 指標箱型突破高點訊號= 1 (部位買進)df['BoxTop'].iloc[i-1] > df['Close'].iloc[i-1] and
         if ( df['BoxTop'].iloc[i] < df['Close'].iloc[i] ) and  df['BoxTopDef'].iloc[i] > S : 
