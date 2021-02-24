@@ -38,7 +38,7 @@ def BoxTheory(df,N,S):
     df['TriangleTop'] =0
     df['TriangleDown'] =0
     df['Triangle'] = 0
-   
+    df['Triangle_sign'] = 0
     #Box 交易訊號欄
     df['box_sign'] =0
    
@@ -82,11 +82,11 @@ def BoxTheory(df,N,S):
         if df['Close'].iloc[i-1] > df['Close'].iloc[i-2] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :
             df['TriangleTop'].iloc[i-1] = df['Close'].iloc[i-1]
             df['Triangle'].iloc[i-1]  =   cal_ang((df['Close'].iloc[i-2], i-2), (df['Close'].iloc[i-1], i-1), (df['Close'].iloc[i], i))
-        
+            df['Triangle_sign'].iloc[i-1] = 1
         if df['Close'].iloc[i-1] < df['Close'].iloc[i-2] and df['Close'].iloc[i-1] < df['Close'].iloc[i] :
             df['TriangleDown'].iloc[i-1] = df['Close'].iloc[i-1]
             df['Triangle'].iloc[i-1]  =   cal_ang((df['Close'].iloc[i-2], i-2), (df['Close'].iloc[i-1], i-1), (df['Close'].iloc[i], i))
-       
+            df['Triangle_sign'].iloc[i-1] = -1
         
        
 
@@ -140,7 +140,7 @@ def BoxTheory(df,N,S):
 
 
     #進行買賣
-    K = 10  #設定保留K線參數
+    K = 5  #設定保留K線參數
     L = len(df) #取得筆數
     r=0 #記錄交易資金流量
     b=0 #設定多空方，多方=1，空方=-1，空手=0
@@ -165,35 +165,31 @@ def BoxTheory(df,N,S):
         #若 i < 最後一筆，則執行
         if i < L-1 :
             #若 b = 1 ,表示多
-            if b == 1 :
-                (r,b,topProfit)=stop(df,1,-0.3,r,b,i,topProfit)
+            if b == 1  or b == -1 :
+                (r,b,topProfit)=stop(df,0.5,-0.1,r,b,i,topProfit)
+                
                      
-            elif b == -1 :
-                (r,b,topProfit)=stop(df,1,-0.3,r,b,i,topProfit)
-            
-            
+        
             
                 #若b=0,表示空手
             if b == 0 :
-                if  df['TriangleDown'].iloc[i] > 0   :
-                    if order_sign == 0 :
+                if order_sign == 0 :
+                    if  df['Triangle_sign'].iloc[i] == 1  and   df['Triangle'].iloc[i-1] < 30 :
                         order_sign = 1 
                         continue
-                elif  df['TriangleTop'].iloc[i] > 0   :
-                    if order_sign == 0 :
+                    elif  df['Triangle_sign'].iloc[i] == -1  and   df['Triangle'].iloc[i-1] < 30 :
                         order_sign = -1 
                         continue
+                
 
 
                 if order_sign == 1   :
-
-                    r,b = inp(df,r,1,i)
+                    r,b = inp(df,r,1,i+1)
                     topProfit = r
                     order_sign = 0 
 
                 elif order_sign == -1  : 
-
-                    r,b = inp(df,r,-1,i)
+                    r,b = inp(df,r,-1,i+1)
                     topProfit = r
                     order_sign = 0 
                 else :

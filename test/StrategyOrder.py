@@ -7,7 +7,7 @@ from SendOrderMSG  import sendMSG
 # topProfit = 0 
 # order_sign = 0 下單訊號 1 下一筆下單
 
-def BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result):
+def OrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result):
     index = len(df)-1 #讀取最後一筆   
     isOk =False
    
@@ -51,61 +51,57 @@ def BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result):
 
     return r,b,order_sign,topProfit,boxIndex,result
 
-def BoxTheoryOrderStop(df,wsp,lsp,r,b,topProfit,endTime,result):
+def OrderStop(df,wsp,lsp,r,b,topProfit,endTime,result):
     index = len(df)-1 #讀取最後一筆  
     mp = 0
-    try:
-        mm = df['Close'].iloc[index] 
-        mp = ( (int(mm) - int(r)) / int(r) )  * 100 * b
-        if(b == 1 and topProfit < mm) : 
-            topProfit = mm
-        elif (b == -1 and topProfit > mm) :
-            topProfit = mm
+
+    mm = df['Close'].iloc[index] 
+    mp = ( (int(mm) - int(r)) / int(r) )  * 100 * b
+    if(b == 1 and topProfit < mm) : 
+        topProfit = mm
+    elif (b == -1 and topProfit > mm) :
+        topProfit = mm
         
-        df['AA'].iloc[index] = ((topProfit - r ) * b )
-        df['BB'].iloc[index] = ((topProfit - r ) * b ) * wsp
-        df['CC'].iloc[index] = ((topProfit - mm) * b )
-        df['DD'].iloc[index] = mp
-        print("df['AA'].iloc[index]:"+str(df['AA'].iloc[index]))
-        print("df['BB'].iloc[index]:"+str(df['BB'].iloc[index]))
-        print("df['CC'].iloc[index]:"+str(df['CC'].iloc[index]))
-        print("df['DD'].iloc[index]:"+str(df['DD'].iloc[index]))
+    df['AA'].iloc[index] = ((topProfit - r ) * b )
+    df['BB'].iloc[index] = ((topProfit - r ) * b ) * wsp
+    df['CC'].iloc[index] = ((topProfit - mm) * b )
+    df['DD'].iloc[index] = mp
+    print("df['AA'].iloc[index]:"+str(df['AA'].iloc[index]))
+    print("df['BB'].iloc[index]:"+str(df['BB'].iloc[index]))
+    print("df['CC'].iloc[index]:"+str(df['CC'].iloc[index]))
+    print("df['DD'].iloc[index]:"+str(df['DD'].iloc[index]))
         #
-        if ((topProfit - r ) * b ) > 0 :
-            if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
-                #print('苻合停利+')
-                linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'苻合停利+出場')
-                r,b,result = BoxTheoryOrderOut(df,r,b,endTime,result) 
-                return r,b ,topProfit,result
-            elif  ((topProfit - r ) * b )  >= 100 :
-                linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'強制出場+')
-                #print('強制出場')
-                r,b,result = BoxTheoryOrderOut(df,r,b,endTime,result)
-                return r,b ,topProfit,result
+    if ((topProfit - r ) * b ) > 0 :
+        if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
+            #print('苻合停利+')
+            #linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'苻合停利+出場')
+            r,b,result = OrderOut(df,r,b,endTime,result) 
+            return r,b ,topProfit,result
+        elif  ((topProfit - r ) * b )  >= 100 :
+            #linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'強制出場+')
+            #print('強制出場')
+            r,b,result = OrderOut(df,r,b,endTime,result)
+            return r,b ,topProfit,result
         #elif mp < lsp :
         #    print('苻合停損-')
         #    r,b = outp(df,r,b,1,i)
         
-        elif b == 1 and  df['Close'].iloc[index] < df['BoxTop'].iloc[index]:
-            linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'苻合停損+出場')
+    elif b == 1 and  df['Close'].iloc[index] < df['BoxTop'].iloc[index]:
+        #linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'苻合停損+出場')
             #print('苻合停損+')
-            r,b,result = BoxTheoryOrderOut(df,r,b,endTime,result)
-            return r,b ,topProfit,result
+        r,b,result = OrderOut(df,r,b,endTime,result)
+        return r,b ,topProfit,result
 
-        elif b == -1 and  df['Close'].iloc[index] > df['BoxDown'].iloc[index]:
-            linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'苻合停損-出場')
+    elif b == -1 and  df['Close'].iloc[index] > df['BoxDown'].iloc[index]:
+        #linePush(endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+'苻合停損-出場')
             #print('苻合停損-')
-            r,b,result = BoxTheoryOrderOut(df,r,b,endTime,result)
-            return r,b ,topProfit,result
-
-
-    except :
-        print('except:'+str(r))
-
+        r,b,result = OrderOut(df,r,b,endTime,result)
+        return r,b ,topProfit,result
+    
     return r,b ,topProfit,result
 
 
-def BoxTheoryOrderOut(df,r,b,endTime,result):
+def OrderOut(df,r,b,endTime,result):
     index = len(df)-1 #讀取最後一筆 
     #r是資金存量，b=多空方設定 多方=1 空方=-1
     #price=1代表開盤價，price=4代表收盤價
@@ -122,4 +118,4 @@ def BoxTheoryOrderOut(df,r,b,endTime,result):
     else :
         result['總賠錢點數'].iloc[0] = result['總賠錢點數'].iloc[0] + rr
    
-    return r,b,result
+    return 0,0,result

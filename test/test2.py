@@ -125,7 +125,7 @@ def drawMap(df ,title ,result) :
                  xycoords='data',
                  arrowprops=dict(facecolor='fuchsia', shrink=0.05)
                  )
-         #TriangleTop	TriangleDown
+        #  TriangleTop	TriangleDown
         
         # if mmData['TriangleTop'].iloc[i] > 0 :
         #     ax.annotate(str(mmData['Triangle'].iloc[i]), xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
@@ -175,20 +175,21 @@ columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次
 reValues =[]
    
 
-#starTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
-#endTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
-#endTimeTest = datetime.datetime.strptime('2021-02-19 13:30:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-24 09:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-24 09:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-24 13:30:00','%Y-%m-%d %H:%M:%S')
 
-starTime = datetime.datetime.strptime('2021-02-19 15:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
+#starTime = datetime.datetime.strptime('2021-02-19 15:00:00','%Y-%m-%d %H:%M:%S')
+#endTime = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
+#endTimeTest = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
 
 
 df = getDBDataForWebAPI(starTime,endTimeTest)
+df['Time'] = pd.to_datetime(df['Time'], format='%Y-%m-%d %H:%M:%S')
 BT(df,5,1)
 df['cus'] = df['ret'].cumsum()
 result = result_F(df,reValues,'DB1')
-out_excle('DB1API',df,result)
+out_excle('DBNew',df,result)
 drawMap(df,'DB1',result)
 #linemsg =result.columns[0] +":"+str(result[result.columns[0]].iloc[0]) +',' +result.columns[1] +":"+str(result[result.columns[1]].iloc[0]) +',' +result.columns[2] +":"+str(result[result.columns[2]].iloc[0])+',' +result.columns[3] +":"+str(result[result.columns[3]].iloc[0])+',' +result.columns[4] +":"+str(result[result.columns[4]].iloc[0])+',' +result.columns[5] +":"+str(result[result.columns[5]].iloc[0])
 #linePush( linemsg)

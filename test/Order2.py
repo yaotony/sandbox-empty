@@ -15,9 +15,9 @@ def inp(df,r,b,i):
 def outp(df,r,b,price,i):
     #r是資金存量，b=多空方設定 多方=1 空方=-1
     #price=1代表開盤價，price=4代表收盤價
-    rr = (df['Close'].iloc[i] - r) * b
+    rr = (df['Open'].iloc[i] - r) * b
     df['ret'].iloc[i] = rr #進場時記錄多空
-    df['note1'].iloc[i] = df['note1'].iloc[i] + ' 出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(df['Close'].iloc[i]) +' ,結算 ： '+str(rr)
+    df['note1'].iloc[i] = df['note1'].iloc[i] + ' 出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(df['Open'].iloc[i]) +' ,結算 ： '+str(rr)
     df['note'].iloc[i] = df['note'].iloc[i] +'出場：'+str(int(rr))
     #sendMSG(b,df['Time'].iloc[i],"Exit")
     r=0#歸零
@@ -63,28 +63,36 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
         df['EE'].iloc[i] = topProfit
       
 
-        #TriangleTop	TriangleDown
+        # #TriangleTop	TriangleDown
         
+        # if ((topProfit - r ) * b ) > 0 :
+        #     if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
+        #         print('苻合停利+')
+        #         r,b = outp(df,r,b,1,i)  
+        #     elif  ((topProfit - r ) * b )  >= 100 :
+        #         print('強制出場')
+        #         r,b = outp(df,r,b,1,i)
         
-        #if mp > wsp :
             
-        #    r,b = outp(df,r,b,1,i)
-            
-        #elif mp < lsp :
-        #    print('苻合停損-')
-        #    r,b = outp(df,r,b,1,i)
+        # elif mp < lsp :
+        # #   print('苻合停損-')
+        #     r,b = outp(df,r,b,1,i)
         
-        TriangleTop = df['TriangleTop'].iloc[i-1]
-        TriangleDown = df['TriangleDown'].iloc[i-1]
-        Triangle = df['Triangle'].iloc[i-1]
+        # TriangleTop = df['TriangleTop'].iloc[i-1]
+        # TriangleDown = df['TriangleDown'].iloc[i-1]
+        # Triangle = df['Triangle'].iloc[i-1]
 
-        if( b == 1  and TriangleTop > 0    and Triangle <  100 ) :
-           r,b = outp(df,r,b,1,i)
+        # if( b == 1  and TriangleTop > 0    and Triangle <  100 ) :
+        #   r,b = outp(df,r,b,1,i+1)
+         
+        # if( b == -1  and TriangleDown > 0   and Triangle < 100 ) :
+        #   r,b = outp(df,r,b,1,i+1)
         
-        if( b == -1  and TriangleDown > 0   and Triangle < 100 ) :
-           r,b = outp(df,r,b,1,i)
+          
 
-            
+        if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b   :
+                #print('苻合停利+')
+            r,b = outp(df,r,b,1,i+1)      
             
 
        

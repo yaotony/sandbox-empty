@@ -3,18 +3,18 @@ import datetime
 import time
 import pandas as pd
 from LineMSG import linePush
-from DataConn import getDBData
-from StrategyData import BoxTheory,setDefault
-from StrategyOrder import BoxTheoryOrderInp,BoxTheoryOrderOut,BoxTheoryOrderStop
+from DataConn import getDBData,getDBDataForWebAPI
+from StrategyData import BoxTheory,setDefault,TriangleTheory
+from StrategyOrder import OrderInp,OrderOut,OrderStop
 # 定義要進出場的時間(9:00進場 13:30出場)
 InTime=datetime.datetime.now().replace( hour=9 , minute=00 , second=00 , microsecond=00 )
 OutTime=datetime.datetime.now().replace( hour=19 , minute=33 , second=00 , microsecond=00 )
 
 
 
-starTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-17 13:30:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-19 13:30:00','%Y-%m-%d %H:%M:%S')
 index = 1
 
 InTime=starTime.replace( hour=9 , minute=10 , second=00 , microsecond=00 )
@@ -28,7 +28,10 @@ topProfit = 0
 order_sign =0
 boxIndex = 0
 
-FUllData = getDBData(starTime,endTimeTest)
+FUllData = getDBDataForWebAPI(starTime,endTimeTest)
+
+FUllData['Time'] = pd.to_datetime(FUllData['Time'], format='%Y-%m-%d %H:%M:%S')
+
 result = pd.DataFrame({
         '最後報酬':[0],
         '總賺錢點數':[0],
@@ -54,6 +57,7 @@ def job():
     #df = getDBData(starTime,endTime)
     df  = FUllData[ FUllData['Time'] <= endTime].copy()
     BoxTheory(df,5,1)
+   
     print(df)
     print('-------------------------------------------------')
     #row = df[df['Time'] > (endTime + datetime.timedelta(minutes=-1))]
@@ -63,10 +67,9 @@ def job():
 
     if( endTime >= InTime ): 
         if b == 0 :
-            r,b,order_sign,topProfit,boxIndex,result = BoxTheoryOrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result)
-            print("BBBBBBB:"+str(b))
+            r,b,order_sign,topProfit,boxIndex,result = OrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result)
         elif b == 1 or  b == -1 :
-            (r,b,topProfit,result)=BoxTheoryOrderStop(df,0.5,-0.5,r,b,topProfit,endTime,result)
+            (r,b,topProfit,result)=OrderStop(df,0.5,-0.5,r,b,topProfit,endTime,result)
 
     
 
@@ -74,7 +77,7 @@ def job():
     #if datetime.datetime.now() > OutTime :
     if endTime > endTimeTest :
         if b != 0 :
-                (r,b,result) = BoxTheoryOrderOut(df,r,b,endTime,result)
+                (r,b,result) = OrderOut(df,r,b,endTime,result)
                 topProfit=0
     
         

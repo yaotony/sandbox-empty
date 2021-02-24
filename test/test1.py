@@ -1,5 +1,5 @@
 from indicator import GetHistoryData,KBar
-from Strategy6 import BoxTheory as BT
+from Strategy5 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -159,9 +159,9 @@ columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次
 reValues =[]
    
 
-starTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-17 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-17 13:30:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-19 13:30:00','%Y-%m-%d %H:%M:%S')
 
 #df = getDBDataForWebAPI(starTime,endTimeTest)
 #BT(df,5,1)

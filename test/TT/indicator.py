@@ -2,6 +2,7 @@
 import requests,datetime,os
 import numpy as np
 import matplotlib as mdates
+
 from talib.abstract import *  # 載入技術指標函數
 from bs4 import BeautifulSoup 
 
@@ -362,6 +363,7 @@ class KBar():
         return (self.TAKBar['close']-mavalue)/mavalue
     # 取得繪圖的格式(時間開高低收)(應用在回測章節)
     def GetChartTypeData(self):
+        
         return [ [mdates.date2num(self.TAKBar['time'][i]),self.TAKBar['open'][i],self.TAKBar['high'][i],self.TAKBar['low'][i],self.TAKBar['close'][i]] for i in range(len(self.TAKBar['time'])) ]
 
 # 固定量K棒
