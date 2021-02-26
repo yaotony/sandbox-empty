@@ -1,5 +1,5 @@
-from indicator import GetHistoryData,KBar
-from Strategy5 import BoxTheory as BT
+
+from Strategy6 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -182,7 +182,7 @@ for i in range (len(filenames)):
     df['cus'] = df['ret'].cumsum()
     result = result_F(df,reValues,filenames[i])
     out_excle(filenames[i],df,result)
-    #drawMap(df,filenames[i],result)
+   # drawMap(df,filenames[i],result)
   
     #計算各項策略績效指標
 

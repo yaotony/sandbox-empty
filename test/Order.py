@@ -30,9 +30,9 @@ def outp(df,r,b,price,i):
     #price=1代表開盤價，price=4代表收盤價
     #rs =  sendMSG(b,df['Time'].iloc[i].strftime("%Y-%m-%d %H:%M:%S"),"Exit",61)
     #print("out : " +  str(rs['d'])+":"+str(df['Close'].iloc[i]))
-    rr = (df['Open'].iloc[i] - r) * b
+    rr = (df['Close'].iloc[i] - r) * b
     #rr = (rs['d'] - r) * b
-    close = df['Open'].iloc[i]
+    close = df['Close'].iloc[i]
     #close = rs['d']
     df['ret'].iloc[i] = rr #進場時記錄多空
     df['note1'].iloc[i] = df['note1'].iloc[i] + ' 出場： b=' + str(b) +' ： 下單：' + str(r) +' , 出場：'+ str(close) +' ,結算 ： '+str(rr)
@@ -81,40 +81,50 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
     df['DD'].iloc[i] = mp
     df['EE'].iloc[i] = topProfit
       
-    if ((topProfit - r ) * b ) > 0 :
-        if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b   :
+    #if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b   :
                 #print('苻合停利+')
-            r,b = outp(df,r,b,1,i+1)  
-        elif  ((topProfit - r ) * b )  >= 100 :
-                #print('強制出場')
-            r,b = outp(df,r,b,1,i+1)
+    #        r,b = outp(df,r,b,1,i+1)  
+    
+    
+    # if ((topProfit - r ) * b ) > 0 :
+    #     if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b   :
+    #             #print('苻合停利+')
+    #         r,b = outp(df,r,b,1,i+1)  
+    #     #elif  ((topProfit - r ) * b )  >= 100 :
+    #             #print('強制出場')
+    #     #    r,b = outp(df,r,b,1,i+1)
        
-    elif ((topProfit - mm) * b ) > 5 :
-            #print('強制出場')
-        r,b = outp(df,r,b,1,i+1)
-    elif b == 1 and  df['Close'].iloc[i] < df['BoxTop'].iloc[i]:
-            #print('苻合停損+'+str(df['Close'].iloc[i]))
-        r,b = outp(df,r,b,1,i+1)
+    # elif ((topProfit - mm) * b ) > 5 :
+    #         #print('強制出場')
+    #     r,b = outp(df,r,b,1,i+1)
+    # elif b == 1 and  df['Close'].iloc[i] < df['BoxTop'].iloc[i]:
+    #         #print('苻合停損+'+str(df['Close'].iloc[i]))
+    #     r,b = outp(df,r,b,1,i+1)
 
-    elif b == -1 and  df['Close'].iloc[i] > df['BoxDown'].iloc[i]:
-            #print('苻合停損-'+str(df['Close'].iloc[i]))
-        r,b = outp(df,r,b,1,i+1)
+    # elif b == -1 and  df['Close'].iloc[i] > df['BoxDown'].iloc[i]:
+    #         #print('苻合停損-'+str(df['Close'].iloc[i]))
+    #     r,b = outp(df,r,b,1,i+1)
             
             
 
        
         
-  
-    
-    
-
+    if b == 1 and  df['point_sign'].iloc[i] == 1:
+    #         #print('苻合停損+'+str(df['Close'].iloc[i]))
+         r,b = outp(df,r,b,1,i)
+    elif b == -1 and  df['point_sign'].iloc[i] == -1:
+    #         #print('苻合停損-'+str(df['Close'].iloc[i]))
+         r,b = outp(df,r,b,1,i)
+    elif ((topProfit - mm) * b ) > 5 :
+    #         #print('強制出場')
+         r,b = outp(df,r,b,1,i)
 
     
     #if  topProfit < lsp :
-    #if  mp < lsp :
+    #if  mp > wsp or  mp < lsp :
     #若苻合停利、停損條件，以下一筆開盤價出場
         #print('苻合停損')
-       # r,b = outp(df,r,b,1,i+1)
+    #    r,b = outp(df,r,b,1,i+1)
     #df['note'].iloc[i] =df['note'].iloc[i] +' 停利、停損 MP = ' + str(mp) + '=' +  '('+str(df.iloc[i,4] ) +'-' + str(r)+ ') *'+str( b) 
         
    
