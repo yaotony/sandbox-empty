@@ -17,17 +17,6 @@ from LineMSG import linePush
 
 
 
-
-
-
-
-
-
-    
-
-
-
-
 #計算各項策略績效指標
 #df為欲分析策略績效的資料
 def result_F(df,v,n):
@@ -60,7 +49,7 @@ def result_F(df,v,n):
         '勝率':[w]
     })
      
-    v.append([n,last,wamt,lamt,count,mdd,w])
+    v.append([n[0:6],n,last,wamt,lamt,count,mdd,w])
 
     return(result)
 
@@ -155,7 +144,7 @@ filenames.sort()
 
     # 透過迴圈將每天的檔案都放進該迴圈中
 
-columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次數','最大回檔','勝率']
+columns =['YYMM','日期','最後報酬','總賺錢點數','總賠錢點數','交易次數','最大回檔','勝率']
 reValues =[]
    
 
@@ -182,7 +171,7 @@ for i in range (len(filenames)):
     df['cus'] = df['ret'].cumsum()
     result = result_F(df,reValues,filenames[i])
     out_excle(filenames[i],df,result)
-   # drawMap(df,filenames[i],result)
+    #drawMap(df,filenames[i],result)
   
     #計算各項策略績效指標
 

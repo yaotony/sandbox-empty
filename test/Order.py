@@ -106,8 +106,14 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
     #     r,b = outp(df,r,b,1,i+1)
             
             
+    # if ((topProfit - r ) * b ) > 0 :
+    #     if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b   :
+    # #             #print('苻合停利+')
+    #         r,b = outp(df,r,b,1,i)     
 
-       
+    # elif ((topProfit - mm) * b ) > 5 :
+    # #         #print('強制出場')
+    #     r,b = outp(df,r,b,1,i+1)   
         
     if b == 1 and  df['point_sign'].iloc[i] == 1:
     #         #print('苻合停損+'+str(df['Close'].iloc[i]))
@@ -119,12 +125,19 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
     #         #print('強制出場')
          r,b = outp(df,r,b,1,i)
 
+#box_sign
+    # if b == 1 and  df['box_sign'].iloc[i] == -1:
+    # #         #print('苻合停損+'+str(df['Close'].iloc[i]))
+    #      r,b = outp(df,r,b,1,i)
+    # elif b == -1 and  df['box_sign'].iloc[i] == 1:
+    # #         #print('苻合停損-'+str(df['Close'].iloc[i]))
+    #      r,b = outp(df,r,b,1,i)
     
     #if  topProfit < lsp :
     #if  mp > wsp or  mp < lsp :
     #若苻合停利、停損條件，以下一筆開盤價出場
         #print('苻合停損')
-    #    r,b = outp(df,r,b,1,i+1)
+    #    r,b = outp(df,r,b,1,i)
     #df['note'].iloc[i] =df['note'].iloc[i] +' 停利、停損 MP = ' + str(mp) + '=' +  '('+str(df.iloc[i,4] ) +'-' + str(r)+ ') *'+str( b) 
         
    

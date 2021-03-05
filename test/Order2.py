@@ -109,15 +109,24 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
 
        
         
-    if b == 1 and  df['point_sign'].iloc[i] == 1:
+    # if b == 1 and  df['point_sign'].iloc[i] == 1:
+    # #         #print('苻合停損+'+str(df['Close'].iloc[i]))
+    #      r,b = outp(df,r,b,1,i)
+    # elif b == -1 and  df['point_sign'].iloc[i] == -1:
+    # #         #print('苻合停損-'+str(df['Close'].iloc[i]))
+    #      r,b = outp(df,r,b,1,i)
+    # elif ((topProfit - mm) * b ) > 5 :
+    # #         #print('強制出場')
+    #      r,b = outp(df,r,b,1,i)
+
+#box_sign
+   if b == 1 and  df['box_sign'].iloc[i] == -1:
     #         #print('苻合停損+'+str(df['Close'].iloc[i]))
          r,b = outp(df,r,b,1,i)
-    elif b == -1 and  df['point_sign'].iloc[i] == -1:
+    elif b == -1 and  df['box_sign'].iloc[i] == 1:
     #         #print('苻合停損-'+str(df['Close'].iloc[i]))
          r,b = outp(df,r,b,1,i)
-    elif ((topProfit - mm) * b ) > 5 :
-    #         #print('強制出場')
-         r,b = outp(df,r,b,1,i)
+    
 
     
     #if  topProfit < lsp :
