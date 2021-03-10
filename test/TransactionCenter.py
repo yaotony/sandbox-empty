@@ -4,7 +4,7 @@ import time
 import pandas as pd
 from LineMSG import linePush
 from DataConn import getDBData,getDBDataForWebAPI
-from StrategyData import BoxTheory,setDefault,TriangleTheory
+from StrategyData import BoxTheory,setDefault
 from StrategyOrder import OrderInp,OrderOut,OrderStop
 # 定義要進出場的時間(9:00進場 13:30出場)
 InTime=datetime.datetime.now().replace( hour=9 , minute=00 , second=00 , microsecond=00 )
@@ -12,9 +12,9 @@ OutTime=datetime.datetime.now().replace( hour=19 , minute=33 , second=00 , micro
 
 
 
-starTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-19 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-19 13:30:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-25 09:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-25 09:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-25 13:30:00','%Y-%m-%d %H:%M:%S')
 index = 1
 
 InTime=starTime.replace( hour=9 , minute=10 , second=00 , microsecond=00 )
@@ -69,7 +69,7 @@ def job():
         if b == 0 :
             r,b,order_sign,topProfit,boxIndex,result = OrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result)
         elif b == 1 or  b == -1 :
-            (r,b,topProfit,result)=OrderStop(df,0.5,-0.5,r,b,topProfit,endTime,result)
+            (r,b,topProfit,result)=OrderStop(df,0.25,-0.5,r,b,topProfit,endTime,result)
 
     
 

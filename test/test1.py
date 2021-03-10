@@ -1,5 +1,5 @@
-from indicator import GetHistoryData,KBar
-from Strategy5 import BoxTheory as BT
+
+from Strategy6 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -14,17 +14,6 @@ import requests,datetime,os
 
 from DataConn import getDBData,getDBDataForWebAPI
 from LineMSG import linePush
-
-
-
-
-
-
-
-
-
-    
-
 
 
 
@@ -60,7 +49,7 @@ def result_F(df,v,n):
         '勝率':[w]
     })
      
-    v.append([n,last,wamt,lamt,count,mdd,w])
+    v.append([n[0:6],n,last,wamt,lamt,count,mdd,w])
 
     return(result)
 
@@ -155,7 +144,7 @@ filenames.sort()
 
     # 透過迴圈將每天的檔案都放進該迴圈中
 
-columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次數','最大回檔','勝率']
+columns =['YYMM','日期','最後報酬','總賺錢點數','總賠錢點數','交易次數','最大回檔','勝率']
 reValues =[]
    
 

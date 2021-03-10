@@ -39,7 +39,7 @@ def OrderInp(df,r,b,order_sign,topProfit,endTime,boxIndex,result):
                     if  df['BoxIndex'].iloc[index] != boxIndex :
                         b =  order_sign
                         df['sign'].iloc[index] = b #進場時記錄多空
-                        r = df['Open'].iloc[index] #設定多方買進與空方賣出成本
+                        r = df['Close'].iloc[index] #設定多方買進與空方賣出成本
                         df['note'].iloc[index] = df['note'].iloc[index]+ " 進場 - 下單 ： " + str(b) +"  :  " + str(r) 
                         linePush( str(df['BoxIndex'].iloc[index]) +' : '+endTime.strftime("%Y-%m-%d %H:%M:%S") +' '+ df['note'].iloc[index])
                         topProfit = r 

@@ -1,4 +1,4 @@
-from indicator import GetHistoryData,KBar
+
 from Strategy6 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -175,13 +175,13 @@ columns =['日期','最後報酬','總賺錢點數','總賠錢點數','交易次
 reValues =[]
    
 
-starTime = datetime.datetime.strptime('2021-02-24 09:00:00','%Y-%m-%d %H:%M:%S')
-endTime = datetime.datetime.strptime('2021-02-24 09:00:00','%Y-%m-%d %H:%M:%S')
-endTimeTest = datetime.datetime.strptime('2021-02-24 13:30:00','%Y-%m-%d %H:%M:%S')
+#starTime = datetime.datetime.strptime('2021-03-04 09:00:00','%Y-%m-%d %H:%M:%S')
+#endTime = datetime.datetime.strptime('2021-03-04 09:00:00','%Y-%m-%d %H:%M:%S')
+#endTimeTest = datetime.datetime.strptime('2021-03-04 13:30:00','%Y-%m-%d %H:%M:%S')
 
-#starTime = datetime.datetime.strptime('2021-02-19 15:00:00','%Y-%m-%d %H:%M:%S')
-#endTime = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
-#endTimeTest = datetime.datetime.strptime('2021-02-20 04:00:00','%Y-%m-%d %H:%M:%S')
+starTime = datetime.datetime.strptime('2021-02-18 15:00:00','%Y-%m-%d %H:%M:%S')
+endTime = datetime.datetime.strptime('2021-02-17 04:00:00','%Y-%m-%d %H:%M:%S')
+endTimeTest = datetime.datetime.strptime('2021-02-17 04:00:00','%Y-%m-%d %H:%M:%S')
 
 
 df = getDBDataForWebAPI(starTime,endTimeTest)

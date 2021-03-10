@@ -148,20 +148,21 @@ def BoxTheory(df,N,S):
             
                 #若b=0,表示空手
             if b == 0 :
-                if  df['box_sign'].iloc[i] == 1  and df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and df['Close'].iloc[i-1] < df['Close'].iloc[i]:
-                    if order_sign == 0 :
-                        order_sign = 1 
-                        continue
-                elif  df['box_sign'].iloc[i] == -1  and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :
-                    if order_sign == 0 :
-                        order_sign = -1 
-                        continue
-                else :
-                    order_sign = 0
+                if order_sign == 0 :
+                    if  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == 1  and df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and df['Close'].iloc[i-1] < df['Close'].iloc[i]:
+                        if order_sign == 0 :
+                            order_sign = 1 
+                            continue
+                    elif  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == -1  and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :
+                        if order_sign == 0 :
+                            order_sign = -1 
+                            continue
+                    else :
+                        order_sign = 0
 
 
-                if order_sign == 1 :
-                    if  df['BoxIndex'].iloc[i-1] != boxIndex  and df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and df['Close'].iloc[i-1] < df['Close'].iloc[i] :
+                elif order_sign == 1 :
+                    if   df['Open'].iloc[i-1] < df['Open'].iloc[i] :
                         r,b = inp(df,r,1,i)
                         topProfit = r
                         order_sign = 0 
@@ -169,7 +170,7 @@ def BoxTheory(df,N,S):
                         if(b!=0) :
                             boxIndex = df['BoxIndex'].iloc[i-1]
                 elif order_sign == -1  :
-                    if  df['BoxIndex'].iloc[i-1] != boxIndex  and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :
+                    if   df['Open'].iloc[i-1] > df['Open'].iloc[i] :
                         r,b = inp(df,r,-1,i)
                         topProfit = r
                         order_sign = 0 
