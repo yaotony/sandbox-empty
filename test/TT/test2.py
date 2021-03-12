@@ -4,7 +4,7 @@ import pandas as pd
 import time ,datetime
 import math
 import numpy as np
-from Order2 import inp,outp,stop
+from Order3 import inp,outp,stopByB,stopByS
 from Strategy6 import BoxTheory
 
 def out_ResultExcle(filePath,name,allResult) :
@@ -37,12 +37,12 @@ FilePath='C:\\temp\\'
 
 Broker='MTX'
 YYMM ='202103'
-FileName ='Daily_2021_03_09.csv'
-dd ='2021-03-09'
-ddd ='20210309'
+FileName ='Daily_2021_03_08.csv'
+dd ='2021-03-08'
+ddd ='20210308'
 
 df =   pd.read_csv(FilePath+FileName, low_memory=False,encoding="UTF-8",converters={'成交日期':str,'成交時間':str})
-
+print('len(df):',len(df))
 Today=datetime.datetime.strptime(ddd,'%Y%m%d').strftime('%Y%m%d')
 
 
@@ -63,12 +63,15 @@ columns =['time','close1','close2','close3','Triangle','BC','ret','cus','note']
 reValues =[]
 r=0 #記錄交易資金流量
 b=0 #設定多空方，多方=1，空方=-1，空手=0
+sr = 0 #保險本 
+sb = 0 #保險多空
 L = len(data) #取得筆數
 topProfit = 0 
 boxIndex =0
 order_sign = 0 
 
 rr = 0
+srr = 0
 print('len(data):',len(data))
 
 for i in  range( len(data)):
@@ -139,14 +142,21 @@ for i in  range( len(data)):
         if i < L-1 :
             
             if b == 1  or b == -1 :
-                (r,b,topProfit,rr,note)=stop(Price,1,-0.25,r,b,topProfit,note)
+                if b == 1 :
+                    (r,b,sr,sb,topProfit,rr,srr,note)=stopByB(Price,0.5,-0.25,r,b,sr,sb,topProfit,note,Time)
+                elif b==-1 :
+                    (r,b,sr,sb,topProfit,rr,srr,note)=stopByS(Price,0.5,-0.25,r,b,sr,sb,topProfit,note,Time)
+                
                 if b==0 :
                     reValues.append([Time,close2,close1,Price,Triangle,b,rr,0,note])
+                
+                if srr != 0:
+                    reValues.append([Time,close2,close1,Price,Triangle,sb,srr,0,note])
                  #若b=0,表示空手
             if b == 0 :#and ChangeKFlag==1 :
                     a = Price - close1
                     
-                    if ( (a > 0 and  a < 5) or (a < 0 and  a >-5) )and Triangle > 0 and  Triangle < 50  and  _ordertime != _time :
+                    if ( (a > 0 and  a < 2) or (a < 0 and  a >-2) )and Triangle > 0 and  Triangle < 50  and  _ordertime != _time :
                         if close1> close2 and close1 > Price :
                             b = 1
                         if close1 < close2 and close1 < Price :   
@@ -166,7 +176,11 @@ for i in  range( len(data)):
             if b != 0 :
                 r,b,rr,note = outp(Price,r,b,note) 
                 reValues.append([Time,close2,close1,Price,Triangle,b,rr,0,note])
-                topProfit = 0    
+                topProfit = 0
+                if sb!=0 :                
+                    sr,sb,srr,note = outp(Price,sr,sb,note)
+                    print('保險出場： sr= ',sr,' sb=',sb,'  srr=',srr )
+                    reValues.append([Time,close2,close1,Price,Triangle,sb,srr,0,note])   
 
 nowTime = int(time.time()) # 取得現在時間
 
