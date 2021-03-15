@@ -33,13 +33,13 @@ def cal_ang(point_1, point_2, point_3):
 
 
 
-FilePath='C:\\temp\\'
+FilePath='C:\\temp\\DATA\\'
 
 Broker='MTX'
-YYMM ='202103'
-FileName ='Daily_2021_03_08.csv'
-dd ='2021-03-08'
-ddd ='20210308'
+YYMM ='202001'
+FileName ='Daily_2020_01_14.csv'
+dd ='2020-01-14'
+ddd ='20200114'
 
 df =   pd.read_csv(FilePath+FileName, low_memory=False,encoding="UTF-8",converters={'成交日期':str,'成交時間':str})
 print('len(df):',len(df))
