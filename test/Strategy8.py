@@ -1,5 +1,6 @@
-#1313
-from Order import inp,outp,stop
+#2021-03-20 已完成！不可修改
+
+from Order3 import inp,outp,stop
 from StrategyOBV import OBVTheory
 from StrategyMA import MA
 
@@ -20,8 +21,7 @@ def BoxTheory(df,N,S):
     df['BoxIndexOrder'] = 0
     df['BoxTopMax']  = 0
     df['BoxDownMin'] = 0
-    df['BoxDownCenter'] = 0
-  
+   
    
     #Box 交易訊號欄
     df['box_sign'] =0
@@ -34,7 +34,7 @@ def BoxTheory(df,N,S):
     df['FF']='' 
 
     #OBVTheory(df,5,10) 
-    #MA(3,5,df)
+    MA(10,30,df)
     #RSI(5,df)
 
     topV = 0
@@ -63,11 +63,9 @@ def BoxTheory(df,N,S):
 
         df['BoxTopDef'].iloc[i] = (df['BoxTop'].iloc[i] - df['Close'].iloc[i]) * -1
         df['BoxDownDef'].iloc[i] = df['BoxDown'].iloc[i] - df['Close'].iloc[i]
-       
-        df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-30:i].max()
-        df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-30:i].min()  
 
-        df['BoxDownCenter'].iloc[i] =df['BoxTopMax'].iloc[i]- df['BoxDownMin'].iloc[i]
+        df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-5:i].max()
+        df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-5:i].min()  
         #df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-60:i].max()
         #df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-60:i].min()
 
@@ -76,8 +74,8 @@ def BoxTheory(df,N,S):
         if ( df['BoxTop'].iloc[i] < df['Close'].iloc[i] )  : 
             boxIndexOrder = boxIndexOrder + 1
             df['BoxIndexOrder'].iloc[i] = boxIndexOrder     
-            if df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and  df['Close'].iloc[i-2] < df['Close'].iloc[i-1] < df['Close'].iloc[i] and     boxIndexOrder <= 10 :
-                if topV < df['Close'].iloc[i] and df['Volume'].iloc[i] > 1000:
+            if df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and df['Close'].iloc[i-1] < df['Close'].iloc[i] :#and   boxIndexOrder <= 10 :
+                if topV < df['Close'].iloc[i] :#and df['Volume'].iloc[i] > 1000:
                     topV = df['Close'].iloc[i]
                     df['box_sign'].iloc[i] = 1
                     #DownV=0
@@ -102,8 +100,8 @@ def BoxTheory(df,N,S):
         elif (df['BoxDown'].iloc[i] > df['Close'].iloc[i] ) : 
             boxIndexOrder = boxIndexOrder + 1
             df['BoxIndexOrder'].iloc[i] = boxIndexOrder  
-            if  df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-2] > df['Close'].iloc[i-1] > df['Close'].iloc[i] and     boxIndexOrder <= 10:#
-                if DownV ==  0  or  DownV > df['Close'].iloc[i]  and df['Volume'].iloc[i] > 1000:
+            if  df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :#and   boxIndexOrder <= 10:#
+                if DownV ==  0  or  DownV > df['Close'].iloc[i]  :#and df['Volume'].iloc[i] > 1000:
                     DownV = df['Close'].iloc[i]
                     df['box_sign'].iloc[i] = -1
                     #topV=0
@@ -137,7 +135,7 @@ def BoxTheory(df,N,S):
 
 
     #進行買賣
-    K = 60  #設定保留K線參數
+    K = 15  #設定保留K線參數
     L = len(df) #取得筆數
     r=0 #記錄交易資金流量
     b=0 #設定多空方，多方=1，空方=-1，空手=0
@@ -171,15 +169,15 @@ def BoxTheory(df,N,S):
             
             
                 #若b=0,表示空手
-            elif b == 0  and i < 254:
+            if b == 0  and i < 254:
                 
-                    if  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == 1 :
+                    if  df['ma_sign'].iloc[i] == 1 :
                         r,b = inp(df,r,1,i)
                         topProfit = r
                         order_sign = 0 
 
                         
-                    elif  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == -1   :
+                    elif   df['ma_sign'].iloc[i] == -1  :#and df['Volume'].iloc[i] > 1000 :
                         r,b = inp(df,r,-1,i)
                         topProfit = r
                         order_sign = 0 

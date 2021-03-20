@@ -1,5 +1,4 @@
-
-from Strategy6 import BoxTheory as BT
+from Strategy8 import BoxTheory as BT
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
@@ -84,10 +83,19 @@ def drawMap(df ,title ,result) :
     BoxTop   = mmData['BoxTop'].iloc[:]
     BoxDown  = mmData['BoxDown'].iloc[:]
 
+    ma_s   = mmData['ma_s'].iloc[:]
+    ma_l  = mmData['ma_l'].iloc[:]
+
+    ma_ax = plt.subplot(111)
+    ma_ax.plot_date( Time,ma_s, 'k-' , linewidth=1 ,color='#00FFFF')
+    ma_ax.plot_date( Time,ma_l, 'k-' , linewidth=1 ,color='#FFFF00')
+    ma_ax.xaxis.set_visible(False)  # 隱藏X軸刻度線
+
     #定義圖表物件
     ax = plt.subplot(111)
     plt.rcParams['font.sans-serif'] = ['PingFang HK']
-
+    
+    
     ax.xaxis.set_visible(False)  # 隱藏X軸刻度線
     #繪製圖案 ( X軸物件, Y軸物件, 線風格 )
     ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
@@ -166,7 +174,7 @@ for i in range (len(filenames)):
     #Strategy1  
     #BT(df,5,5)
     #Strategy2  
-    BT(df,5,1)
+    BT(df,10,1)
     #計算累計損益
     df['cus'] = df['ret'].cumsum()
     result = result_F(df,reValues,filenames[i])
@@ -175,7 +183,7 @@ for i in range (len(filenames)):
   
     #計算各項策略績效指標
 
-
+#
 
 
 

@@ -1,4 +1,5 @@
-#1313
+#2021-03-20 已完成！不可修改
+
 from Order import inp,outp,stop
 from StrategyOBV import OBVTheory
 from StrategyMA import MA
@@ -17,6 +18,7 @@ def BoxTheory(df,N,S):
     df['BoxTopDef']  = 0
     df['BoxDownDef'] = 0
     df['BoxIndex'] = 0
+    df['BoxIndexOrder'] = 0
     df['BoxTopMax']  = 0
     df['BoxDownMin'] = 0
    
@@ -32,12 +34,13 @@ def BoxTheory(df,N,S):
     df['FF']='' 
 
     #OBVTheory(df,5,10) 
-    #MA(3,5,df)
+    MA(10,30,df)
     #RSI(5,df)
 
     topV = 0
     DownV = 0
     boxIndex =0
+    BoxIndexOrder=0
     boxIndexTop =0
     boxIndexDown =0
     boxIndexBL = 0
@@ -61,16 +64,21 @@ def BoxTheory(df,N,S):
         df['BoxTopDef'].iloc[i] = (df['BoxTop'].iloc[i] - df['Close'].iloc[i]) * -1
         df['BoxDownDef'].iloc[i] = df['BoxDown'].iloc[i] - df['Close'].iloc[i]
 
-        df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-N:i].max()
-        df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-N:i].min()
+        df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-5:i].max()
+        df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-5:i].min()  
+        #df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-60:i].max()
+        #df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-60:i].min()
+
         
         #設定Box 指標箱型突破高點訊號= 1 (部位買進)df['BoxTop'].iloc[i-1] > df['Close'].iloc[i-1] and
-        if ( df['BoxTop'].iloc[i] < df['Close'].iloc[i] ) and  df['BoxTopDef'].iloc[i] > S : 
-            if df['Close'].iloc[i] > df['Close'].iloc[i-1]:
-                if topV < df['Close'].iloc[i] :
+        if ( df['BoxTop'].iloc[i] < df['Close'].iloc[i] )  : 
+            boxIndexOrder = boxIndexOrder + 1
+            df['BoxIndexOrder'].iloc[i] = boxIndexOrder     
+            if df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and df['Close'].iloc[i-1] < df['Close'].iloc[i] :#and   boxIndexOrder <= 10 :
+                if topV < df['Close'].iloc[i] :#and df['Volume'].iloc[i] > 1000:
                     topV = df['Close'].iloc[i]
                     df['box_sign'].iloc[i] = 1
-                    DownV=0
+                    #DownV=0
                     if boxIndexTop == 0 :
                         boxIndex = boxIndex + 1 
                         boxIndexTop = 1
@@ -78,42 +86,56 @@ def BoxTheory(df,N,S):
                         boxIndexBL =0
                   
                     df['BoxIndex'].iloc[i] = boxIndex
+            
+            
+        
+        
+
+                    
+                    
            
     
         
         #設定Box指標箱型突破低點訊號= -1 (部位買進)df['BoxDown'].iloc[i-1] < df['Close'].iloc[i-1] and 
-        if (df['BoxDown'].iloc[i] > df['Close'].iloc[i] ) and  df['BoxDownDef'].iloc[i] > S  : 
-            if df['Close'].iloc[i] < df['Close'].iloc[i-1] :
-                if DownV ==  0  or  DownV > df['Close'].iloc[i] :
+        elif (df['BoxDown'].iloc[i] > df['Close'].iloc[i] ) : 
+            boxIndexOrder = boxIndexOrder + 1
+            df['BoxIndexOrder'].iloc[i] = boxIndexOrder  
+            if  df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :#and   boxIndexOrder <= 10:#
+                if DownV ==  0  or  DownV > df['Close'].iloc[i]  :#and df['Volume'].iloc[i] > 1000:
                     DownV = df['Close'].iloc[i]
                     df['box_sign'].iloc[i] = -1
-                    topV=0
+                    #topV=0
                     if boxIndexDown == 0 :
                         boxIndex = boxIndex + 1 
                         boxIndexTop = 0
                         boxIndexDown = 1  
                         boxIndexBL =0               
                     df['BoxIndex'].iloc[i] = boxIndex
+               
+        
+        else :
+            boxIndexOrder = 0
+
             
         if (df['BoxTop'].iloc[i] > df['Close'].iloc[i] ) &  (df['BoxDown'].iloc[i] < df['Close'].iloc[i]): 
-            if boxIndexBL == 0 :
-                boxIndexTop = 0
-                boxIndexDown = 0  
-                boxIndexBL =1
-                df['FF'].iloc[i] ='V'            
+             if boxIndexBL == 0 :
+                 boxIndexTop = 0
+                 boxIndexDown = 0  
+                 boxIndexBL =1
+                 df['FF'].iloc[i] ='V'            
                              
 
-        if df['BoxTop'].iloc[i] < df['BoxDown'].iloc[i]  :
-            df['box_sign'].iloc[i] = 1
-            df['BoxIndex'].iloc[i] = boxIndex
+        # if df['BoxTop'].iloc[i] < df['BoxDown'].iloc[i]  :
+        #     df['box_sign'].iloc[i] = 1
+        #     df['BoxIndex'].iloc[i] = boxIndex
      
-        if df['BoxDown'].iloc[i] > df['BoxTop'].iloc[i]  :
-             df['box_sign'].iloc[i] = -1
-             df['BoxIndex'].iloc[i] = boxIndex
+        # if df['BoxDown'].iloc[i] > df['BoxTop'].iloc[i]  :
+        #      df['box_sign'].iloc[i] = -1
+        #      df['BoxIndex'].iloc[i] = boxIndex
 
 
     #進行買賣
-    K = 10  #設定保留K線參數
+    K = 60  #設定保留K線參數
     L = len(df) #取得筆數
     r=0 #記錄交易資金流量
     b=0 #設定多空方，多方=1，空方=-1，空手=0
@@ -139,45 +161,33 @@ def BoxTheory(df,N,S):
         if i < L-1 :
             #若 b = 1 ,表示多
             if b == 1 :
-                (r,b,topProfit)=stop(df,0.25,-0.5,r,b,i,topProfit)
+                (r,b,topProfit)=stop(df,0.5,-0.5,r,b,i,topProfit)
                      
             elif b == -1 :
-                (r,b,topProfit)=stop(df,0.25,-0.5,r,b,i,topProfit)
+                (r,b,topProfit)=stop(df,0.5,-0.5,r,b,i,topProfit)
             
             
             
                 #若b=0,表示空手
-            if b == 0 :
-                if order_sign == 0 :
-                    if  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == 1  and df['Close'].iloc[i] > df['BoxTopMax'].iloc[i] and df['Close'].iloc[i-1] < df['Close'].iloc[i]:
-                        if order_sign == 0 :
-                            order_sign = 1 
-                            continue
-                    elif  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == -1  and df['Close'].iloc[i] < df['BoxDownMin'].iloc[i] and df['Close'].iloc[i-1] > df['Close'].iloc[i] :
-                        if order_sign == 0 :
-                            order_sign = -1 
-                            continue
-                    else :
-                        order_sign = 0
-
-
-                elif order_sign == 1 :
-                    if   df['Open'].iloc[i-1] < df['Open'].iloc[i] :
+            elif b == 0  and i < 254:
+                
+                    if  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == 1 :
                         r,b = inp(df,r,1,i)
                         topProfit = r
                         order_sign = 0 
 
-                        if(b!=0) :
-                            boxIndex = df['BoxIndex'].iloc[i-1]
-                elif order_sign == -1  :
-                    if   df['Open'].iloc[i-1] > df['Open'].iloc[i] :
+                        
+                    elif  df['BoxIndex'].iloc[i] != boxIndex and df['box_sign'].iloc[i] == -1   :
                         r,b = inp(df,r,-1,i)
                         topProfit = r
                         order_sign = 0 
-                        if(b!=0):
-                            boxIndex = df['BoxIndex'].iloc[i-1]
-                else :
-                    order_sign = 0 
+                    
+                    if(b!=0):
+                        boxIndex = df['BoxIndex'].iloc[i]
+                    
+
+
+            
                 
         elif i == L-1 :
             #若b不等於0 (表示還有部位)
