@@ -121,6 +121,9 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
    
     if b!= 0 and df['ma_sign'].iloc[i] != 0    and  (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
             r,b = outp(df,r,b,1,i)
+    #elif  (mm - r) * b < 0 and ((topProfit - mm) * b ) >= 10 :#and (mm - r) * b < -50:
+    #        r,b = outp(df,r,b,1,i)
+
     #elif b== -1 and df['ma_sign'].iloc[i] == 1 and  (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b  :
     #        r,b = outp(df,r,b,1,i)
         
