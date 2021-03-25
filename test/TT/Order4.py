@@ -56,7 +56,7 @@ def stopByS(time,Price,wsp,lsp,r,b,sr,sb,topProfit,note,re):
             #if sb == 0 and  ((topProfit - Price) * b ) >= 30 :
             #        sr,sb,note,re = inp(time,Price,1,note,re)
             
-            if  ((topProfit - Price) * b ) >= 50 :
+            if  ((topProfit - Price) * b ) >= 20 :
                 #         print('強制出場')
                 r,b,rr,note,re = outp(time,Price,r,b,note,re)
                 note = note +'強制出場+lsp < mp'  
@@ -68,19 +68,20 @@ def stopByS(time,Price,wsp,lsp,r,b,sr,sb,topProfit,note,re):
  
         else :
  
-                if sb == 0 and   ((topProfit - r ) * b ) > 5 and  (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b:
+                if ((topProfit - r ) * b ) > 20  and  (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b:
                     # print(' (((topProfit - r ) * b ) * wsp=) ', (((topProfit - r ) * b ) * wsp)  )
                     # print('(topProfit - Price ) * b =', (topProfit - Price ) * b  )
                     # print('topProfit=',topProfit)
                     # print('Price=',Price)
                     # print('r=',r)
                     note = '保險單- '
-                    sr,sb,note,re = inp(time,Price,1,note,re)
+                    r,b,rr,note,re = outp(time,Price,r,b,note,re) 
+                    #sr,sb,note,re = inp(time,Price,1,note,re)
                     #print('1 保險進場： sr= ',sr,' sb=',sb,' (Price - r)',(Price - r),' Time:',time )
                 
 
                 # if  (Price - r) * b >= 200 :
-                #     r,b,rr,note,re = outp(time,Price,r,b,note,re)
+               #     
                 #     print('停利出場 - ((topProfit - Price) * b )',((topProfit - Price) * b ),' topProfit=',topProfit,'  Price=',Price )
 
                 #     if sb!=0 :                
@@ -120,7 +121,7 @@ def stopByB(time,Price,wsp,lsp,r,b,sr,sb,topProfit,note,re):
                     
             
  
-            if  ((topProfit - Price) * b ) >= 50 :
+            if  ((topProfit - Price) * b ) >= 20 :
                 #print('強制出場 - ((topProfit - Price) * b )',((topProfit - Price) * b ),' topProfit=',topProfit,'  Price=',Price )
                 r,b,rr,note,re = outp(time,Price,r,b,note,re)
                 note = note +'強制出場+lsp < mp'
@@ -131,14 +132,17 @@ def stopByB(time,Price,wsp,lsp,r,b,sr,sb,topProfit,note,re):
         else  :
           
 
-            if sb == 0 and ((topProfit - r ) * b ) > 5 and  (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b:
+            if ((topProfit - r ) * b ) > 20 and  (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b:
                     # print(' (((topProfit - r ) * b ) * wsp=) ', (((topProfit - r ) * b ) * wsp)  )
                     # print('(topProfit - Price ) * b =', (topProfit - Price ) * b  )
                     # print('topProfit=',topProfit)
                     # print('Price=',Price)
                     # print('r=',r)
                     note = '保險單- '
-                    sr,sb,note,re = inp(time,Price,-1,note,re)
+                    r,b,rr,note,re = outp(time,Price,r,b,note,re)
+                    #print('停利出場 - ((topProfit - Price) * b )',((topProfit - Price) * b ),' topProfit=',topProfit,'  Price=',Price )
+
+                    #sr,sb,note,re = inp(time,Price,-1,note,re)
            
                     #print('-1 保險進場： sr= ',sr,' sb=',sb,' (Price - r)',(Price - r),' Time:',time )
 

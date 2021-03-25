@@ -112,6 +112,7 @@ filenames.sort()
 
 
 
+
 for i in range (len(filenames)):
     #df =   pd.read_csv(FilePath+filenames[i],encoding="UTF8")
     df =   pd.read_csv(FilePath+filenames[i], low_memory=False,encoding="UTF-8",converters={'成交日期':str,'成交時間':str})
@@ -150,16 +151,16 @@ for i in range (len(filenames)):
     # 定義K棒物件
 
 
-    MinuteKbar=KBar(Today,1)    
+    KBar1M=KBar(Today,1)  
+    # 定義MA週期
+    FastPeriod=10
+    SlowPeriod=30 
     starTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 09:00:00','%Y-%m-%d %H:%M:%S')
-    orderEndTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 13:00:00','%Y-%m-%d %H:%M:%S')
     orderTime = starTime
     close1=0
     close2=0
     close3=0
-    # 定義MA、RSI週期
-    MAPeriod=10
-    RSIPeriod=30
+    
     columns =['time','close1','close2','close3','Triangle','BC','ret','cus','note']
     reValues =[]
     r=0 #記錄交易資金流量
@@ -193,62 +194,21 @@ for i in range (len(filenames)):
         if Time < starTime :
             continue
 
-        ChangeKFlag=MinuteKbar.AddPrice(Time,Price,Qty)
+        ChangeKFlag=KBar1M.AddPrice(Time,Price,Qty)
         
         # 每分鐘判斷一次
     
     
-        note =''
+
         if ChangeKFlag==1:
             #print('ChangeKFlag：',ChangeKFlag)
-            pf = pd.DataFrame(MinuteKbar.TAKBar,columns =['time','open','high','low','close','volume'])
+            pf = pd.DataFrame(KBar1M.TAKBar,columns =['time','open','high','low','close','volume'])
             #print('當前價',Price,'，時間：',Time,'，量：',Qty)
             #print('len(pf1):',len(pf))      
             #pf = BoxTheory(pf,5,0)
             #print('len(pf2):',len(pf))
             pf = pf.sort_values(by=['time'],ascending=False)
-            if len(MinuteKbar.GetClose()) < max(MAPeriod,RSIPeriod) :
-                continue
-            # 取得最新的、上一筆收盤價
-            Close=MinuteKbar.GetClose()[-2]
-            # 取得最新的、上一筆MA
-            FastMA=MinuteKbar.GetWMA(9)[-2]
-            SlowMA=MinuteKbar.GetWMA(16)[-2]
-            # 取得最新的RSI
-            RSI=MinuteKbar.GetRSI(30)[-2]
-
-            High=MinuteKbar.GetHigh()
-            # if len(High) >= 15:
-            #     # 取前15分鐘的高低點
-            #     Ceil=max(High[-15:-1])
-            #     Floor=min(MinuteKbar.GetLow()[-15:-1])
-            #     # 判斷價格是否突破高低點進場
-            #     #print('Ceil',Ceil)
-            #     #print('Floor',Floor)
-                
-            close1 =pf['close'].iloc[1]
-            close2 =pf['close'].iloc[2]
-            close3 =pf['close'].iloc[3]
-
-            if b == 0 and  Time < orderEndTime :
-                # RSI 大於 50 且 價格 > MA 
-                    #print('Ceil',Ceil,' Floor',Floor,' Price',Price)
-                    Triangle  =   cal_ang((close3, 3), (close2, 2), (close1, 1))
-
-                    if close2 > close3 and close2 > close1 :
-                        if Triangle < 50 :
-                            orderTime = Time
-                            r,b,note,reValues = inp(Time,Price,1,note,reValues)
-                            topProfit = r
-                            continue
-                    elif close2 < close3 and close2 < close1 :
-                        if Triangle < 50 :
-                            orderTime = Time
-                            r,b,note,reValues = inp(Time,Price,-1,note,reValues)
-                            topProfit = r
-                        
-                            continue
-
+    
 
         
             Triangle = 0
@@ -277,14 +237,14 @@ for i in range (len(filenames)):
             
             Triangle  =   cal_ang((Price, 1), (close1, 2), (close2, 3))
             
-            
+            note =''
             if i < L-1 :
                 
                 if b == 1  or b == -1 :
                     if b == 1 :
-                        (r,b,sr,sb,topProfit,rr,srr,note,reValues)=stopByB(Time,Price,0.5,-0.25,r,b,sr,sb,topProfit,note,reValues)
+                        (r,b,sr,sb,topProfit,rr,srr,note,reValues)=stopByB(Time,Price,0.6,-0.25,r,b,sr,sb,topProfit,note,reValues)
                     elif b==-1 :
-                        (r,b,sr,sb,topProfit,rr,srr,note,reValues)=stopByS(Time,Price,0.5,-0.25,r,b,sr,sb,topProfit,note,reValues)
+                        (r,b,sr,sb,topProfit,rr,srr,note,reValues)=stopByS(Time,Price,0.6,-0.25,r,b,sr,sb,topProfit,note,reValues)
                     
                     # if b==0 :
                     #     reValues.append([Time,close2,close1,Price,Triangle,b,rr,0,note])
@@ -295,17 +255,17 @@ for i in range (len(filenames)):
                 if b == 0 :#and ChangeKFlag==1 :
                         a = Price - close1
                         
-                        # if ( (a > 0 and  a < 2) or (a < 0 and  a >-2) )and Triangle > 0 and  Triangle < 50  and  _ordertime != _time :
-                        #     if close1> close2 and close1 > Price :
-                        #         b = 1
-                        #     if close1 < close2 and close1 < Price :   
-                        #         b = -1
+                        if ( (a > 0 and  a < 2) or (a < 0 and  a >-2) )and Triangle > 0 and  Triangle < 50  and  _ordertime != _time :
+                            if close1> close2 and close1 > Price :
+                                b = 1
+                            if close1 < close2 and close1 < Price :   
+                                b = -1
 
-                        #     orderTime = Time
-                        #     r,b,note,reValues = inp(Time,Price,b,note,reValues)
-                        #     topProfit = r
-                        #     #reValues.append([Time,close2,close1,Price,Triangle,b,0,0,note])
-                        #     #print('a:', a,' Time',Time, 'close3:',close3,'close2:',close2,'    close1:',close1,'   Price:',Price,' Triangle:',Triangle,'-----及時 ',b)
+                            orderTime = Time
+                            r,b,note,reValues = inp(Time,Price,b,note,reValues)
+                            topProfit = r
+                            #reValues.append([Time,close2,close1,Price,Triangle,b,0,0,note])
+                            #print('a:', a,' Time',Time, 'close3:',close3,'close2:',close2,'    close1:',close1,'   Price:',Price,' Triangle:',Triangle,'-----及時 ',b)
 
 
 
@@ -326,8 +286,7 @@ for i in range (len(filenames)):
 
     if(len(reDF)>0):
         last = int( reDF['cus'].iloc[-1])
-    
-    print(filename,' 最後報酬:',last)
+        print(last)
     result = result_F(reDF,allReValues,yy+mm+dd)
     out_excle(filename,reDF,result)
 

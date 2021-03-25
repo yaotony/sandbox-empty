@@ -3,6 +3,7 @@ import requests,datetime,os
 import numpy as np
 import matplotlib as mdates
 from talib.abstract import *  # 載入技術指標函數
+import talib
 from bs4 import BeautifulSoup 
 
 
@@ -335,6 +336,8 @@ class KBar():
     # 取MA值(MA期數)
     def GetMA(self,n,matype):
         return MA(self.TAKBar,n,matype)    
+    def GetMAByOpen(self,n,matype):
+        return  talib.MA(self.TAKBar['open'],n,matype)    
     # 取SMA值(SMA期數)
     def GetSMA(self,n):
         return SMA(self.TAKBar,n)

@@ -59,67 +59,67 @@ def BoxTheory(df,N,S):
     #RSI(5,df)
 
    
-    for i in  range( len(df)):
+    # for i in  range( len(df)):
         
-        if df['BoxTopD'].iloc[i] <  df['BoxTopN'].iloc[i] :
-            df['BoxTop'].iloc[i] =  df['BoxTopN'].iloc[i]
-        else :
-            df['BoxTop'].iloc[i] =  df['BoxTop'].iloc[i-1]
+    #     if df['BoxTopD'].iloc[i] <  df['BoxTopN'].iloc[i] :
+    #         df['BoxTop'].iloc[i] =  df['BoxTopN'].iloc[i]
+    #     else :
+    #         df['BoxTop'].iloc[i] =  df['BoxTop'].iloc[i-1]
 
-        if df['BoxDownD'].iloc[i] >  df['BoxDownN'].iloc[i] :
-            df['BoxDown'].iloc[i] =  df['BoxDownN'].iloc[i]
-        else :
-            df['BoxDown'].iloc[i] =  df['BoxDown'].iloc[i-1]
+    #     if df['BoxDownD'].iloc[i] >  df['BoxDownN'].iloc[i] :
+    #         df['BoxDown'].iloc[i] =  df['BoxDownN'].iloc[i]
+    #     else :
+    #         df['BoxDown'].iloc[i] =  df['BoxDown'].iloc[i-1]
         
-        if df['BoxTop'].iloc[i] == 0 :
-            df['BoxTop'].iloc[i]  =  df['BoxTopD'].iloc[i]
-        if df['BoxDown'].iloc[i] == 0 :
-            df['BoxDown'].iloc[i]  =  df['BoxDownD'].iloc[i]
+    #     if df['BoxTop'].iloc[i] == 0 :
+    #         df['BoxTop'].iloc[i]  =  df['BoxTopD'].iloc[i]
+    #     if df['BoxDown'].iloc[i] == 0 :
+    #         df['BoxDown'].iloc[i]  =  df['BoxDownD'].iloc[i]
 
-        df['BoxTopDef'].iloc[i] = (df['BoxTop'].iloc[i] - df['Close'].iloc[i]) * -1
-        df['BoxDownDef'].iloc[i] = df['BoxDown'].iloc[i] - df['Close'].iloc[i]
+    #     df['BoxTopDef'].iloc[i] = (df['BoxTop'].iloc[i] - df['Close'].iloc[i]) * -1
+    #     df['BoxDownDef'].iloc[i] = df['BoxDown'].iloc[i] - df['Close'].iloc[i]
 
-        df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-N:i].max()
-        df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-N:i].min()
+    #     df['BoxTopMax'].iloc[i]  = df['High'].iloc[i-N:i].max()
+    #     df['BoxDownMin'].iloc[i] = df['Low'].iloc[i-N:i].min()
 
 
         
           
-        # if (df['ma_s'].iloc[i-1]  <  df['ma_l'].iloc[i-1] ) & (df['ma_s'].iloc[i]  >  df['ma_l'].iloc[i] ) :
-        if (df['Close'].iloc[i-1]  >  df['BoxTop'].iloc[i-1] ) and (df['Close'].iloc[i]  <  df['BoxTop'].iloc[i] ) :#and (df['Close'].iloc[i]  >  df['BoxDown'].iloc[i] )  :
-            df['box_sign'].iloc[i] = -1
+    #     # if (df['ma_s'].iloc[i-1]  <  df['ma_l'].iloc[i-1] ) & (df['ma_s'].iloc[i]  >  df['ma_l'].iloc[i] ) :
+    #     if (df['Close'].iloc[i-1]  >  df['BoxTop'].iloc[i-1] ) and (df['Close'].iloc[i]  <  df['BoxTop'].iloc[i] ) :#and (df['Close'].iloc[i]  >  df['BoxDown'].iloc[i] )  :
+    #         df['box_sign'].iloc[i] = -1
         
-        if (df['Close'].iloc[i-1]  < df['BoxDown'].iloc[i-1] ) and (df['Close'].iloc[i]  >  df['BoxDown'].iloc[i] ) :#and (df['Close'].iloc[i]  < df['BoxTop'].iloc[i] )   :
-            df['box_sign'].iloc[i] = 1
+    #     if (df['Close'].iloc[i-1]  < df['BoxDown'].iloc[i-1] ) and (df['Close'].iloc[i]  >  df['BoxDown'].iloc[i] ) :#and (df['Close'].iloc[i]  < df['BoxTop'].iloc[i] )   :
+    #         df['box_sign'].iloc[i] = 1
 
 
-        if  df['box_sign'].iloc[i] == -1 and  (df['Close'].iloc[i]  >  df['BoxDown'].iloc[i] ) :
-             df['box_sign'].iloc[i] = 1
+    #     if  df['box_sign'].iloc[i] == -1 and  (df['Close'].iloc[i]  >  df['BoxDown'].iloc[i] ) :
+    #          df['box_sign'].iloc[i] = 1
 
-        if  df['box_sign'].iloc[i] == 1 and  (df['Close'].iloc[i]  <  df['BoxTop'].iloc[i] ) :
-             df['box_sign'].iloc[i] = -1
+    #     if  df['box_sign'].iloc[i] == 1 and  (df['Close'].iloc[i]  <  df['BoxTop'].iloc[i] ) :
+    #          df['box_sign'].iloc[i] = -1
      
 
 
-        # if (df['Close'].iloc[i-1]  <  df['BoxTop'].iloc[i-1] ) and (df['Close'].iloc[i]  >  df['BoxTop'].iloc[i] ) :
-        #     df['box_signB'].iloc[i] = 1
+    #     # if (df['Close'].iloc[i-1]  <  df['BoxTop'].iloc[i-1] ) and (df['Close'].iloc[i]  >  df['BoxTop'].iloc[i] ) :
+    #     #     df['box_signB'].iloc[i] = 1
         
-        # if (df['Close'].iloc[i-1]  > df['BoxDown'].iloc[i-1] ) and  (df['Close'].iloc[i]  <  df['BoxDown'].iloc[i] ) :
-        #     df['box_signB'].iloc[i] = -1 
+    #     # if (df['Close'].iloc[i-1]  > df['BoxDown'].iloc[i-1] ) and  (df['Close'].iloc[i]  <  df['BoxDown'].iloc[i] ) :
+    #     #     df['box_signB'].iloc[i] = -1 
 
 
-        df['Triangle'].iloc[i-1]  =   cal_ang((df['Close'].iloc[i-2], i-2), (df['Close'].iloc[i-1], i-1), (df['Close'].iloc[i], i))
+    #     df['Triangle'].iloc[i-1]  =   cal_ang((df['Close'].iloc[i-2], i-2), (df['Close'].iloc[i-1], i-1), (df['Close'].iloc[i], i))
 
-        if (df['Close'].iloc[i-1]  > df['Close'].iloc[i] ) & (df['Close'].iloc[i-1]  >  df['Close'].iloc[i-2] ) :
+    #     if (df['Close'].iloc[i-1]  > df['Close'].iloc[i] ) & (df['Close'].iloc[i-1]  >  df['Close'].iloc[i-2] ) :
        
-            if df['Triangle'].iloc[i-1]  < 90 and df['Triangle'].iloc[i-1]  > 0:
-                df['point_sign'].iloc[i-1] = 1 
+    #         if df['Triangle'].iloc[i-1]  < 90 and df['Triangle'].iloc[i-1]  > 0:
+    #             df['point_sign'].iloc[i-1] = 1 
 
-        if (df['Close'].iloc[i-1]  < df['Close'].iloc[i] ) & (df['Close'].iloc[i-1]  < df['Close'].iloc[i-2] ) :
-            #df['Triangle'].iloc[i-1]  =   cal_ang((df['Close'].iloc[i-2], 10), (df['Close'].iloc[i-1], 20), (df['Close'].iloc[i], 10))
+    #     if (df['Close'].iloc[i-1]  < df['Close'].iloc[i] ) & (df['Close'].iloc[i-1]  < df['Close'].iloc[i-2] ) :
+    #         #df['Triangle'].iloc[i-1]  =   cal_ang((df['Close'].iloc[i-2], 10), (df['Close'].iloc[i-1], 20), (df['Close'].iloc[i], 10))
 
-            if df['Triangle'].iloc[i-1]  < 90 and df['Triangle'].iloc[i-1]  > 0:
-                df['point_sign'].iloc[i-1] = -1 
+    #         if df['Triangle'].iloc[i-1]  < 90 and df['Triangle'].iloc[i-1]  > 0:
+    #             df['point_sign'].iloc[i-1] = -1 
 
 
     

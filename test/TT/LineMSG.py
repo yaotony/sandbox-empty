@@ -1,10 +1,10 @@
 import lineTool
 import requests
 
-token='BGMktHvxXppQctxavvBkKl3aNPjKgG027mWIF4z9a46'
+#token='BGMktHvxXppQctxavvBkKl3aNPjKgG027mWIF4z9a46'
+token='vkI9hP7Ildv4HkxY63nWV6CTFjk45yGMgpnw6eJk88u'
 
- 
-  
+
 URL = 'https://notify-api.line.me/api/notify'
   
   
@@ -18,5 +18,6 @@ def send_message( msg, img=None):
         files['imageFile'].close()
     return r.status_code
 
-send_message('tst','c:\\temp\\051.jpg')
-send_message('AAGC')
+#r = send_message('ABC','c:\\temp\\20200106121100.png')
+#print(r)
+#send_message('AAGC')

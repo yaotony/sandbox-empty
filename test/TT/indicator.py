@@ -2,8 +2,9 @@
 import requests,datetime,os
 import numpy as np
 import matplotlib as mdates
-
+from matplotlib.dates import date2num
 from talib.abstract import *  # 載入技術指標函數
+import talib
 from bs4 import BeautifulSoup 
 
 
@@ -335,7 +336,9 @@ class KBar():
         return self.TAKBar['volume']
     # 取MA值(MA期數)
     def GetMA(self,n,matype):
-        return MA(self.TAKBar,n,matype)    
+        return MA(self.TAKBar,n,matype)  
+    def GetMAByOpen(self,n,matype):
+        return  talib.MA(self.TAKBar['open'],n,matype)   
     # 取SMA值(SMA期數)
     def GetSMA(self,n):
         return SMA(self.TAKBar,n)
@@ -364,7 +367,7 @@ class KBar():
     # 取得繪圖的格式(時間開高低收)(應用在回測章節)
     def GetChartTypeData(self):
         
-        return [ [mdates.date2num(self.TAKBar['time'][i]),self.TAKBar['open'][i],self.TAKBar['high'][i],self.TAKBar['low'][i],self.TAKBar['close'][i]] for i in range(len(self.TAKBar['time'])) ]
+        return [ [date2num(self.TAKBar['time'][i]),self.TAKBar['open'][i],self.TAKBar['high'][i],self.TAKBar['low'][i],self.TAKBar['close'][i]] for i in range(len(self.TAKBar['time'])) ]
 
 # 固定量K棒
 class VolumeKBar():
