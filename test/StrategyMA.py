@@ -1,8 +1,8 @@
 # MA策略 黃金交叉 = 1   死亡交叉 = -1  預設=0
 def MA(s,l,df):
     #平均線產生
-    df['ma_s'] = df.iloc[:,4].rolling(s).mean()#以收盤價[close]計算5日均線 
-    df['ma_l'] = df.iloc[:,4].rolling(l).mean()#以收盤價[close]計算5日均線 
+    df['ma_s'] = df['Open'].iloc[:].rolling(s).mean()#以收盤價[close]計算5日均線 
+    df['ma_l'] = df['Open'].iloc[:].rolling(l).mean()#以收盤價[close]計算5日均線 
     #MA 交易訊號欄
     df['ma_sign']=0
     #設定黃金交叉訊號

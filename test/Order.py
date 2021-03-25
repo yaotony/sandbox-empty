@@ -1,3 +1,5 @@
+#2021-03-20 已完成！不可修改
+
 from LineMSG import linePush
 from SendOrderMSG  import sendMSG
 
@@ -17,7 +19,7 @@ def inp(df,r,b,i):
     df['sign'].iloc[i] = b #進場時記錄多空
     #rs = sendMSG(b,df['Time'].iloc[i].strftime("%Y-%m-%d %H:%M:%S"),"BoxTheory",1)
     #r = rs['d']
-    r = df['Open'].iloc[i] #設定多方買進與空方賣出成本
+    r = df['Close'].iloc[i] #設定多方買進與空方賣出成本
     df['note'].iloc[i] =str(r) + df['note'].iloc[i]+ " 下單 ： " + str(b) +"  :  "
     #print("inp : " +  str( rs['d']) +":" + str(df['Open'].iloc[i]))
     #linePush( df['note'].iloc[i])
@@ -114,16 +116,42 @@ def stop(df,wsp,lsp,r,b,i,topProfit):
     # elif ((topProfit - mm) * b ) > 5 :
     # #         #print('強制出場')
     #     r,b = outp(df,r,b,1,i+1)   
-        
-    if b == 1 and  df['point_sign'].iloc[i] == 1:
-    #         #print('苻合停損+'+str(df['Close'].iloc[i]))
-         r,b = outp(df,r,b,1,i)
-    elif b == -1 and  df['point_sign'].iloc[i] == -1:
+        #sign
+    #if b == 1 and  df['point_sign'].iloc[i] == 1  :#and  df['sign'].iloc[i-1] == 0 :
+    if (mm - r) * b > 0:
+        #if(mm - r) * b > 20:
+            if (((topProfit - r ) * b ) * wsp) < (topProfit - mm ) * b   :
+                r,b = outp(df,r,b,1,i)
+        # else :
+        #     if b== 1 and df['BoxDown'].iloc[i] > mm  and df['BoxTop'].iloc[i] > mm  :
+        #         r,b = outp(df,r,b,1,i)
+        #     elif b== -1 and df['BoxDown'].iloc[i] < mm and df['BoxTop'].iloc[i] < mm :
+        #         r,b = outp(df,r,b,1,i)
+    else :
+        if ((topProfit - mm) * b ) >= 20 :#and (mm - r) * b < -50:
+            r,b = outp(df,r,b,1,i)
+        elif b== 1 and df['BoxTop'].iloc[i] > mm and df['BoxDown'].iloc[i] > mm  :
+            r,b = outp(df,r,b,1,i)
+        elif b== -1 and df['BoxDown'].iloc[i] < mm and df['BoxTop'].iloc[i] < mm :
+            r,b = outp(df,r,b,1,i)
+    
+    # if  ((topProfit - r ) * b ) > 0 and  (((topProfit - r ) * b ) * wsp) <= (topProfit - mm ) * b :#and  df['sign'].iloc[i-1] == 0 :
+    # #         #print('苻合停損+'+str(df['Close'].iloc[i]))
+       
+    #         r,b = outp(df,r,b,1,i)
+    # #elif b == -1 and  df['point_sign'].iloc[i] == -1  :#and  df['sign'].iloc[i-1] == 0 :
+    #elif b == -1 and  df['point_sign'].iloc[i] == -1  :#and  df['sign'].iloc[i-1] == 0 :
     #         #print('苻合停損-'+str(df['Close'].iloc[i]))
-         r,b = outp(df,r,b,1,i)
-    elif ((topProfit - mm) * b ) > 5 :
-    #         #print('強制出場')
-         r,b = outp(df,r,b,1,i)
+    #     r,b = outp(df,r,b,1,i)
+    # elif ((topProfit - mm) * b ) >= 50 :
+    # #         #print('強制出場')
+    #      r,b = outp(df,r,b,1,i)
+   
+    # elif b== 1 and df['BoxTop'].iloc[i] > mm :
+    #     r,b = outp(df,r,b,1,i)
+    
+    # elif b== -1 and df['BoxDown'].iloc[i] < mm :
+    #     r,b = outp(df,r,b,1,i)
 
 #box_sign
     # if b == 1 and  df['box_sign'].iloc[i] == -1:
