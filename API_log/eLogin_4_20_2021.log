@@ -1,0 +1,1852 @@
+2021/4/20 §U§» 05:55:01(111415903) : 
+2021/4/20 §U§» 05:55:45(111459524) : 
+2021/4/20 §U§» 05:56:10(111484872) : 
+2021/4/20 §U§» 05:56:14(111488390) : 
+2021/4/20 §U§» 06:10:04(112318662) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181003'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:10:04(112318745) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:10:38(112352627) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181037'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:10:38(112352734) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:11:04(112378516) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181103'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:11:04(112378588) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:11:57(112431647) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181157'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:11:57(112431747) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:12:04(112438372) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181203'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:12:04(112438470) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:12:45(112480145) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181245'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:12:45(112480230) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:15:08(112622668) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181508'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:15:08(112622821) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:15:50(112665049) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181550'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:15:50(112665195) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:15:58(112672771) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181558'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:15:58(112672872) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:19:52(112907018) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-181952'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:19:52(112907177) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:20:33(112948217) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182033'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:20:34(112948370) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:21:32(113006748) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182132'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:21:32(113006831) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:23:07(113106120) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182311'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:23:08(113106206) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:24:07(113164980) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182410'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:24:07(113165059) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:24:12(113169641) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182414'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:24:12(113169756) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:24:16(113173116) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182418'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:24:16(113173240) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:24:41(113196743) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182442'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:24:41(113196829) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:24:52(113209152) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182454'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:24:52(113209235) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:25:28(113244269) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182529'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:25:28(113244363) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:25:38(113253232) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182538'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:25:38(113253365) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:26:26(113303544) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182628'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:26:27(113303631) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:27:54(113390859) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-182756'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:27:54(113390949) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:47:52(114586932) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-184752'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:47:52(114587045) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:56:49(115124070) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-185649'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:56:49(115124292) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:57:02(115136520) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-185701'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:57:02(115136652) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 06:57:20(115155353) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-185720'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 06:57:21(115155452) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:07:06(115741110) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190706'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:07:06(115741211) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:07:40(115774826) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190740'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:07:40(115774924) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:00(115794442) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190759'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:00(115794581) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:05(115800118) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190805'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:05(115800227) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:14(115808924) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190814'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:14(115809013) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:23(115817648) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190822'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:23(115817753) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:31(115825574) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190830'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:31(115825679) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:47(115841383) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190846'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:47(115841513) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:08:56(115850644) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190855'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:08:56(115850770) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:09:10(115864397) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-190909'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:09:10(115864612) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:10:40(115954921) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191040'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:10:40(115955075) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:10:51(115965803) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191051'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:10:51(115965892) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:11:22(115996952) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191122'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:11:22(115997049) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:11:46(116020928) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191146'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:11:46(116021031) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:16:28(116302663) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191627'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:16:28(116302748) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:18:32(116427186) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191832'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:18:32(116427281) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:18:45(116439408) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191844'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:18:45(116439502) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+
+2021/4/20 §U§» 07:18:54(116449145) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20210420-191854'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>M1xUNbjWrQEoiUc=20210420</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2021/4/20 §U§» 07:18:54(116449248) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+

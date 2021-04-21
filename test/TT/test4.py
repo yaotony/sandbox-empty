@@ -2,12 +2,144 @@ from indicator import getFutureDailyInfo
 from indicator import KBar
 import pandas as pd
 import time ,datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import matplotlib
+
+import mplfinance as mpf
+from mplfinance.original_flavor import candlestick_ohlc
+from LineMSG import send_message
+
 import math
 import numpy as np
-from Order3 import inp,outp,stopByB,stopByS
+from Order2 import inp,outp,stop,stopByMA
 from Strategy6 import BoxTheory
 import os
 
+
+def saveDrawMap(KBar1M,df,filename,note =None) :
+    FastPeriod=10
+    SlowPeriod=30 
+    KData = KBar1M.GetChartTypeData()
+    df = df.sort_values(by=['time'],ascending=True)
+    FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
+    SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
+    BoxTop =   df['BoxTop'] 
+    BoxDown =df['BoxDown'] 
+
+    Time=KBar1M.GetTime()    
+    #定義圖表物件
+    plt.rcParams['font.sans-serif'] = ['mingliu']
+    plt.rcParams['axes.unicode_minus'] = False
+    plt.rcParams['savefig.dpi'] = 200 #图片像素
+    plt.rcParams['figure.dpi'] = 200 #分辨率
+  
+    ax = plt.subplot(111)
+ 
+    #繪製圖案 ( 圖表 , K線物件 )
+    
+    
+    candlestick_ohlc(ax, KData, width=0.0003, colorup='r', colordown='g')  
+    ax.plot_date( Time,FastMA, 'k-' , linewidth=1 ,color='#00FFFF')
+    ax.plot_date( Time,SlowMA, 'k-' , linewidth=1 ,color='#FFFF00')
+    ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
+    ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
+
+    # X軸的間隔設為半小時
+    plt.xticks(np.arange(KData[0][0],KData[-1][0], 1/1440*30))
+        
+    #定義標頭
+    ax.set_title(note)
+
+    #定義x軸
+    hfmt = mdates.DateFormatter('%H:%M')
+    ax.xaxis.set_major_formatter(hfmt)
+    plt.savefig('C:\\Temp\\'+filename+'.png')#儲存圖片
+    plt.close()
+   
+def drawMap(KBar1M,df,filename,note =None) :
+    FastPeriod=10
+    SlowPeriod=30 
+    KData = KBar1M.GetChartTypeData()
+    df = df.sort_values(by=['time'],ascending=True)
+    #FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
+    #SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
+    FastMA=pf['ma_s']
+    SlowMA=pf['ma_l']
+    BoxTop =   df['BoxTop'] 
+    BoxDown =df['BoxDown'] 
+
+    Time=KBar1M.GetTime()    
+    #定義圖表物件
+   # zhfont1 = matplotlib.font_manager.FontProperties(fname='C:\Windows\Fonts\mingliu.ttf')
+    #plt.legend(prop=zhfont1)
+    plt.rcParams['font.sans-serif'] = ['mingliu']
+    plt.rcParams['axes.unicode_minus'] = False
+    #plt.rcParams['savefig.dpi'] = 200 #图片像素
+    #plt.rcParams['figure.dpi'] = 200 #分辨率
+  
+    
+    ax = plt.subplot(111)
+    #繪製圖案 ( 圖表 , K線物件 )
+    candlestick_ohlc(ax, KData, width=0.0003, colorup='r', colordown='g')  
+    ax.plot_date( Time,FastMA, 'k-' , linewidth=1 ,color='#00FFFF')
+    ax.plot_date( Time,SlowMA, 'k-' , linewidth=1 ,color='#FFFF00')
+    ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
+    ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
+    # X軸的間隔設為半小時
+    plt.xticks(np.arange(KData[0][0],KData[-1][0], 1/1440*30))
+        
+    #定義標頭
+    ax.set_title(note)
+
+    #定義x軸
+    hfmt = mdates.DateFormatter('%H:%M')
+    ax.xaxis.set_major_formatter(hfmt)
+    plt.savefig('C:\\Temp\\'+filename+'.png')#儲存圖片
+    #顯示繪製圖表
+    plt.show()       
+    # #定義圖表物件
+    # ax = plt.subplot(111)
+    # plt.rcParams['font.sans-serif'] = ['PingFang HK']
+
+    # ax.xaxis.set_visible(False)  # 隱藏X軸刻度線
+    # #繪製圖案 ( X軸物件, Y軸物件, 線風格 )
+    # ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
+    # ax.plot_date( Time,Price, 'k-' , linewidth=1 ,color='#FF0000')
+    # ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
+    # for i in  range( len(mmData)):
+    #     if mmData['sign'].iloc[i] == -1 :
+    #         ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+    #             xycoords='data',
+    #             arrowprops=dict(facecolor='green', shrink=0.05)
+    #             )
+    #     elif mmData['sign'].iloc[i]== 1 :
+    #         ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+    #             xycoords='data',
+    #             arrowprops=dict(facecolor='red', shrink=0.05)
+    #             )
+
+    #     elif  len(mmData['note'].iloc[i]) > 0:
+    #         ax.annotate(NoteText[i], xy=(Time[i], Price[i]), xytext=(Time[i], Price[i]),
+    #             xycoords='data',
+    #             arrowprops=dict(facecolor='fuchsia', shrink=0.05)
+    #             )
+        
+
+
+
+    # #定義標頭
+    # ax.set_title(title)
+
+    # #定義x軸
+    # hfmt = mdates.DateFormatter('%H:%M')
+    # ax.xaxis.set_major_formatter(hfmt)
+
+    # table = pd.plotting.table(ax, result, loc='bottom')
+    # table.set_fontsize(14)
+    # table.scale(1.5, 1.5)  # may help
+    # #顯示繪製圖表
+    # plt.show()
 
 def out_excle(name,df,result) :
     writer = pd.ExcelWriter('C:\\temp\\'+ name+'_re.xlsx',engine=None)
@@ -20,7 +152,10 @@ def out_excle(name,df,result) :
 
 def result_F(df,v,n):
     #計算最後報酬
-    last = int( df['cus'].iloc[-1])
+    last = 0
+
+    if(len(df)>0):
+        last = int( df['cus'].iloc[-1])
     #計算交易次數
     count = len(df)
     wamt =int( df['ret'][df['ret']>0].sum())
@@ -30,8 +165,10 @@ def result_F(df,v,n):
     def maxdrawdown(s):
         s = s.cummax() - s #歷史最高價 - 現在序列,cummax 生成當日之前的歷史最高價序列
         return (s.max())
-    
-    mdd =int( maxdrawdown(df['cus']))
+    mdd = 0
+
+    if(len(df)>0):
+        mdd =int( maxdrawdown(df['cus']))
     #計算勝率
     #若交易次數=0，則勝率=0
     if count == 0 :
@@ -107,6 +244,7 @@ filenames.sort()
 
 
 
+
 for i in range (len(filenames)):
     #df =   pd.read_csv(FilePath+filenames[i],encoding="UTF8")
     df =   pd.read_csv(FilePath+filenames[i], low_memory=False,encoding="UTF-8",converters={'成交日期':str,'成交時間':str})
@@ -131,24 +269,40 @@ for i in range (len(filenames)):
   
 
    
-    print('filename',filename)
+
     # print('yy', yy)
     # print('mm',mm)
     # print('dd',dd)
-    print('YYMM',YYMM)
-    print('len(df):',len(df))
-    Today=datetime.datetime.strptime(yy+mm+dd,'%Y%m%d').strftime('%Y%m%d')
-    data = df[ (df['商品代號']==Broker) & (df['到期月份(週別)']==YYMM) & (df['成交日期']==yy+mm+dd)   ]
+    #print('YYMM',YYMM)
+    #print('len(df):',len(df))
+    
+
+    data = df[ (df['商品代號'].str.strip() == Broker) &  (df['到期月份(週別)'].str.strip()  == YYMM ) ]# & (df['成交日期']==yy+mm+dd)   ]
     print('len(data):',len(data))
     # 定義K棒物件
 
-    KBar1M=KBar(Today,1)    
-    starTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 09:00:00','%Y-%m-%d %H:%M:%S')
-    orderTime = starTime
-    close1=0
-    close2=0
-    close3=0
-
+    if len(data)==0 :
+             continue
+    
+    Today=datetime.datetime.strptime(data['成交日期'].iloc[0],'%Y%m%d').strftime('%Y%m%d')
+   
+    KBar1M=KBar(Today,1)  
+    # 定義MA週期
+    FastPeriod=10
+    SlowPeriod=30 
+    #starTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 08:45:00','%Y-%m-%d %H:%M:%S')
+    #orderTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 09:30:00','%Y-%m-%d %H:%M:%S')
+    #endTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 13:30:00','%Y-%m-%d %H:%M:%S')
+    
+    starTime = time.strptime('15:00:00','%H:%M:%S') #datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 15:00:00','%Y-%m-%d %H:%M:%S')
+    orderTime =time.strptime('18:00:00','%H:%M:%S')# datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 18:00:00','%Y-%m-%d %H:%M:%S')
+   
+    endTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 04:30:00','%Y-%m-%d %H:%M:%S') 
+    
+    print('starTime',starTime) 
+    print('orderTime',orderTime)
+    print('starTime',starTime)
+    
     columns =['time','close1','close2','close3','Triangle','BC','ret','cus','note']
     reValues =[]
     r=0 #記錄交易資金流量
@@ -163,115 +317,185 @@ for i in range (len(filenames)):
     rr = 0 #
     srr = 0
 
+    pf =[]
 
+    msgIndex =0
     for i in  range( len(data)):
 
         _date =  data['成交日期'].iloc[i]
         _time =  data['成交時間'].iloc[i]
         Price=float(data['成交價格'].iloc[i])
         Qty=float(data['成交數量(B+S)'].iloc[i])
+        _t = time.strptime('15:00:00','%H:%M:%S') 
     
     
         if len(_time)==5 :
             _dateTime = _date[0:4]+'-'+_date[4:6]+'-'+_date[6:] +' 0' + _time[0:1]+':' + _time[1:3]+':' + _time[3:]
+            _t =  time.strptime('0' + _time[0:1]+':' + _time[1:3]+':' + _time[3:],'%H:%M:%S')
         else :
             _dateTime = _date[0:4]+'-'+_date[4:6]+'-'+_date[6:] +' ' + _time[0:2]+':' + _time[2:4]+':' + _time[4:]
-        
+            _t =  time.strptime(_time[0:2]+':' + _time[2:4]+':' + _time[4:],'%H:%M:%S')
         Time=datetime.datetime.strptime(_dateTime,'%Y-%m-%d %H:%M:%S')
         
-        if Time < starTime :
-            continue
+        
 
-        ChangeKFlag=KBar1M.AddPrice(Time,Price,Qty)
+        isok = True
+
+        if _t >= time.strptime('00:00:00','%H:%M:%S') and  _t <= time.strptime('04:30:00','%H:%M:%S') :
+            isok= False
+        
+        if _t >= time.strptime('15:00:00','%H:%M:%S') and  _t <= time.strptime('23:59:59','%H:%M:%S') :
+            isok= False
+           
+        
+        if isok :
+             continue
+
+        
         
         # 每分鐘判斷一次
-    
-    
+        #print('Time',Time,'Price',Price)
+        ChangeKFlag=KBar1M.AddPrice(Time,Price,Qty)
+        
+        isok = True
+
+        if _t >= orderTime and  _t <= time.strptime('23:59:59','%H:%M:%S') :
+            isok= False
+        if _t >= time.strptime('00:00:00','%H:%M:%S') and  _t <= time.strptime('04:30:00','%H:%M:%S') :
+            
+            endTime = datetime.datetime.strptime(Time.strftime('%Y-%m-%d ') +' 04:20:00','%Y-%m-%d %H:%M:%S') 
+           
+            if Time > endTime :
+               
+                if b != 0 :
+                    r,b,rr,reValues = outp(Time,Price,r,b,note,reValues)
+                    topProfit = 0
+                    print('Time > endTime Time > endTime Time > endTime Time > endTime Time > endTime Time > endTime ')
+                    #drawMap(KBar1M,pf,filename,msg)
+            
+
+
+            isok= False
+
+        if isok :
+            continue
+
 
         if ChangeKFlag==1:
+            #print('Time',Time)
             #print('ChangeKFlag：',ChangeKFlag)
             pf = pd.DataFrame(KBar1M.TAKBar,columns =['time','open','high','low','close','volume'])
+            pf = BoxTheory(pf,10,1)
             #print('當前價',Price,'，時間：',Time,'，量：',Qty)
             #print('len(pf1):',len(pf))      
             #pf = BoxTheory(pf,5,0)
             #print('len(pf2):',len(pf))
             pf = pf.sort_values(by=['time'],ascending=False)
-    
-
-        
-            Triangle = 0
-            if len(pf)>=4:
-
-                close1 =pf['close'].iloc[1]
-                close2 =pf['close'].iloc[2]
-                close3 =pf['close'].iloc[3]
-
-                #print('Time',Time, ' close3:',close3,' close2:',close2,'    close1:',close1)
+            #print(pf)
+            #print('--------------------------------------------------------------------------------')
             
-                # if close2 > close3 and close2 > close1 :
-                #     Triangle  =   cal_ang((close3, 3), (close2, 2), (close1, 1))
-                #     if Triangle < 50 :
-                #         print('Time',Time, ' close3:',close3,' close2:',close2,'    close1:',close1,' Triangle:',Triangle,' 1')
-                # if close2 < close3 and close2 < close1 :
-                #     Triangle  =   cal_ang((close3, 3), (close2, 2), (close1, 1))
-                #     if Triangle < 50 :
-                #         print('Time',Time,' close3:',close3,' close2:',close2,'    close1:',close1,' Triangle:',Triangle,' -1')
+           
+            
+            BoxTop =pf['BoxTop'].iloc[1] 
+            BoxDown =pf['BoxDown'].iloc[1] 
+            
+           
+            
+            FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
+            SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
 
-        if close1 >0 and close2 >0  :
-        
+            #print(FastMA)
+            #print('--------------------------------------------------------------------------------')
             #print ('close2:',close2,'    close1:',close1,'   Price:',Price)
-            _time =   datetime.datetime.strptime( Time.strftime('%Y-%m-%d %H:%M'),'%Y-%m-%d %H:%M')
-            _ordertime = datetime.datetime.strptime( orderTime.strftime('%Y-%m-%d %H:%M'),'%Y-%m-%d %H:%M')
-            
-            Triangle  =   cal_ang((Price, 1), (close1, 2), (close2, 3))
+            #_time =   datetime.datetime.strptime( Time.strftime('%Y-%m-%d %H:%M'),'%Y-%m-%d %H:%M')
+#            _ordertime = datetime.datetime.strptime( orderTime.strftime('%Y-%m-%d %H:%M'),'%Y-%m-%d %H:%M')
             
             note =''
-            if i < L-1 :
+
+            
+            
+
+            if len(SlowMA)>=SlowPeriod+2:
                 
-                if b == 1  or b == -1 :
-                    if b == 1 :
-                        (r,b,sr,sb,topProfit,rr,srr,note)=stopByB(Price,1,-0.25,r,b,sr,sb,topProfit,note,Time)
-                    elif b==-1 :
-                        (r,b,sr,sb,topProfit,rr,srr,note)=stopByS(Price,1,-0.25,r,b,sr,sb,topProfit,note,Time)
-                    
-                    if b==0 :
-                        reValues.append([Time,close2,close1,Price,Triangle,b,rr,0,note])
-                    
-                    if srr != 0:
-                        reValues.append([Time,close2,close1,Price,Triangle,sb,srr,0,note])
-                    #若b=0,表示空手
-                if b == 0 :#and ChangeKFlag==1 :
-                        a = Price - close1
-                        
-                        if ( (a > 0 and  a < 2) or (a < 0 and  a >-2) )and Triangle > 0 and  Triangle < 50  and  _ordertime != _time :
-                            if close1> close2 and close1 > Price :
-                                b = 1
-                            if close1 < close2 and close1 < Price :   
-                                b = -1
+                
+                #Last1FastMA,Last2FastMA=FastMA[-2],FastMA[-1]
+                #Last1SlowMA,Last2SlowMA=SlowMA[-2],SlowMA[-1] 
+                Last1FastMA,Last2FastMA=pf['ma_s'].iloc[2],pf['ma_s'].iloc[1]
+                Last1SlowMA,Last2SlowMA=pf['ma_l'].iloc[2],pf['ma_l'].iloc[1]  
 
-                            orderTime = Time
-                            r,b,note = inp(Price,b,note)
-                            topProfit = r
-                            reValues.append([Time,close2,close1,Price,Triangle,b,0,0,note])
-                            print('a:', a,' Time',Time, 'close3:',close3,'close2:',close2,'    close1:',close1,'   Price:',Price,' Triangle:',Triangle,'-----及時 ',b)
+                msg = ''
+                msg_b = 0 
+                if  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA:#pf['ma_sign'].iloc[-1] == 1:
+                    msg_b = 1
+                    msg='黃金交叉 - 做多： Price:'+str(Price) +' '+Time.strftime("%Y-%m-%d %H:%M:%S")
+                    msgIndex=0
+                    print(msg)
+                elif Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA:# pf['ma_sign'].iloc[-1] == -1:
+                    msg_b = -1
+                    msg='死亡交叉 - 做空： Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S")
+                    msgIndex=0
+                    print(msg)
+                elif msgIndex != 1 and   BoxTop < Last2FastMA  and BoxTop < Last2SlowMA :
+                    #print('BoxTop',BoxTop ,'Last2FastMA' ,Last2FastMA,'Last2SlowMA',Last2SlowMA)
+                    msg_b = 1
+                    msg='突破箱頂 - 做多： Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S")
+                    msgIndex =1
+                    print(msg)
+                elif  msgIndex != -1 and  BoxDown > Last2FastMA  and BoxDown > Last2SlowMA :   
+                    #print('BoxDown',BoxDown ,'Last2FastMA' ,Last2FastMA,'Last2SlowMA',Last2SlowMA) 
+                    msg_b = -1
+                    msg='突破箱底 - 做空： Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S")
+                    msgIndex =-1
+                    print(msg)
+
+                #if msg_b!= 0 :
+                    #saveDrawMap(KBar1M,Time.strftime("%Y%m%d%H%M%S"))
+                    #drawMap(KBar1M,pf,Time.strftime("%Y%m%d%H%M%S"),msg)
+                    #status_code =  send_message(msg,'C:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
+                    #if(status_code != 200):
+                    #    send_message(msg)
 
 
-
-            elif i == L-1 :
-                #若b不等於0 (表示還有部位)
                 if b != 0 :
-                    r,b,rr,note = outp(Price,r,b,note) 
-                    reValues.append([Time,close2,close1,Price,Triangle,b,rr,0,note])
-                    topProfit = 0
-                    if sb!=0 :                
-                        sr,sb,srr,note = outp(Price,sr,sb,note)
-                        print('保險出場： sr= ',sr,' sb=',sb,'  srr=',srr )
-                        reValues.append([Time,close2,close1,Price,Triangle,sb,srr,0,note])   
     
+                    r,b,rr,topProfit,reValues = stopByMA(Time,Price,0.5,-0.5,r,b,topProfit,note,reValues,pf,KBar1M)
+                    #if b==0:
+                    #    drawMap(KBar1M,pf,filename,msg)
+                
+                if b == 0 :
+                    note=''
+                    #if pf['adx'].iloc[1] >25 and Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
+                    #    b =1
+                    #elif pf['adx'].iloc[1] >25 and Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
+                    #    b = -1
+                    if pf['adx'].iloc[1] >25 and Price > Last2FastMA and  BoxTop < Last2FastMA  and BoxTop < Last2SlowMA :
+                        b = 1
+                    elif pf['adx'].iloc[1] >25 and Price < Last2FastMA and BoxDown > Last2FastMA  and BoxDown > Last2SlowMA :   
+                        b = -1
+ 
+                    if b!= 0 :
+                        r,b,reValues = inp(Time,Price,b,note,reValues)
+                        topProfit = r
+                        order_sign = 0 
+                        #drawMap(KBar1M,pf,filename,msg)
+                       
+
+    
+   
     reDF = pd.DataFrame(reValues, columns = columns)
     reDF['cus'] = reDF['ret'].cumsum()
+    last = 0
+
+    if(len(reDF)>0):
+        last = int( reDF['cus'].iloc[-1])
+    
+    msg = 'filename:'+filename+'last:'+str(last)+' OrderCount:'+str(len(reDF))
+    print(msg)
     result = result_F(reDF,allReValues,yy+mm+dd)
     out_excle(filename,reDF,result)
+    #out_excle(filename+'_All',pf,pf)
+    #drawMap(KBar1M,pf,filename,'')
+    #send_message(msg,'C:\\Temp\\'+filename+'.png')
 
 
 
@@ -280,10 +504,9 @@ for i in range (len(filenames)):
 
 nowTime = int(time.time()) # 取得現在時間
 allDf = pd.DataFrame(allReValues, columns = allColumns)
-out_ResultExcle(FilePath,str(nowTime),allDf)
+out_ResultExcle(FilePath+'\\OUT\\',str(nowTime),allDf)
 
             
-
 
         
        
