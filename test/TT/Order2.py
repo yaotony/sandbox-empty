@@ -117,9 +117,9 @@ def stopByMA(time,Price,wsp,lsp,r,b,topProfit,note,re,pf,KBar1M):
         elif Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA and (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b :# pf['ma_sign'].iloc[-1] == -1:
             bb = -1        
         
-        if  b== 1 and Price < Last2FastMA and  (Price - r) * b < -10 :
+        if  b== 1 and Price < Last2FastMA and  (Price - r) * b < -40 :
             bb = -1
-        elif  b== -1 and Price > Last2FastMA and (Price - r) * b < -10:
+        elif  b== -1 and Price > Last2FastMA and (Price - r) * b < -40:
             bb =1
         
 

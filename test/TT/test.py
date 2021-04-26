@@ -8,7 +8,7 @@ import matplotlib
 
 import mplfinance as mpf
 from mplfinance.original_flavor import candlestick_ohlc
-from LineMSG import send_message
+from LineMSG import send_message,send_bs_message
 import math
 import numpy as np
 from Order2 import inp,outp,stop,stopByMA
@@ -17,6 +17,19 @@ import os
 import haohaninfo
 from order import Record
 from Log import add
+from FunOrder import efOrder,getPositionQty
+
+def get_week_of_month(yy,mm,dd):
+    begin = int(str(datetime.date(int(yy),int(mm),1).strftime("%W")))
+    end = int(str(datetime.date(int(yy),int(mm),int(dd)).strftime("%W")))
+
+    return end - begin + 1
+
+def get_weekday(yy,mm,dd):
+    weekday = datetime.date(int(yy),int(mm),int(dd)).isoweekday()
+   
+
+    return weekday
 
 def out_excle(name,df,result) :
     writer = pd.ExcelWriter('C:\\temp\\'+ name+'_re.xlsx',engine=None)
@@ -32,8 +45,8 @@ def saveDrawMap(KBar1M,df,filename,note =None) :
     SlowPeriod=30 
     KData = KBar1M.GetChartTypeData()
     df = df.sort_values(by=['time'],ascending=True)
-    FastMA= df['ma_s'] :# KBar1M.GetMAByOpen(FastPeriod,0)
-    SlowMA= df['ma_l'] ：# KBar1M.GetMAByOpen(SlowPeriod,0)
+    FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
+    SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
     BoxTop =   df['BoxTop'] 
     BoxDown =df['BoxDown'] 
 
@@ -98,6 +111,30 @@ def run(Product , starTime,endTime,orderTime) :
 
     # 定義K棒物件
     Today=datetime.datetime.now().strftime('%Y%m%d')
+    mmlist=['','A','B','C','D','E','F','G','H','I','J','K','L']
+
+    yy = Today[0:4]
+    mm = Today[4:6]
+    dd = Today[6:8]
+    YYMM = yy+mm
+   
+    
+    if get_week_of_month(yy,mm,dd) == 3 :
+        if get_weekday(yy,mm,dd)>3 :
+            if(len( str( int(mm)+1))==1):
+                YYMM =yy+ str( int(mm)+1).zfill(2)
+            else :
+                YYMM =yy+ str( int(mm)+1)
+
+    elif get_week_of_month(yy,mm,dd) > 3 :
+        if(len( str( int(mm)+1))==1):
+            YYMM =yy +  str( int(mm)+1).zfill(2)
+        else :
+            YYMM =yy + str( int(mm)+1)
+
+    print('YYMM',YYMM)
+    Product=f'MXF{mmlist[int(YYMM[5:6])]}{YYMM[3:4]}'
+    print('Product',Product)
     KBar1M=KBar(Today,1)
     
     # 定義初始倉位
@@ -115,7 +152,7 @@ def run(Product , starTime,endTime,orderTime) :
     SlowPeriod=30
     note='' 
     
-
+    print('YYMM',YYMM)
     print('starTime ',starTime)
     print('orderTime ',orderTime)
     print('endTime ',endTime)
@@ -202,29 +239,21 @@ def run(Product , starTime,endTime,orderTime) :
                     elif (OpenInterest == -1 and orderTopProFit > Price) :
                         orderTopProFit = Price
                     
-                    if  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA and (((topProfit - r ) * b ) * 0.5) < (topProfit - Price ) * BSN :
+                    if  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA and (((topProfit - r ) * BSN ) * 0.5) < (topProfit - Price ) * BSN :
                         BS ='B'
-                    elif Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA and (((topProfit - r ) * b ) * 0.5) < (topProfit - Price ) * BSN :
-                        BS ='S'                    
+                    elif Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA and (((topProfit - r ) * BSN ) * 0.5) < (topProfit - Price ) * BSN :
+                        BS ='S'    
+
+                    if  BSN== 1 and Price < Last2FastMA and  (Price - r) * BSN < -40 :
+                        BS ='S'
+                    elif  BSN== -1 and Price > Last2FastMA and (Price - r) * BSN < -40:
+                        BS ='B'                
                 
                     if (BS == 'B' and BSN == -1 ) or (BS == 'S' and BSN == 1 ):
+                        Price = efOrder(YYMM,BS,1)
                         OrderRecord.Cover(BS,Product,Time,Price,1)
+                        send_bs_message(f'{Time} 出場：{BS} 價格：{Price} 口數：1 結果：{ (Price - r) * BSN}')
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out',Product,BS,Price,1,0]) 
-
-                OpenInterest = OrderRecord.GetOpenInterest()
-                if OpenInterest == 0 :
-                   
-                    if   Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
-                        BS ='B'
-                    elif  Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
-                        BS ='S'
-                    
-                    if BS != '' :
-                        orderTopProFit = 0
-                        OrderRecord.Order(BS,Product,Time,Price,1)
-                        orderTopProFit = Price
-                        add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'in',Product,BS,Price,1,0])                    
-         
 
 
                 if b != 0 :
@@ -233,29 +262,60 @@ def run(Product , starTime,endTime,orderTime) :
                     if b==0:
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out','MTXS',b,Price,1,rr])
 
-                if b == 0 :
+
+                OpenInterest = OrderRecord.GetOpenInterest()
+                
+                if OpenInterest == 0 or b == 0 :
+
+                    reDF = pd.DataFrame(reValues, columns = columns)
+                    cus  = 0 
+                    last = 0
+                    lamt = 0
+                    
+                        
+                    orderCount = len(reDF)#計算交易次數
+                    last = int( reDF['ret'].sum())
+                    lamt =int( reDF['ret'][reDF['ret']<0].sum())
+                    wamt =int( reDF['ret'][reDF['ret']>0].sum())
                    
+                    if   Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
+                        BS ='B'
+                    elif  Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
+                        BS ='S'
+                    
+                    if BS != '' and   last < -100  :
+                        BS =''
+                        send_bs_message(f'{Time} 強制停止下單！損益：{last}')
+
+
+                    if BS != '' :
+                        orderTopProFit = 0
+                        Price = efOrder(YYMM,BS,1)
+                        OrderRecord.Order(BS,Product,Time,Price,1)
+                        orderTopProFit = Price
+                        
+                        send_bs_message(f'{Time} 下單：{BS} 價格：{Price} 口數：1 ')
+                        add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'in',Product,BS,Price,1,0])                    
+
+
                     if   Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
                         b =1
                     elif  Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
                         b = -1
+                    
+                    if b!= 0  and (  last < -100  )  :
+                        b =0
  
-                    if b!= 0  :
+                    if b!= 0 :
                         r,b,reValues = inp(Time,Price,b,note,reValues)
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'in','MTXS',b,Price,1,0])
                         topProfit = r
                     else :
                         b = 0
-                 
-
 
         if Time > endTime :
             GO.EndSubscribe()
-            if b != 0 :
-                r,b,rr,reValues = outp(Time,Price,r,b,note,reValues)
-                topProfit = 0
-                add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out','MTXS',b,Price,1,rr])
-                    
+            
             OpenInterest = OrderRecord.GetOpenInterest()
             if  OpenInterest != 0 :
                 BSN = 0
@@ -266,13 +326,20 @@ def run(Product , starTime,endTime,orderTime) :
                 elif (OpenInterest < 0 ) :
                     BSN = -1       
                     BS ='B'
+                Price = efOrder(YYMM,BS,1)
                 OrderRecord.Cover(BS,Product,Time,Price,1)
+                send_bs_message(f'{Time} 出場：{BS} 價格：{Price} 口數：1 結果：{ (Price - r) * BSN}')
                 add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out',Product,BS,Price,1,0])
-  
+            
+            if b != 0 :
+                r,b,rr,reValues = outp(Time,Price,r,b,note,reValues)
+                topProfit = 0
+                add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out','MTXS',b,Price,1,rr])
+                    
     
 while True :
 
-    Product='MXFD1'
+    Product='MXFE1'
     starTime = datetime.datetime.now()
     orderTime = datetime.datetime.now()
     endTime = datetime.datetime.now()

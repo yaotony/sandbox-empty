@@ -1,4 +1,5 @@
 import csv
+import time ,datetime
 
 def add(filename,note):
 # 開啟輸出的 CSV 檔案
@@ -8,3 +9,10 @@ def add(filename,note):
 
         # 寫入一列資料
         writer.writerow(note)
+
+
+def addLogTtxt(note):
+    filename =datetime.datetime.now().strftime('%Y%m%d')
+    with open('C:\\temp\\'+filename+'_re.txt', 'a', newline='') as f:
+        f.writelines(note+' \n')
+        f.close
