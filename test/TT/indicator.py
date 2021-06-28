@@ -290,9 +290,12 @@ class KBar():
         self.TAKBar['volume'] = np.array([])
         self.current = datetime.datetime.strptime(date + ' 00:00:00','%Y%m%d %H:%M:%S')
         self.cycle = datetime.timedelta(minutes = cycle)
+        print('self.current',self.current)
+        print('self.cycle',self.cycle)
     # 更新最新報價
     def AddPrice(self,time,price,volume):
         # 同一根K棒
+
         if time < self.current:
             # 更新收盤價
             self.TAKBar['close'][-1] = price
@@ -306,8 +309,10 @@ class KBar():
             return 0
         # 不同根K棒
         else:
+           
             while time >= self.current:
                 self.current += self.cycle
+            
             self.TAKBar['time'] = np.append(self.TAKBar['time'],self.current)
             self.TAKBar['open'] = np.append(self.TAKBar['open'],price)
             self.TAKBar['high'] = np.append(self.TAKBar['high'],price)
