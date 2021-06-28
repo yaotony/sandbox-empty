@@ -32,7 +32,7 @@ def get_weekday(yy,mm,dd):
     return weekday
 
 def out_excle(name,df,result) :
-    writer = pd.ExcelWriter('C:\\temp\\'+ name+'_re.xlsx',engine=None)
+    writer = pd.ExcelWriter('E:\\temp\\'+ name+'_re.xlsx',engine=None)
     df.to_excel(writer,'0') #將df資料輸出到 '0' 工作表
     result.to_excel(writer,'result') #將result資料輸出到 'result' 工作表
     #將df['cus']資料輸出到'result'工作表，指定第5欄輸出
@@ -77,7 +77,7 @@ def saveDrawMap(KBar1M,df,filename,note =None) :
     #定義x軸
     hfmt = mdates.DateFormatter('%H:%M')
     ax.xaxis.set_major_formatter(hfmt)
-    plt.savefig('C:\\Temp\\'+filename+'.png')#儲存圖片
+    plt.savefig('E:\\Temp\\'+filename+'.png')#儲存圖片
     plt.close()
 
 def loadData(KBar1M ,Product,starTime):
@@ -86,7 +86,7 @@ def loadData(KBar1M ,Product,starTime):
     Today=datetime.datetime.now().strftime('%Y%m%d')
     # 定義券商  、Simulator 虛擬期權
     
-    FilePath='D:\\DATA\\simulator\\'+Today+'\\'+Product+'_Match.TXT'
+    FilePath='E:\\DATA\\simulator\\'+Today+'\\'+Product+'_Match.TXT'
 
     df =   pd.read_csv(FilePath, low_memory=False,encoding="UTF-8",header=None)
     for i in  range( len(df)):
@@ -253,7 +253,7 @@ def run(Product , starTime,endTime,orderTime) :
 
                 if msg_b!= 0 :
                     saveDrawMap(KBar1M,pf,Time.strftime("%Y%m%d%H%M%S"),msg)
-                    status_code =  send_message(msg,'C:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
+                    status_code =  send_message(msg,'E:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
 
                     if(status_code != 200):
                         send_message(msg)
@@ -267,7 +267,7 @@ def run(Product , starTime,endTime,orderTime) :
                     msg='Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S")
                     saveDrawMap(KBar1M,pf,Time.strftime("%Y%m%d%H%M%S"),msg)
                 
-                status_code =  send_All_message(msg,'C:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
+                status_code =  send_All_message(msg,'E:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
                 if(status_code != 200):
                     print(f'status_code:{status_code}')
                     send_All_message(msg)
