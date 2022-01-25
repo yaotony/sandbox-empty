@@ -1,7 +1,7 @@
 import os
 
-#command = "\"E:\\FubonAPIDemoF\\(C#)FubonAPIDemo\\FubonAPIDemoPro\\bin\\Debug\\FubonAPIDemoPro.exe\" "
-command = "\"D:\\FRun\\FubonAPIDemoPro.exe\" "
+command = "\"E:\\FubonAPIDemoF\\(C#)FubonAPIDemo\\FubonAPIDemoPro\\bin\\Debug\\FubonAPIDemoPro.exe\" "
+#command = "\"D:\\FRun\\FubonAPIDemoPro.exe\" "
 
 def efOrder(yymm,bs,qty):
     res = os.popen( f"{command} order {yymm} {bs} {qty}")
@@ -28,7 +28,7 @@ def getQuity():
     res = os.popen(f"{command} quity ")
     quity = res.read().replace('Active code page: 52936','').replace('\n','')
 
-    return  int(quity)
+    return  quity
 
 
 def getMatch():
@@ -40,7 +40,8 @@ def getMatch():
 #r = efOrder('202105','S','1')
 #print(r)
 
-#print('Qty：'+getPositionQty())
-#print('BS：'+getPositionBS())
-#print(getMatch())
+print('Qty：',getPositionQty())
+print('BS：',getPositionBS())
+print('Quity',getQuity())
+print(getMatch())
 

@@ -58,17 +58,21 @@ def saveDrawMap(KBar1M,df,filename,note =None) :
     plt.savefig('C:\\Temp\\'+filename+'.png')#儲存圖片
     plt.close()
    
-def drawMap(KBar1M,df,filename,note =None) :
+def drawMap(KBar1M,df,filename,orderValue,note =None) :
     FastPeriod=10
     SlowPeriod=30 
+    
     KData = KBar1M.GetChartTypeData()
     df = df.sort_values(by=['time'],ascending=True)
     #FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
-    #SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
+    #B40MA=KBar1M.GetMAByOpen(SlowPeriod,0)
     FastMA=df['ma_s']
     SlowMA=df['ma_l']
+    ma_40=df['ma_40']
+
     BoxTop =  df['BoxTop'] 
     BoxDown =df['BoxDown'] 
+    Prices=orderValue['Price']
 
     Time=KBar1M.GetTime()    
     #定義圖表物件
@@ -86,7 +90,21 @@ def drawMap(KBar1M,df,filename,note =None) :
     ax.plot_date( Time,FastMA, 'k-' , linewidth=1 ,color='#00FFFF')
     ax.plot_date( Time,SlowMA, 'k-' , linewidth=1 ,color='#FFFF00')
     ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
+    ax.plot_date(Time ,ma_40, 'k-' , linewidth=1 ,color='#FF0000')
     ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
+    for i in  range( len(orderValue)):
+        
+        if orderValue['BC'].iloc[i] == -1 :
+            ax.annotate( str(orderValue['Price'].iloc[i])+orderValue['note'].iloc[i] , xy=(Time[i], Prices[i]), xytext=(Time[i], Prices[i]),
+                xycoords='data',
+                arrowprops=dict(facecolor='green', shrink=0.05)
+                )
+        elif orderValue['BC'].iloc[i]== 1 :
+            ax.annotate(str(orderValue['Price'].iloc[i])+orderValue['note'].iloc[i], xy=(Time[i], Prices[i]), xytext=(Time[i], Prices[i]),
+                xycoords='data',
+                arrowprops=dict(facecolor='red', shrink=0.05)
+                )
+
     # X軸的間隔設為半小時
     plt.xticks(np.arange(KData[0][0],KData[-1][0], 1/1440*30))
         
@@ -213,6 +231,10 @@ def cal_ang(point_1, point_2, point_3):
     except :
         return 0
     return B
+def slopee(x1,y1,x2,y2):
+    x = (y2 - y1) / (x2 - x1)
+    return x
+
 
 def get_week_of_month(yy,mm,dd):
     begin = int(str(datetime.date(int(yy),int(mm),1).strftime("%W")))
@@ -291,7 +313,7 @@ for i in range (len(filenames)):
     SlowPeriod=30 
     starTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 08:45:00','%Y-%m-%d %H:%M:%S')
     orderTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 09:30:00','%Y-%m-%d %H:%M:%S')
-    endTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 13:30:00','%Y-%m-%d %H:%M:%S')
+    endTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 13:28:00','%Y-%m-%d %H:%M:%S')
     
     #starTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 15:00:00','%Y-%m-%d %H:%M:%S')
     #orderTime = datetime.datetime.strptime(yy+'-'+mm+'-'+dd +' 18:00:00','%Y-%m-%d %H:%M:%S')
@@ -303,7 +325,11 @@ for i in range (len(filenames)):
     print('starTime',starTime)
     
     columns =['time','close1','close2','close3','Triangle','BC','ret','cus','note']
+    orderColumns =['time','Price','BC','note']
+    allOrderColumns =['time','Price','BC','note']
     reValues =[]
+    orderValues=[]
+    allOrderValues=[]
     r=0 #記錄交易資金流量
     b=0 #設定多空方，多方=1，空方=-1，空手=0
     sr = 0 #保險本 
@@ -327,7 +353,7 @@ for i in range (len(filenames)):
         Price=float(data['成交價格'].iloc[i])
         Qty=float(data['成交數量(B+S)'].iloc[i])
     
-    
+        
         if len(_time)==5 :
             _dateTime = _date[0:4]+'-'+_date[4:6]+'-'+_date[6:] +' 0' + _time[0:1]+':' + _time[1:3]+':' + _time[3:]
         else :
@@ -335,25 +361,31 @@ for i in range (len(filenames)):
         
         Time=datetime.datetime.strptime(_dateTime,'%Y-%m-%d %H:%M:%S')
         
-
+        #print('time:',Time)
         
 
         if Time < starTime :
-            continue
-
-        
+                continue
         
         # 每分鐘判斷一次
     
         ChangeKFlag=KBar1M.AddPrice(Time,Price,Qty)
 
-        if Time < orderTime :
-            continue
-
+       
         
 
 
         if ChangeKFlag==1:
+            allOrderValues.append([Time,Price,'',''])
+
+
+          
+
+    
+
+            if Time < orderTime :
+                continue
+          
             #print('ChangeKFlag：',ChangeKFlag)
             pf = pd.DataFrame(KBar1M.TAKBar,columns =['time','open','high','low','close','volume'])
             pf = BoxTheory(pf,10,1)
@@ -370,10 +402,11 @@ for i in range (len(filenames)):
             BoxTop =pf['BoxTop'].iloc[1] 
             BoxDown =pf['BoxDown'].iloc[1] 
             
-           
+            
             
             FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
             SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
+            B40MA=KBar1M.GetMAByOpen(40,0)
 
             #print(FastMA)
             #print('--------------------------------------------------------------------------------')
@@ -382,11 +415,15 @@ for i in range (len(filenames)):
             _ordertime = datetime.datetime.strptime( orderTime.strftime('%Y-%m-%d %H:%M'),'%Y-%m-%d %H:%M')
             
             note =''
-
+            
             if Time > endTime :
+                #print('time over')
                 if b != 0 :
-                    r,b,rr,reValues = outp(Time,Price,r,b,note,reValues)
+                    allOrderValues[-1][2] = b
+                    allOrderValues[-1][3] = "時間到"
+                    r,b,rr,reValues,orderValues = outp(Time,Price,r,b,note,reValues,orderValues)
                     topProfit = 0
+                    
                     #drawMap(KBar1M,pf,filename,msg)
                 OpenInterest = OrderRecord.GetOpenInterest()
                 if  OpenInterest != 0 :
@@ -413,6 +450,19 @@ for i in range (len(filenames)):
                 Last1FastMA,Last2FastMA=pf['ma_s'].iloc[2],pf['ma_s'].iloc[1]
                 Last1SlowMA,Last2SlowMA=pf['ma_l'].iloc[2],pf['ma_l'].iloc[1]  
 
+                Last1_40MA,Last2_40MA=pf['ma_40'].iloc[3],pf['ma_40'].iloc[1]
+                Last1_Close,Last2_Close,Last3_Close,Last4_Close=pf['close'].iloc[4],pf['close'].iloc[3],pf['close'].iloc[2] ,pf['close'].iloc[1]   
+                #ma_40#slopee
+                y1,y2 =pf['ma_l'].iloc[5],pf['ma_l'].iloc[1]
+                y41,y42 =pf['ma_40'].iloc[5],pf['ma_40'].iloc[1]
+
+                rSlopee = slopee(1,y1,5,y2)
+                #print('rSlopee = '+  str(rSlopee))
+
+                rSlopee4 = slopee(1,y41,5,y42)
+               
+
+               
                 msg = ''
                 msg_b = 0 
                 if  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA:#pf['ma_sign'].iloc[-1] == 1:
@@ -471,12 +521,17 @@ for i in range (len(filenames)):
 
                 OpenInterest = OrderRecord.GetOpenInterest()
                 if OpenInterest == 0 :
-                   
+                
                     if   Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
-                        BS ='B'
+                         BS ='B'
                     elif  Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
-                        BS ='S'
-                    
+                         BS ='S'
+                        # Last1_Close  >  Last2_40MA  and
+                    # elif   Last1_Close  >  Last2_40MA  and  Last2_Close > Last2_40MA  and  Last3_Close < Last2_40MA and  Last4_Close < Last2_40MA :
+                    #       BS ='S'
+                    # elif   Last1_Close  <  Last2_40MA  and  Last2_Close < Last2_40MA and  Last3_Close > Last2_40MA and Last4_Close > Last2_40MA :
+                    #       BS ='B'
+                  
                     if BS != '':
                         orderTopProFit = 0
                         OrderRecord.Order(BS,Product,Time,Price,1)
@@ -486,18 +541,37 @@ for i in range (len(filenames)):
 
                 if b != 0 :
     
-                    r,b,rr,topProfit,reValues = stopByMA(Time,Price,0.5,-0.5,r,b,topProfit,note,reValues,pf,KBar1M)
+                    r,b,rr,topProfit,reValues,orderValues,allOrderValues = stopByMA(Time,Price,0.5,-0.5,r,b,topProfit,note,reValues,pf,KBar1M,orderValues,allOrderValues)
                     #if b==0:
                     #    drawMap(KBar1M,pf,filename,msg)
                 
                 if b == 0 :
                     note=''
-                    if   Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
-                        b =1
-                    elif  Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
-                        b = -1
-                    #elif   BoxTop < Last2FastMA  and BoxTop < Last2SlowMA :
-                    #    b = 1
+                        #Last2_Close > Last2_40MA and
+                    if    Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA :#pf['ma_sign'].iloc[-1] == 1:
+                         b =1
+                         #  Last2_Close < Last2_40MA and
+                    elif   Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA :# pf['ma_sign'].iloc[-1] == -1:
+                         b = -1
+                    # elif rSlopee > 5 and rSlopee4 >5 :
+                    #      b =1
+                    #      print('多-角度',rSlopee,rSlopee4)
+                    # elif  rSlopee < -5 and rSlopee4 < -5 :
+                    #      b =-1
+                    #      print('空-角度',rSlopee,rSlopee4)
+
+                    # elif   Last1_Close  >  Last2_40MA  and  Last2_Close > Last2_40MA  and  Last3_Close < Last2_40MA and  Last4_Close < Last2_40MA :
+                    #     b = -1
+                    #     print(Last1_Close,Last2_Close,Last3_Close,Last4_Close,Last2_40MA)
+                    #     print('MA40 下方突破 Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S"))
+                    #     print('rSlopee4 = '+  str(rSlopee4))
+                    # elif  Last1_Close  <  Last2_40MA  and  Last2_Close < Last2_40MA and  Last3_Close > Last2_40MA and Last4_Close > Last2_40MA  :
+                    #     b =1
+                    #     print(Last1_Close,Last2_Close,Last3_Close,Last4_Close,Last2_40MA)
+                    #     print('MA40 上方突破 Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S"))
+                    #     print('rSlopee4 = '+  str(rSlopee4))
+                    # #if   BoxTop < Last2FastMA  and BoxTop < Last2SlowMA :
+                    # #    b = 1
                     #elif BoxDown > Last2FastMA  and BoxDown > Last2SlowMA :   
                     #    b = -1
 
@@ -517,16 +591,19 @@ for i in range (len(filenames)):
                         print('orderCount',orderCount,'last',last,'lamt',lamt) 
  
                     if b!= 0 :
-                        r,b,reValues = inp(Time,Price,b,note,reValues)
+                        r,b,reValues,orderValues = inp(Time,Price,b,note,reValues,orderValues)
+                        allOrderValues[-1][2] = b
+                       
                         topProfit = r
                         #order_sign = 0 
-                        #drawMap(KBar1M,pf,filename,msg)
+                        
+                        #drawMap(KBar1M,pf,filename,pd.DataFrame(allOrderValues, columns = allOrderColumns),msg)
                     else :
                         b = 0
                        
 
     
-   
+
     reDF = pd.DataFrame(reValues, columns = columns)
     reOrder = pd.DataFrame(OrderRecord.GetTradeRecord())
     reDF['cus'] = reDF['ret'].cumsum()
@@ -541,7 +618,7 @@ for i in range (len(filenames)):
     result = result_F(reDF,allReValues,yy+mm+dd)
     out_excle(filename,reDF,reOrder)
     #out_excle(filename+'_All',pf,pf)
-    #drawMap(KBar1M,pf,filename,'')
+    #drawMap(KBar1M,pf,filename,pd.DataFrame(allOrderValues, columns = allOrderColumns),msg)
     #send_message(msg,'C:\\Temp\\'+filename+'.png')
 
 

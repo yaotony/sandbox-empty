@@ -185,7 +185,7 @@ for i in  range( len(data)):
 nowTime = int(time.time()) # 取得現在時間
 
 reDF = pd.DataFrame(reValues, columns = columns)
-#print(reDF)
+print(reDF)
 print('cus=',str(reDF['ret'].cumsum()))
 out_ResultExcle(FilePath,str(nowTime),reDF)
 

@@ -48,7 +48,8 @@ def saveDrawMap(KBar1M,df,filename,note =None) :
     FastMA=KBar1M.GetMAByOpen(FastPeriod,0)
     SlowMA=KBar1M.GetMAByOpen(SlowPeriod,0)
     BoxTop =   df['BoxTop'] 
-    BoxDown =df['BoxDown'] 
+    BoxDown =df['BoxDown']
+    B40MA =KBar1M.GetMAByOpen(40,0)
 
     Time=KBar1M.GetTime()    
     #定義圖表物件
@@ -67,7 +68,7 @@ def saveDrawMap(KBar1M,df,filename,note =None) :
     ax.plot_date( Time,SlowMA,'-g' , linewidth=1)
     ax.plot_date( Time,BoxTop,'-y' , linewidth=1)
     ax.plot_date( Time,BoxDown,'-c', linewidth=1)
-
+    ax.plot_date( Time,B40MA,'-r' , linewidth=1)
     # X軸的間隔設為半小時
     plt.xticks(np.arange(KData[0][0],KData[-1][0], 1/1440*30))
         
@@ -111,7 +112,7 @@ def run(Product , starTime,endTime,orderTime) :
 
     # 定義K棒物件
     Today=datetime.datetime.now().strftime('%Y%m%d')
-    mmlist=['','A','B','C','D','E','F','G','H','I','J','K','L']
+    mmlist=['','A','B','C','D','E','F','G','H','I','J','K','L','M','N']
 
     yy = Today[0:4]
     mm = Today[4:6]
@@ -133,7 +134,7 @@ def run(Product , starTime,endTime,orderTime) :
             YYMM =yy + str( int(mm)+1)
 
     print('YYMM',YYMM)
-    Product=f'MXF{mmlist[int(YYMM[5:6])]}{YYMM[3:4]}'
+    Product=f'MXF{mmlist[int(YYMM[4:6])]}{YYMM[3:4]}'
     print('Product',Product)
     KBar1M=KBar(Today,1)
     
@@ -144,7 +145,11 @@ def run(Product , starTime,endTime,orderTime) :
     GO = haohaninfo.GOrder.GOQuote()
 
     columns =['time','close1','close2','close3','Triangle','BC','ret','cus','note']
+    allOrderColumns =['time','Price','BC','note']
+    orderColumns =['time','Price','BC','note']
     reValues =[]
+    orderValues=[]
+    allOrderValues=[]
     r=0 #記錄交易資金流量
     b=0 #設定多空方，多方=1，空方=-1，空手=0
     topProfit = 0 
@@ -198,16 +203,18 @@ def run(Product , starTime,endTime,orderTime) :
                 #if datetime.datetime.now().hour >=9 and datetime.datetime.now().hour < 14 and getPositionQty()  > 0:
                 #    Price = efOrder(YYMM,BS,1)
                 OrderRecord.Cover(BS,Product,Time,Price,1)
-                send_bs_message(f'{Time} 出場：{BS} 價格：{Price} 口數：1 結果：{ (Price - r) * BSN}')
+                #send_bs_message(f'{Time} ORDER出場：{BS} 價格：{Price} 口數：1 結果：{ (Price - r) * BSN}')
                 add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out',Product,BS,Price,1,0])
             
             if b != 0 :
-                r,b,rr,reValues = outp(Time,Price,r,b,note,reValues)
+                allOrderValues[-1][2] = b
+                allOrderValues[-1][3] = "時間到"
+                r,b,rr,reValues,orderValues = outp(Time,Price,r,b,note,reValues,orderValues)
                 topProfit = 0
                 add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out','MTXS',b,Price,1,rr])
             continue
         if ChangeKFlag==1:
-           
+            allOrderValues.append([Time,Price,'',''])
             pf = pd.DataFrame(KBar1M.TAKBar,columns =['time','open','high','low','close','volume'])
             #print('當前價',Price,'，時間：',Time,'，量：',Qty)
             pf =    BoxTheory(pf,10,1)       
@@ -267,10 +274,10 @@ def run(Product , starTime,endTime,orderTime) :
                     msg='Price:'+str(Price)+' '+Time.strftime("%Y-%m-%d %H:%M:%S")
                     saveDrawMap(KBar1M,pf,Time.strftime("%Y%m%d%H%M%S"),msg)
                 
-                status_code =  send_All_message(msg,'E:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
-                if(status_code != 200):
-                    print(f'status_code:{status_code}')
-                    send_All_message(msg)
+                # status_code =  send_All_message(msg,'E:\\Temp\\'+Time.strftime("%Y%m%d%H%M%S")+'.png')
+                # if(status_code != 200):
+                #     print(f'status_code:{status_code}')
+                #     send_All_message(msg)
 
 
 
@@ -305,13 +312,13 @@ def run(Product , starTime,endTime,orderTime) :
                         #    Price = efOrder(YYMM,BS,1)
                         #    print(f'Price:{Price}')
                         OrderRecord.Cover(BS,Product,Time,Price,1)
-                        send_bs_message(f'{Time} 出場：{BS} 價格：{Price} 口數：1 結果：{ (Price - r) * BSN}')
+                        #send_bs_message(f'{Time} ORDER出場：{BS} 價格：{Price} 口數：1 結果：{ (Price - r) * BSN}')
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out',Product,BS,Price,1,0]) 
 
 
                 if b != 0 :
     
-                    r,b,rr,topProfit,reValues = stopByMA(Time,Price,0.5,-0.5,r,b,topProfit,note,reValues,pf,KBar1M)
+                    r,b,rr,topProfit,reValues,orderValues,allOrderValues = stopByMA(Time,Price,0.5,-0.5,r,b,topProfit,note,reValues,pf,KBar1M,orderValues,allOrderValues)
                     if b==0:
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'out','MTXS',b,Price,1,rr])
 
@@ -350,7 +357,7 @@ def run(Product , starTime,endTime,orderTime) :
                         OrderRecord.Order(BS,Product,Time,Price,1)
                         orderTopProFit = Price
                         
-                        send_bs_message(f'{Time} 下單：{BS} 價格：{Price} 口數：1 ')
+                        #send_bs_message(f'{Time} ORDER下單：{BS} 價格：{Price} 口數：1 ')
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'in',Product,BS,Price,1,0])                    
 
 
@@ -363,7 +370,8 @@ def run(Product , starTime,endTime,orderTime) :
                     #    b =0
  
                     if b!= 0 :
-                        r,b,reValues = inp(Time,Price,b,note,reValues)
+                        r,b,reValues,orderValues = inp(Time,Price,b,note,reValues,orderValues)
+                        allOrderValues[-1][2] = b
                         add(starTime.strftime('%Y%m%d%H%M%S'),[Time,'in','MTXS',b,Price,1,0])
                         topProfit = r
                     else :
@@ -373,7 +381,7 @@ def run(Product , starTime,endTime,orderTime) :
     
 while True :
 
-    Product='MXFE1'
+    Product='MXFB2'
     starTime = datetime.datetime.now()
     orderTime = datetime.datetime.now()
     endTime = datetime.datetime.now()

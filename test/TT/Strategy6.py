@@ -17,6 +17,7 @@ def BoxTheory(df,N,S):
  
     df['ma_s'] = df['open'].iloc[:].rolling(10).mean()#以收盤價[close]計算5日均線 
     df['ma_l'] = df['open'].iloc[:].rolling(30).mean()#以收盤價[close]計算5日均線 
+    df['ma_40'] = df['open'].iloc[:].rolling(40).mean()#以收盤價[close]計算5日均線 
     df['adx'] = talib.ADX(df['high'],df['low'],df['close'],14)
    
    
