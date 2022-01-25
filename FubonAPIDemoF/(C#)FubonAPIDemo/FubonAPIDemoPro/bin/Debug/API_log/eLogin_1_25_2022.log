@@ -1,0 +1,42 @@
+2022/1/25 §U§» 03:46:27(112615244) : <?xml version='1.0' encoding='big5'?><Result Code='0' ServerTime='20220125-154627'><Data><Global><MultiUID>0</MultiUID><HKTrade>N</HKTrade><Creator>H122192596</Creator><Name>´¿´ÿ®j</Name><UID>H122192596</UID><NeedNewPWD>0</NeedNewPWD><Birthday>N</Birthday><AuthKey>5Whe+9d+rUpnXGM=20220125</AuthKey><IORDER_STOCK>Y</IORDER_STOCK><IORDER_FUTURE>Y</IORDER_FUTURE><SpotShareDayTrade>N</SpotShareDayTrade></Global><Row FBID='F026000' BID='15000' AID='15000-0108360' Name='´¿´ÿ®j' ID='H122192596' NeedNewPWD='0' Type='F' Credit='Y' Key='CMj0sDNQbe4xo/A6qkTFKJFTUOQXEa+/MQ==#F026000' Creater='H122192596' Disp-aid='¥¡-¥¡≥f0108360-´¿´ÿ®j' CAID='H122192596' VerifyCA = 'Y' Status='0' MsgKey='F0260000108360' MsgServerID='TFE00' Underwriting='N' IOrder='Y' ETrade='' IApi='Y' DayTradeTT0='' IsMarketValueRisk='Y' ITouchTrade='N' LoseHalf='N' Regular='N'/><CA Type='2' SSID='H122192596' ><CLSID>caFubonFAP.dll</CLSID><VerifyCA>Y</VerifyCA><CAID>E=@@,CN=H122192596,OU=ECPL,OU=RA-FubonECRA,O=Certification Service Provider,O=TaiCA Secure CA,C=TW</CAID><CAID2>S_CN=H122192596,S_OU=ECPL,S_OU=RA-FubonECRA,S_O=Certification Service Provider,S_O=TaiCA Secure CA,S_C=TW</CAID2><InitParam></InitParam><Message></Message><InitSignString>LoginVerify</InitSignString><CAKey>H122192596</CAKey><CAType>P7</CAType><CAStatus>0</CAStatus></CA></Data></Result>
+2022/1/25 §U§» 03:46:27(112615276) :  >> <!DOCTYPE html>
+<html>
+    <head>
+        <title>?æ‰??∞Ë?Ê∫ê„Ä?/title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>'/' ?âÁî®Á®ãÂ?‰∏≠Áôº?ü‰º∫?çÂô®?ØË™§??hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>?æ‰??∞Ë?Ê∫ê„Ä?/i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> ?èËø∞: </b>HTTP 404. ?®Ë?Â∞ãÊâæ?ÑË?Ê∫?(?ñÂÖ∂?∏‰??ßÁ??∂‰∏≠‰πã‰?) ?ØËÉΩÂ∑≤Á?ÁßªÈô§?ÅÂ?Á®±Â∑≤Á∂ìË??¥Ê??ØÊö´?ÇÁÑ°Ê≥ï‰Ωø?®„ÄÇË?Ê™¢Èñ±‰∏ãÂ? URLÔºå‰∏¶‰∏îÁ¢∫ÂÆöÂ??ÑÊãºÂØ´ÁÑ°Ë™§„Ä?
+            <br><br>
+
+            <b> Ë¶ÅÊ???URL: </b>/SessionWeb/LoginSession.aspx<br><br>
+
+    </body>
+</html>
+

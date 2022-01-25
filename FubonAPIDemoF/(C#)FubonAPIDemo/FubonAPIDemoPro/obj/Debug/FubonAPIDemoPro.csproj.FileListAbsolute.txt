@@ -1,0 +1,14 @@
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.csprojAssemblyReference.cache
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\Interop.VBA.dll
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.csproj.ResolveComReference.cache
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.Form1.resources
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.Properties.Resources.resources
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.csproj.GenerateResource.cache
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.csproj.CoreCompileInputs.cache
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\bin\Debug\FubonAPIDemoPro.exe
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\bin\Debug\FubonAPIDemoPro.pdb
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\bin\Debug\Interop.VBA.dll
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.exe
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\FubonAPIDemoPro.pdb
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\Interop.FubonE01API.dll
+E:\FubonAPIDemoF\(C#)FubonAPIDemo\FubonAPIDemoPro\obj\Debug\Interop.TabDlg.dll
