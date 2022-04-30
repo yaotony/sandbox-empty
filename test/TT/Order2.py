@@ -1,28 +1,39 @@
 from LineMSG import send_message,send_bs_message,send_All_message
+from Util import drawMap
+import pandas as pd
+from Log import add,logFileClear
+import time ,datetime
+
+
 
 #定義進場函數，呼號範例為(r,b) = inp(df,r,b,i)
-def inp(time,r,b,note,re,orV):
+def inp(time,r,b,note,re,orV,logFileName):
 
     note =note + " 下單 ： "+str(r) + ' : '+ str(b) + " Time:"+time.strftime('%Y-%m-%d %H:%M')
     print(note)
     re.append([time,r,r,r,0,b,0,0,note])
     orV.append([time,r,b,note])
+   
+    orderInfo= time,r,b,note,1
+    add(logFileName,orderInfo)
     send_bs_message( note)
     return (r,b,re,orV)
 
-def addInp(time,r,b,note,re,orV):
+def addInp(time,r,b,note,re,orV,logFileName):
 
     note =note + " 加碼下單 ： "+str(r) + ' : '+ str(b) + " Time:"+time.strftime('%Y-%m-%d %H:%M')
     print(note)
     re.append([time,r,r,r,0,b,0,0,note])
     orV.append([time,r,b,note])
+    orderInfo= time,r,b,note,1
+    add(logFileName,orderInfo)
     send_bs_message( note)
     return (re,orV)
 
 
 
 #定義出場函數，呼號範例為(r,b) = outp(df,r,b,price,i)
-def outp(time,Price,r,b,note,re,orV):
+def outp(time,Price,r,b,note,re,orV,logFileName):
      #r是資金存量，b=多空方設定 多方=1 空方=-1
     #price=1代表開盤價，price=4代表收盤價
     for i in range( len(orV)) :
@@ -35,10 +46,12 @@ def outp(time,Price,r,b,note,re,orV):
         send_bs_message( note)
         note =''
     
+
     #print(orV)
     r=0#歸零
     b=0#多空方歸零
     orV =[]
+    logFileClear(logFileName)
 
     return (r,b,rr,re,orV)
 
@@ -93,7 +106,7 @@ def stop(time,Price,wsp,lsp,r,b,topProfit,note,re,orV):
                 
         return (r,b,rr,topProfit,re,note)
 
-def stopByMA(time,Price,wsp,lsp,r,b,topProfit,note,re,pf,KBar1M,orV,aorV):
+def stopByMA(time,Price,wsp,lsp,r,b,topProfit,note,re,pf,KBar1M,orV,aorV,orderType,logFileName ):
     #r是資金存量，b=多空方設定 多方=1 空方=1
     #mm = df.iloc[i,4] #當日結算(收盤價)
     #mp = mm / r  # 以當日結價價 / 進場成本
@@ -101,7 +114,8 @@ def stopByMA(time,Price,wsp,lsp,r,b,topProfit,note,re,pf,KBar1M,orV,aorV):
    # if b == 1 :
    #     topProfit = df['High'].iloc[i].rolling(5).max()
    # elif b == -1 : 
-   #     topProfit = df['Low'].iloc[i].rolling(5).min()    
+   #     topProfit = df['Low'].iloc[i].rolling(5).min()   
+        allOrderColumns =['time','Price','BC','note'] 
         FastPeriod=10
         SlowPeriod=30  
         mp = 0
@@ -141,22 +155,37 @@ def stopByMA(time,Price,wsp,lsp,r,b,topProfit,note,re,pf,KBar1M,orV,aorV):
         # elif b==-1 and Last1_Close  <  Last2_40MA  and  Last2_Close > Last2_40MA and (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b   :
         #     bb =1
         #     print('空單提早出場MA40')
-        if  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA and (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b :#pf['ma_sign'].iloc[-1] == 1:
-            bb = 1      
-        elif Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA and (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b :# pf['ma_sign'].iloc[-1] == -1:
-            bb = -1 
-        # elif   b==1 and (Price - max(orV,key = lambda x:x[1])[1] * b) < -50 :
+        #print('Price:',Price,type(Price))
+        if Price > Last2FastMA and  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA and (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b :#pf['ma_sign'].iloc[-1] == 1:
+            bb = 1
+            note='空單出場-'+str(  (((topProfit - r ) * b ) * wsp))+','+str(    (topProfit - Price ) * b)
+        elif Price < Last2FastMA and  Last1FastMA >  Last1SlowMA and  Last2FastMA < Last2SlowMA and (((topProfit - r ) * b ) * wsp) < (topProfit - Price ) * b :# pf['ma_sign'].iloc[-1] == -1:
+            bb = -1
+            note='多單出場-' +str(    (((topProfit - r ) * b ) * wsp) )+','+str(    (topProfit - Price ) * b)
+        # elif b==1 and Price < Last2FastMA and Price < Last2SlowMA and  (Price - r) * b < 0 :
+        #     bb = -1
+        #     print('多 單提早出場',(((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2),(topProfit - Price ) * b)
+        #     note='多 單提早出場'+str(Price)+','+str(  (((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2) )+','+str( (topProfit - Price ) * b)
+        # elif b==-1 and Price > Last2FastMA and Price > Last2SlowMA and  (Price - r) * b < 0 :
+        #     bb = 1
+        #     print('空 單提早出場',(((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2),(topProfit - Price ) * b)
+        #     note='空 單提早出場'+str(Price)+','+str(  (((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2) )+','+str( (topProfit - Price ) * b)
+        # # elif   b==1 and (Price - max(orV,key = lambda x:x[1])[1] * b) < -20 :
         #     bb = -1 
         #     print('多 單提早出場',(((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2),(topProfit - Price ) * b)
-        # elif    b==-1 and (Price - min(orV,key = lambda  x:x[1])[1]  ) * b < -50 :
+        #     note='多 單提早出場'+str(  (((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2) )+','+str( (topProfit - Price ) * b)
+        # elif    b==-1 and (Price - min(orV,key = lambda  x:x[1])[1]  ) * b < -20 :
         #     bb = 1
         #     print('空 單提早出場',(((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * -0.2) , (topProfit - Price ) * b )  
+        #     note='空 單提早出場'+str(  (((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * -0.2) )+','+str( (topProfit - Price ) * b )
         # elif len(orV) >= 2 and b==1 and Price < max(orV,key = lambda x:x[1])[1] and (((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2) < (topProfit - Price ) * b :
-        #    bb = -1 
-        #    print('多單提早出場',(((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2),(topProfit - Price ) * b)
+        #     bb = -1 
+        #     print('多單提早出場',(((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2),(topProfit - Price ) * b)
+        #     note='多單提早出場'+str((((topProfit - max(orV,key = lambda x:x[1])[1] ) * b ) * -0.2))+','+str((topProfit - Price ) * b)
         # elif  len(orV) >= 2 and  b==-1 and Price > min(orV,key = lambda  x:x[1])[1]  and (((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * -0.2) < (topProfit - Price ) * b :
-        #    bb = 1
-        #    print('空 單提早出場',(((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * -0.2) , (topProfit - Price ) * b )  
+        #     bb = 1
+        #     print('空 單提早出場',(((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * -0.2) , (topProfit - Price ) * b )  
+        #     note='空 單提早出場'+str((((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * -0.2) )+','+ str((topProfit - Price ) * b )
         else  :
             if  Last1FastMA <  Last1SlowMA and  Last2FastMA > Last2SlowMA and  b==1 :
                 print('黃金交叉 - 加碼做多')
@@ -190,24 +219,36 @@ def stopByMA(time,Price,wsp,lsp,r,b,topProfit,note,re,pf,KBar1M,orV,aorV):
                 #      print('多 單提早出場',(((topProfit - min(orV,key = lambda  x:x[1])[1]  ) * b ) * wsp) , (topProfit - Price ) * b )
 
      
-     #   if  b== 1 and Price < Last2FastMA and  (Price - r) * b < -40 :
-     #       bb = -1
-     #   elif  b== -1 and Price > Last2FastMA and (Price - r) * b < -40:
-     #       bb =1
+        # if  b== 1 and Price < Last2FastMA and  (Price - r) * b < -10 :
+        #     bb = -1
+        # elif  b== -1 and Price > Last2FastMA and (Price - r) * b < -10:
+        #     bb =1
         
 
             
         if bb !=0  and bb != b:
-            aorV[-1][2]=b 
-            aorV[-1][3]=note 
-            r,b,rr,re,orV = outp(time,Price,r,b,note,re,orV)
+            
+            if(orderType=='Auto'):
+                aorV[-1][2]=b 
+                aorV[-1][3]=note 
+                r,b,rr,re,orV = outp(time,Price,r,b,note,re,orV,logFileName)
+            else :
+                drawMap(KBar1M,pf,'1223456',pd.DataFrame(aorV, columns = allOrderColumns),note)
+                if(input("確認要出場? (y/n)") == 'y'):
+                    aorV[-1][2]=b 
+                    aorV[-1][3]=note 
+                    r,b,rr,re,orV = outp(time,Price,r,b,note,re,orV,logFileName)
+                else:
+                    bb=0
+                    note=''    
+            
            
         elif bc == b:
             #print('max(orV,key = lambda x:x[1])',max(orV,key = lambda x:x[1])[1])
             #目前價格有大於最後加碼價才可以加碼：
             if (b == 1 and Price > max(orV,key = lambda x:x[1])[1]) or (b == -1 and Price < min(orV,key = lambda  x:x[1])[1]) :
-                #if len(orV) < 4 :
-                    re,orV = addInp(time,Price,b,note,re,orV)
+                if len(orV) < 2 :
+                    re,orV = addInp(time,Price,b,note,re,orV,logFileName)
                     aorV[-1][2]=b 
                     aorV[-1][3]=note
                     print('Add')

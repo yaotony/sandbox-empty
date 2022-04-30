@@ -40,8 +40,8 @@ def getMatch():
 #r = efOrder('202105','S','1')
 #print(r)
 
-print('Qty：',getPositionQty())
-print('BS：',getPositionBS())
-print('Quity',getQuity())
-print(getMatch())
+#print('Qty：',getPositionQty())
+#print('BS：',getPositionBS())
+#print('Quity',getQuity())
+#print(getMatch())
 

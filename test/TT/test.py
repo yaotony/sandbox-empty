@@ -91,6 +91,7 @@ def loadData(KBar1M ,Product,starTime):
 
     df =   pd.read_csv(FilePath, low_memory=False,encoding="UTF-8",header=None)
     for i in  range( len(df)):
+        
         Time=datetime.datetime.strptime(df.iloc[i,0],'%Y/%m/%d %H:%M:%S.%f')
         Price=float(df.iloc[i,2])
         Qty=float(df.iloc[i,3])

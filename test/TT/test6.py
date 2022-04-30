@@ -1,8 +1,20 @@
-from datetime import date, timedelta
+from numpy import dsplit
+from Log import add,logFileClear,readCsvLog
+import time ,datetime
+import pandas as pd
 
-start_date = date(2019, 1, 1)
-end_date = date(2020, 1, 1)
-delta = timedelta(days=1)
-while start_date <= end_date:
-    print (start_date.strftime("%Y-%m-%d"))
-    start_date += delta
+
+
+orderFileName =datetime.datetime.now().strftime('%Y%m%d')+'_order'
+df  =  readCsvLog(orderFileName)
+#print(df)
+
+for i in  range( len(df)):
+    timeValue=  df.iloc[i][0]
+    Price =  df.iloc[i][1]
+    BS =  df.iloc[i][2]
+    print('BS:',BS,' Price:',Price,' Time:',timeValue)
+
+
+print('-----BS:',df.iloc[-1][2],' Price:',df.iloc[-1][1],' Time:',df.iloc[-1][0])
+
