@@ -95,11 +95,11 @@ def drawMap(KBar1M,df,filename,orderValue,note =None) :
     ax = plt.subplot(111)
     #繪製圖案 ( 圖表 , K線物件 )
     candlestick_ohlc(ax, KData, width=0.0003, colorup='r', colordown='g')  
-    ax.plot_date( Time,FastMA, 'k-' , linewidth=1 ,color='#00FFFF')
-    ax.plot_date( Time,SlowMA, 'k-' , linewidth=1 ,color='#FFFF00')
-    ax.plot_date( Time,BoxTop, 'k-' , linewidth=1 ,color='#0000FF')
-    ax.plot_date(Time ,ma_40, 'k-' , linewidth=1 ,color='#FF0000')
-    ax.plot_date( Time,BoxDown, 'k-' , linewidth=1 ,color='#00FF00')
+    ax.plot_date( Time,FastMA,'-' , linewidth=1 ,color='#00FFFF')
+    ax.plot_date( Time,SlowMA, '-' , linewidth=1 ,color='#FFFF00')
+    ax.plot_date( Time,BoxTop, '-' , linewidth=1 ,color='#0000FF')
+    ax.plot_date(Time ,ma_40, '-' , linewidth=1 ,color='#FF0000')
+    ax.plot_date( Time,BoxDown, '-' , linewidth=1 ,color='#00FF00')    
     for i in  range( len(orderValue)):
         
         if orderValue['BC'].iloc[i] == -1 :

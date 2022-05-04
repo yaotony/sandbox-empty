@@ -1,0 +1,10 @@
+pip install requests
+pip install numpy
+pip install matplotlib
+pip install bs4
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib
+pip3 install c:\temp\TA_Lib-0.4.24-pp38-pypy38_pp73-win_amd64.whl
+pip3 install pandas
+pip3 install mplfinance
+pip3 install lineTool
+pip install openpyxl

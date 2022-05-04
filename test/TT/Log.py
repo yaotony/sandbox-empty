@@ -7,7 +7,7 @@ import os
 
 def add(filename,note):
 # 開啟輸出的 CSV 檔案
-    with open('C:\\temp\\'+filename+'.csv', 'a', newline='') as csvfile:
+    with open('C:\\temp\\'+filename+'.csv', 'a', newline='', encoding='utf-8') as csvfile:
     # 建立 CSV 檔寫入器
         writer = csv.writer(csvfile)
 
@@ -17,7 +17,7 @@ def add(filename,note):
 
 def addLogTtxt(note):
     filename =datetime.datetime.now().strftime('%Y%m%d')
-    with open('C:\\temp\\'+filename+'.txt', 'a', newline='') as f:
+    with open('C:\\temp\\'+filename+'.txt', 'a', newline='', encoding='utf-8') as f:
         f.writelines(note+' \n')
         f.close
 
